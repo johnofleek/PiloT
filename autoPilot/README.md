@@ -28,13 +28,31 @@ for example to change the APN / add PAP / CHAP / USER / PASSWORD ...
 
 Note that the interface can be set to auto connect  
 
+## Configure to autoconnect using nmcli
+
+Make the change
+```
+pi@raspberrypi:~ $ sudo nmcli c modify '3 Internet' connection.autoconnect yes
+```
+
+Check the result
+```
+pi@raspberrypi:~ $ nmcli c show '3 Internet' | grep connection.auto
+connection.autoconnect:                 yes
+connection.autoconnect-priority:        0
+connection.autoconnect-retries:         -1 (default)
+connection.autoconnect-slaves:          -1 (default)
+
+```
+
 ## Actual connection data looks like this
 ```
 root@raspberrypi:/etc/NetworkManager# ls system-connections
 '3 Internet.nmconnection'
 ```
 
-[For an example see](./exampleNetworkManagerConfigFile.md)
+[For an example see](./exampleNetworkManagerConfigFile.md)  
+[For an nmcli setting show see](./exampleNmcliConnectShow.md)
 
 ## Tested on 
 (uname -a)
@@ -44,4 +62,12 @@ RPi4 -- Buster -- Linux raspberrypi 4.19.58-v7l+ #1245 SMP Fri Jul 12 17:31:45 B
 Modem settings 
 Set to MBIM mode
    AT+KUSBCOMP=2
+```
+
+
+## Debug stuff
+
+Have a look at the syslog  
+```
+sudo tail -f /var/log/syslog
 ```

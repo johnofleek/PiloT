@@ -1,3 +1,4 @@
+```
 root@raspberrypi:/etc/NetworkManager# cat system-connections/'3 Internet.nmconnection'
 [connection]
 id=3 Internet
@@ -19,3 +20,4 @@ method=auto
 addr-gen-mode=stable-privacy
 dns-search=
 method=auto
+```

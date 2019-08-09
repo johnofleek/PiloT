@@ -34,10 +34,14 @@ root@raspberrypi:/etc/NetworkManager# ls system-connections
 '3 Internet.nmconnection'
 ```
 
-[see](./exampleNetworkManagerConfigFile.md)
+[For an example see](./exampleNetworkManagerConfigFile.md)
 
 ## Tested on 
 (uname -a)
+```
 Module HL7692
 RPi4 -- Buster -- Linux raspberrypi 4.19.58-v7l+ #1245 SMP Fri Jul 12 17:31:45 BST 2019 armv7l GNU/Linux
-
+Modem settings 
+Set to MBIM mode
+   AT+KUSBCOMP=2
+```

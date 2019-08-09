@@ -3,7 +3,7 @@ instructions_howToAutoPiloT.md August 2019
 
 # RPi4 GPIO-- update the wiringPi app
 
-The two scripts 
+Two scripts use wiringPi 
 * pilotOn.sh
 * pilotOff.sh
 
@@ -54,9 +54,9 @@ sudo apt-get install network-manager-gnome
 
 ```
 
+Reboot
 
 
-Reboot  
 
 
 

@@ -28,7 +28,7 @@ for example to change the APN / add PAP / CHAP / USER / PASSWORD ...
 
 Note that the interface can be set to auto connect  
 
-## Configure to autoconnect using nmcli
+### Configure to autoconnect using nmcli
 
 Make the change
 ```
@@ -42,27 +42,29 @@ connection.autoconnect:                 yes
 connection.autoconnect-priority:        0
 connection.autoconnect-retries:         -1 (default)
 connection.autoconnect-slaves:          -1 (default)
-
 ```
 
-## Actual connection data looks like this
+[To list nmcli settings "show" see](./exampleNmcliConnectShow.md)
+
+### Configure via Gui
+Right click on the tray icon - "edit - connections"
+
+
+### Configure manually via the file system
+Configuration settings are actually stored in the file system e.g.
+
 ```
 root@raspberrypi:/etc/NetworkManager# ls system-connections
 '3 Internet.nmconnection'
 ```
 
 [For an example see](./exampleNetworkManagerConfigFile.md)  
-[For an nmcli setting show see](./exampleNmcliConnectShow.md)
+
 
 ## Tested on 
-(uname -a)
-```
-Module HL7692
-RPi4 -- Buster -- Linux raspberrypi 4.19.58-v7l+ #1245 SMP Fri Jul 12 17:31:45 BST 2019 armv7l GNU/Linux
-Modem settings 
-Set to MBIM mode
-   AT+KUSBCOMP=2
-```
+
+[Testing details](./test_configurationRecords.md)
+
 
 
 ## Debug stuff
@@ -70,4 +72,9 @@ Set to MBIM mode
 Have a look at the syslog  
 ```
 sudo tail -f /var/log/syslog
+
+```
+
+```
+sudo service network-manager restart
 ```

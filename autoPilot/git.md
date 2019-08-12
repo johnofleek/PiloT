@@ -4,7 +4,7 @@ git add .
 
 git commit -m "add HL8548"
 
-git -u origin master
+git push -u origin master
 ```
 
 

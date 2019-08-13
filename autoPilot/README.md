@@ -7,21 +7,30 @@ So far the following connection methods are documented
 * Network manager PPP
 
 ## Quick start
-1. Check [to see if we tested your Pilot / modem will work with network manager](./test_configurationRecords.md)
-1. [Clone](./git.md) this project into a pi
-1. Install [network-manager](./instructions_howToInstall_gpioAndNetworkManager.md)
-1. Install [network-manager-gnome](./instructions_howToInstall_gpioAndNetworkManager.md)
-1. Install [minicom](./instructions_howToInstall_gpioAndNetworkManager.md)
-1. Run minicom to enable AT commands to be sent to the Pilot modem
-  1. Start a shell terminal 
-     1. Hold down keys [CTRL] [ALT] T or 
-     1. Use the RPi Terminal icon
-  1. Run minicom ---
+
+**Load required RPi apps, update modem firmware**  
+
+Note *The following is a general process - may need 
+to be adapted to suit the particular modem fitted to the Pilot*
+
+1. Check [to see if we tested that your Pilot / modem will work with network
+ manager](./test_configurationRecords.md)
+1. [Clone](./git.md#checkout) this project into your RPi
+1. Install [network-manager](./instructions_howToInstall_gpioAndNetworkManager.md#install-network-manager)
+1. Install [network-manager-gnome](./instructions_howToInstall_gpioAndNetworkManager.md#install-network-manager-gnome)
+1. Install [minicom](./instructions_howToInstall_gpioAndNetworkManager.md#install-minicom)
+1. Start a shell terminal 
+   1. Hold down keys [CTRL] [ALT] T or 
+   1. Use the RPi Terminal icon
+1. From the terminal session - power on the Pilot (doesn't apply to uPilot)
+```
+./Pilot/autoPilot/pilotOn.sh
+```
+1. Run minicom to enable AT commands to be sent to the Pilot modem [(check the actual serial port to use)](test_configurationRecords.md)
 ```
 sudo minicom -D /dev/ttyUSB2
 ```
-1. Check the Pilot modems firmware version
-  1. Type 
+1. Check the Pilot modems firmware version -- type 
 ```
 ATi9
 ```
@@ -31,24 +40,33 @@ ATi9
  Pilot USB port to a Windows PC using a 
 one click .exe installer from [here](https://source.sierrawireless.com/)  
 1. Configure the Pilot modem as required (based on firmware identified above)
-  1. *The following is a general process - may need 
-to be adapted to suit the particular modem fitted to the Pilot*
   1. [some configuration examples are here](test_configurationRecords.md)
 1. Reboot the RPi
-1. Use the *network manager applet* (should be visible on the Rpi Panel) to configure 
+
+  
+**Configure the cellular network connection**  
+1. Power on the pilot
+```
+./Pilot/autoPilot/pilotOn.sh
+```
+1. Wait for Mobile Broadband to appear in the *network manager applet* (should be visible on the Rpi Panel)
+1. Use the *network manager applet*  to configure 
 your wwan0 settings such as APN / username / password etc
 1. If everything is installed and configured correctly network manager should 
  connect the modem when the Mobile broadband profile you created is clicked
 
-## Installation instructions
-[Pilot RPi GPIO scripts and install network manager](./instructions_howToInstall_gpioAndNetworkManager.md)
+Note that it is possible to configure network manager to automatically start the 
+mobile broadband connection on power up. This can be achieved either via the GUI
+
+## RPi app installation instructions
+[Pilot RPi GPIO scripts and install network manager](./instructions_howToInstall_gpioAndNetworkManager.md)  
 
 
 ## System test records
 
-[Test records](test_configurationRecords.md)
+[Test records](test_configurationRecords.md)  
 
 ## Network manager 
 
-[Usage notes](./instructions_networkManager.md)
+[Further use notes](./instructions_networkManager.md#connection-start)  
 

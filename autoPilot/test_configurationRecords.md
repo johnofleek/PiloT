@@ -16,9 +16,9 @@
 | nmcli tool | version 1.14.6 |
 | dpkg -s network-manager \| grep '^Version:' | Version: 1.14.6-2 |
 | Notes | MBIM didn't work with earlier FW version |
-  
- - [X] Working Connection
- - [X] Via MBIM
+|  [Y] | Working Connection |
+|  [Y] | Via MBIM |  
+
 
 <br/>
 
@@ -37,9 +37,10 @@
 | Notes | Network manager doesn't try to connect the CDC-ECM port |
 | Notes | Network manager will connect using PPP over CDC-ACM4 | 
 | Notes | dhcpcd does still manage CDC_ECM when AT+XCEDATA=2,0 is used |
+|  [Y] | Working Connection |
+|  [N] | Via MBIM |
   
- - [X] Working Connection
- - [ ] Via MBIM
+
 <br/>
 
 
@@ -59,9 +60,10 @@
 | nmcli tool | version 1.14.6 |
 | dpkg -s network-manager \| grep '^Version:' | Version: 1.14.6-2 |
 | Notes | Network manager unable to set up a connection an attempt is made
-  
- - [ ] Working Connection
- - [ ] Via MBIM
+|  [N] | Working Connection |
+|  [N] | Via MBIM |
+
+
 <br/>
 
 
@@ -83,7 +85,7 @@
 | dpkg -s network-manager \| grep '^Version:' | Version: 1.14.6-2 |
 | Notes | Network manager made connection first time using MBIM cdc-wdm0
 | Notes | Speed test ~20Mbps down 13Mbps/29Mbps up at+cops? +cops: 0,0,"3",7 |
-  
- - [X] Working Connection
- - [X] Via MBIM
+|  [Y] | Working Connection |
+|  [Y] | Via MBIM |
+|  [Y] | [some speed testing](./speedtests/Rpi4EM7455_uPilot_USB3_threeNetwork_2019-08-13-111021_1920x1200_scrot.png)  |
 <br/>

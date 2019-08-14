@@ -51,6 +51,7 @@
 | OS | Buster |
 | OS Version (uname -a) | Linux raspberrypi 4.19.58-v7l+ #1245 SMP Fri Jul 12 17:31:45 BST 2019 armv7l GNU/Linux |
 | Module Firmware | SWI9X30C_02.24.05.06 r7040 CARMD-EV-FRMWR2 2017/05/19 0 |
+| Module Config Serial Port | sudo minicom -D /dev/ttyUSB2 |
 | Module Config |  Set to MBIM mode |
 | --- |  at!usbcomp? 
 | --- | Config Index: 1                                                                 
@@ -75,6 +76,7 @@
 | OS | Buster |
 | OS Version (uname -a) | Linux raspberrypi 4.19.58-v7l+ #1245 SMP Fri Jul 12 17:31:45 BST 2019 armv7l GNU/Linux |
 | Module Firmware | Revision: SWI9X30C_02.32.11.00 r8042 CARMD-EV-FRMWR2 2019/05/15 21:52:20 |
+| Module Config Serial Port | sudo minicom -D /dev/ttyUSB2 |
 | Module Config |  Set to MBIM mode |
 | --- |  at!usbcomp? 
 | --- | Config Index: 1                                                                 

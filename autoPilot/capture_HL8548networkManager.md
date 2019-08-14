@@ -64,7 +64,7 @@ Aug 12 14:44:09 raspberrypi systemd[625]: Started Virtual filesystem metadata se
 
 # connect
 pi@raspberrypi:~ $ sudo tail -f /var/log/syslog
-
+```
 Aug 12 14:55:58 raspberrypi NetworkManager[394]: <info>  [1565618158.1554] device (ttyACM4): Activation: starting connection '3 Internet' (f23612eb-7b35-4524-9e3d-67bc86003e04)
 Aug 12 14:55:58 raspberrypi NetworkManager[394]: <info>  [1565618158.1576] audit: op="connection-activate" uuid="f23612eb-7b35-4524-9e3d-67bc86003e04" name="3 Internet" pid=761 uid=1000 result="success"
 Aug 12 14:55:58 raspberrypi NetworkManager[394]: <info>  [1565618158.1594] device (ttyACM4): state change: disconnected -> prepare (reason 'none', sys-iface-state: 'managed')
@@ -135,3 +135,4 @@ Aug 12 14:56:02 raspberrypi nm-dispatcher: req:1 'up' [ppp0]: new request (1 scr
 Aug 12 14:56:02 raspberrypi nm-dispatcher: req:1 'up' [ppp0]: start running ordered scripts...
 Aug 12 14:56:02 raspberrypi nm-dispatcher: req:2 'connectivity-change': new request (1 scripts)
 Aug 12 14:56:03 raspberrypi nm-dispatcher: req:2 'connectivity-change': start running ordered scripts...
+```

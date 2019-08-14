@@ -10,5 +10,5 @@ git push -u origin master
 
 ## Checkout
 ```
-git clone github.com/johnofleek/Pilot
+git clone http://github.com/johnofleek/Pilot
 ```

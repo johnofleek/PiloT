@@ -1,6 +1,9 @@
 ## This documents purpose 
 Document methods of automatically managing the wwanX interface(s) provided by the PiloT 
-HAT board when used with a Raspberry PI and Raspian
+HAT board when used with a Raspberry PI and Raspian.
+
+At this time it is experimental and has only been tested on a very limited set of RPi
+ and Rasbian variants 
 
 So far the following connection methods are documented
 * Network manager MBIM
@@ -8,24 +11,40 @@ So far the following connection methods are documented
 
 ## Quick start
 
-**Load required RPi apps, update modem firmware**  
+  
 
-Note *The following is a general process - may need 
-to be adapted to suit the particular modem fitted to the Pilot*
+Note that  
+*The following is a general process it may need 
+to be adapted to suit the particular modem fitted to the Pilot*  
+*Not all combinations of Pilot / RPi / Rasbian OS have been tested*  
 
-1. Check [to see if we tested that your Pilot / modem will work with network
+**Install RPi apps**  
+
+1. Check [to see if we tested that your Pilot / modem / Rpi /  will work with network
  manager](./test_configurationRecords.md)
 1. [Clone](./git.md#checkout) this project into your RPi
 1. Install [network-manager](./instructions_howToInstall_gpioAndNetworkManager.md#install-network-manager)
 1. Install [network-manager-gnome](./instructions_howToInstall_gpioAndNetworkManager.md#install-network-manager-gnome)
 1. Install [minicom](./instructions_howToInstall_gpioAndNetworkManager.md#install-minicom)
+
+**Uninstall RPi apps**
+1. Remove openresolve and dhcpcd
+1. In a shell
+```
+sudo apt purge openresolv dhcpcd5
+```
+
+**Power up the Pilot / modem**  
+ 
 1. Start a shell terminal 
    1. Hold down keys [CTRL] [ALT] T or 
    1. Use the RPi Terminal icon
 1. From the terminal session - power on the Pilot (doesn't apply to uPilot)
 ```
-./Pilot/autoPilot/pilotOn.sh
+$ ./Pilot/autoPilot/pilotOn.sh
 ```
+
+**Pilot / modem configuration**  
 1. Run minicom to enable AT commands to be sent to the Pilot modem [(check the actual serial port to use)](test_configurationRecords.md)
 ```
 sudo minicom -D /dev/ttyUSB2
@@ -38,16 +57,16 @@ ATi9
   1. If the modem does appear in [here](test_configurationRecords.md) but the
  firmware reported is older - then update the modem firmware by connecting the 
  Pilot USB port to a Windows PC using a 
-one click .exe installer from [here](https://source.sierrawireless.com/)  
+one click .exe installer from [here](https://source.sierrawireless.com/)   
 1. Configure the Pilot modem as required (based on firmware identified above)
   1. [some configuration examples are here](test_configurationRecords.md)
 1. Reboot the RPi
 
   
 **Configure the cellular network connection**  
-1. Power on the pilot
+1. From a shell terminal - power on the Pilot
 ```
-./Pilot/autoPilot/pilotOn.sh
+$ ./Pilot/autoPilot/pilotOn.sh
 ```
 1. Wait for Mobile Broadband to appear in the *network manager applet* (should be visible on the Rpi Panel)
 1. Use the *network manager applet*  to configure 
@@ -55,8 +74,21 @@ your wwan0 settings such as APN / username / password etc
 1. If everything is installed and configured correctly network manager should 
  connect the modem when the Mobile broadband profile you created is clicked
 
-Note that it is possible to configure network manager to automatically start the 
-mobile broadband connection on power up. This can be achieved either via the GUI
+### Further network manager notes
+* With dhcpcd disabled - network manager manages all of the RPi networking interfaces
+ e.g. Ethernet, WiFi, Cellular ...
+* Network manager profiles can be configured to automatically start the 
+mobile broadband connection on power up.   
+* Network manager profiles can be set to retry if a network connection is lost - however network manager 
+won't test to see if the IP connection is functional. This is a task for a different tool 
+* With dhcpcd uninstalled it's GUI is still visible in the Raspbian Task bar
+it reports "Connection to dhcpcpd lost"   
+the functionality of this GUI is replaced by the NetworkManager Applet icon  
+* Configuration of the network interfaces can be via the NetworkManager Applet GUI or the command 
+line "nmcli" or 
+manual hacking of the config files  
+* The command line tool nmtui doesn't appear to be able to edit cellular device configuration
+
 
 ## RPi app installation instructions
 [Pilot RPi GPIO scripts and install network manager](./instructions_howToInstall_gpioAndNetworkManager.md)  

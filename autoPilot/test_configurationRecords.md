@@ -8,7 +8,7 @@
 | Module | HL7692 |
 |  [Y] | Working Connection |
 |  [Y] | Via MBIM |
-| Raspberry | RPi4 |
+| Raspberry | RPi4 , RPi3B+ |
 | OS | Buster |
 | OS Version (uname -a) | Linux raspberrypi 4.19.58-v7l+ #1245 SMP Fri Jul 12 17:31:45 BST 2019 armv7l GNU/Linux |
 | Module Firmware |RHL769x.2.26.180400.201802141030.x7120m_1 2018-02-14 12:02:13 r12309 |
@@ -19,7 +19,7 @@
 | NetworkManager Applet Version | 1.8.20 |
 | nmcli tool | version 1.14.6 |
 | dpkg -s network-manager \| grep '^Version:' | Version: 1.14.6-2 |
-| Notes | MBIM didn't work with earlier FW version |
+| Notes | Modem MBIM didn't function correctly with earlier FW version |
  |  
 
 

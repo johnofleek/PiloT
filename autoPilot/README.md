@@ -18,7 +18,7 @@ Note that
 to be adapted to suit the particular modem fitted to the Pilot*  
 *Not all combinations of Pilot / RPi / Rasbian OS have been tested*  
 
-**Install RPi apps**  
+**Install required RPi apps**  
 
 1. Check [to see if we tested that your Pilot / modem / Rpi /  will work with network
  manager](./test_configurationRecords.md)
@@ -27,8 +27,9 @@ to be adapted to suit the particular modem fitted to the Pilot*
 1. Install [network-manager-gnome](./instructions_howToInstall_gpioAndNetworkManager.md#install-network-manager-gnome)
 1. Install [minicom](./instructions_howToInstall_gpioAndNetworkManager.md#install-minicom)
 
-**Uninstall RPi apps**
-1. Remove openresolve and dhcpcd
+**Uninstall RPi apps not required**
+
+1. Remove openresolve and dhcpcd as they interfere with the operation of network manager
 1. In a shell
 ```
 sudo apt purge openresolv dhcpcd5
@@ -58,6 +59,8 @@ ATi9
  firmware reported is older - then update the modem firmware by connecting the 
  Pilot USB port to a Windows PC using a 
 one click .exe installer from [here](https://source.sierrawireless.com/)   
+  1. If your RPi variant doesn't appear [here](test_configurationRecords.md) I haven't tested it
+  1. If your Raspian variant doesn't appear [here](test_configurationRecords.md) I haven't tested it
 1. Configure the Pilot modem as required (based on firmware identified above)
   1. [some configuration examples are here](test_configurationRecords.md)
 1. Reboot the RPi

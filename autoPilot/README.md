@@ -26,10 +26,11 @@ to be adapted to suit the particular modem fitted to the Pilot*
  manager](./test_configurationRecords.md)
 1. Clone [this](./git.md#checkout) project into your RPi
 
-    ```
+ ```
 git clone http://github.com/johnofleek/Pilot
 
-    ```
+```
+
 1. Install [network-manager](./instructions_howToInstall_gpioAndNetworkManager.md#install-network-manager)
     ```
 sudo apt-get install network-manager

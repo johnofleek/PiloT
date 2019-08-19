@@ -7,6 +7,10 @@ Documents a method of automatically managing network interfaces with
 At this time it is experimental and has only been tested on a very limited set of RPi
 , Rasbian OS variants and Pilot variants 
 
+Note that using the following the installation process below the Raspbian default network manager
+ method *dhcpcd* will be replaced with network-manager and that if the network manager GUI
+ is installed it will replace the dhcpcd GUI
+
 So far the following modem network interface technologies have been tried
 * Network manager MBIM
 * Network manager PPP
@@ -14,7 +18,6 @@ So far the following modem network interface technologies have been tried
 ## Quick start
 This method uses network managers GUI [NetworkManager Applet] to configure and monitor the Pilot
 Cellular networking RPi HAT and it therefore requires a standard Raspian desktop install
-  
 
 *Note that the following is a general process it may need 
 to be adapted to suit the particular modem fitted to the Pilot*  

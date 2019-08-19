@@ -42,7 +42,7 @@ to be adapted to suit the particular modem fitted to the Pilot
    ```
    ./Pilot/autoPilot/pilotOn.sh
    ```
-1. Click this link for information on expected Pilot [LED behaviour](#pilot_modem_configuration_notes)
+1. Click this link for information on expected Pilot [LED behaviour](#pilot-modem-configuration-notes)
    
 
 **Pilot / modem configuration**  

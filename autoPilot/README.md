@@ -19,11 +19,11 @@ So far the following modem network interface technologies have been tried
 This method uses network managers GUI [NetworkManager Applet] to configure and monitor the Pilot
 Cellular networking RPi HAT and it therefore requires a standard Raspian desktop install
 
-*Notes*
-1.The following is a general process it may need 
-to be adapted to suit the particular modem fitted to the Pilot*  
+*Notes*  
+1. The following is a general process it may need 
+to be adapted to suit the particular modem fitted to the Pilot
 2. Not all combinations of Pilot / RPi / Rasbian OS have been tested  
-3. How to start a shell terminal 
+3. How to start a shell terminal
    1. Hold down keys [CTRL] [ALT] T or 
    1. Use the RPi Terminal icon
 
@@ -54,14 +54,14 @@ to be adapted to suit the particular modem fitted to the Pilot*
 
 **Uninstall RPi apps not required**
 
-1. Remove openresolv and dhcpcd as they interfere with the operation of network manager - in a shell
+1. Remove openresolv and dhcpcd as they interfere with the operation of network manager
    ```
    sudo apt purge openresolv dhcpcd5
    ```
 
 **Power up the Pilot / modem**  
  
-1. From a shell terminal session - power on the Pilot (doesn't apply to uPilot)
+1. From a shell terminal - power on the Pilot using a convenient script (doesn't apply to uPilot)
    ```
    ./Pilot/autoPilot/pilotOn.sh
    ```
@@ -71,11 +71,11 @@ to be adapted to suit the particular modem fitted to the Pilot*
    ```
    sudo minicom -D /dev/ttyUSB2
    ```
-1. Check the Pilot modems firmware version -- type 
+1. Check the Pilot modems firmware version -- type AT command
    ```
    ATi9
    ```
-  1. If the modem firmware doesn't appear in [here](test_configurationRecords.md) I haven't tested it
+  1. If the modem firmware reported doesn't appear in [here](test_configurationRecords.md) I haven't tested it
   1. If the modem does appear in [here](test_configurationRecords.md) but the
  firmware reported is older - then update the modem firmware by connecting the 
  Pilot USB port to a Windows PC using a 
@@ -84,6 +84,9 @@ one click .exe installer from [here](https://source.sierrawireless.com/)
   1. If your Raspian variant doesn't appear [here](test_configurationRecords.md) I haven't tested it
 1. Configure the Pilot modem as required (based on firmware identified above)
   1. [Some configuration examples are here](test_configurationRecords.md)
+  1. Pay particular attention to the usb composition setting - if in doubt check the 
+     AT command manual for the particular modem that is being used - a composition with an MBIM setting is 
+     recommended
 1. Reboot the RPi
 
   
@@ -96,8 +99,8 @@ one click .exe installer from [here](https://source.sierrawireless.com/)
 1. Use the *network manager applet*  to configure 
 your wwan0 settings such as APN / username / password etc
 1. If everything is installed and configured correctly network manager should 
- connect the modem with the Mobile broadband profile you created is clicked
-1. To power down the Pilot 
+ connect the modem using the Mobile broadband profile you created is clicked
+1. To power down the Pilot run the following script
    ```
    $ ./Pilot/autoPilot/pilotOff.sh
    ```

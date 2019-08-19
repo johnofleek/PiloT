@@ -28,6 +28,44 @@ to be adapted to suit the particular modem fitted to the Pilot
    1. Use the RPi Terminal icon
 
 
+
+**Power up the Pilot / modem**  
+ 
+1. From a shell terminal - power on the Pilot using a convenient script (doesn't apply to uPilot)
+   ```
+   ./Pilot/autoPilot/pilotOn.sh
+   ```
+1. For further information on expected Pilot [LED behaviour](#pilot_modem_configuration_notes)
+   
+
+**Pilot / modem configuration**  
+1. To enable AT commands to be sent to the Pilot modem - run minicom [(check the actual serial port to use)](test_configurationRecords.md)
+   ```
+   sudo minicom -D /dev/ttyACM0
+   ```
+1. Check the Pilot modems firmware version -- type AT command
+   ```
+   ATi9
+   ```
+  1. If the modem firmware reported doesn't appear in [here](test_configurationRecords.md) I haven't tested it
+  1. If the modem does appear in [here](test_configurationRecords.md) but the
+ firmware reported is older - then update the modem firmware by connecting the 
+ Pilot USB port to a Windows PC using a 
+one click .exe installer from [here](https://source.sierrawireless.com/)   
+  1. If your RPi variant doesn't appear [here](test_configurationRecords.md) I haven't tested it
+  1. If your Raspian variant doesn't appear [here](test_configurationRecords.md) I haven't tested it
+1. Configure the Pilot modem as required (based on firmware identified above)
+  1. [Some configuration examples are here](test_configurationRecords.md)
+  1. Pay particular attention to the usb composition setting - if in doubt check the 
+     AT command manual for the particular modem that is being used - a composition with an MBIM setting is 
+     recommended
+1. Power off the Pilot HAT - run the following script
+   ```
+   /Pilot/autoPilot/pilotOff.sh
+   ```
+1. Reboot the RPi
+
+
 **Install required RPi apps**  
 
 1. Check [to see if we tested that your Pilot / modem / Rpi /  will work with network
@@ -58,42 +96,14 @@ to be adapted to suit the particular modem fitted to the Pilot
    ```
    sudo apt purge openresolv dhcpcd5
    ```
-
-**Power up the Pilot / modem**  
- 
-1. From a shell terminal - power on the Pilot using a convenient script (doesn't apply to uPilot)
-   ```
-   ./Pilot/autoPilot/pilotOn.sh
-   ```
-
-**Pilot / modem configuration**  
-1. To enable AT commands to be sent to the Pilot modem - run minicom [(check the actual serial port to use)](test_configurationRecords.md)
-   ```
-   sudo minicom -D /dev/ttyUSB2
-   ```
-1. Check the Pilot modems firmware version -- type AT command
-   ```
-   ATi9
-   ```
-  1. If the modem firmware reported doesn't appear in [here](test_configurationRecords.md) I haven't tested it
-  1. If the modem does appear in [here](test_configurationRecords.md) but the
- firmware reported is older - then update the modem firmware by connecting the 
- Pilot USB port to a Windows PC using a 
-one click .exe installer from [here](https://source.sierrawireless.com/)   
-  1. If your RPi variant doesn't appear [here](test_configurationRecords.md) I haven't tested it
-  1. If your Raspian variant doesn't appear [here](test_configurationRecords.md) I haven't tested it
-1. Configure the Pilot modem as required (based on firmware identified above)
-  1. [Some configuration examples are here](test_configurationRecords.md)
-  1. Pay particular attention to the usb composition setting - if in doubt check the 
-     AT command manual for the particular modem that is being used - a composition with an MBIM setting is 
-     recommended
 1. Reboot the RPi
+
 
   
 **Configure the cellular network connection**  
 1. From a shell terminal - power on the Pilot
    ```
-   $ ./Pilot/autoPilot/pilotOn.sh
+   ./Pilot/autoPilot/pilotOn.sh
    ```
 1. Wait for Mobile Broadband to appear in the *network manager applet* (should be visible on the Rpi Panel)
 1. Use the *network manager applet*  to configure 
@@ -102,7 +112,7 @@ your wwan0 settings such as APN / username / password etc
  connect the modem using the Mobile broadband profile you created is clicked
 1. To power down the Pilot run the following script
    ```
-   $ ./Pilot/autoPilot/pilotOff.sh
+   /Pilot/autoPilot/pilotOff.sh
    ```
 
 ### Further network manager notes
@@ -130,10 +140,10 @@ manual hacking of the config files
 [Test records](test_configurationRecords.md)  
 
 
-##  Modem configuration notes
-[EM7455](./instructions_EM7455.md)  
-[HL7692](./instructions_HL7692.md)  
-[HL8548](./instructions_HL8548.md)  
+##  Pilot modem configuration notes
+4G LTE [EM7455](./instructions_EM7455.md)  
+4G LTE [HL7692](./instructions_HL7692.md)  
+3G [HL8548](./instructions_HL8548.md)  
 
 
 

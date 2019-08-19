@@ -25,19 +25,19 @@ to be adapted to suit the particular modem fitted to the Pilot*
 1. Check [to see if we tested that your Pilot / modem / Rpi /  will work with network
  manager](./test_configurationRecords.md)
 1. Clone [this](./git.md#checkout) project into your RPi
-```
+    ```
 git clone http://github.com/johnofleek/Pilot
-```
+    ```
 1. Install [network-manager](./instructions_howToInstall_gpioAndNetworkManager.md#install-network-manager)
 ```
 sudo apt-get install network-manager
-```
+    ```
 1. Install the GUI [network-manager-gnome](./instructions_howToInstall_gpioAndNetworkManager.md#install-network-manager-gnome)
-```
+    ```
 sudo apt-get install network-manager-gnome
 ```
 1. Install text-based modem control and terminal emulation  application [minicom](./instructions_howToInstall_gpioAndNetworkManager.md#install-minicom)
-```
+    ```
 sudo apt-get install minicom
 ```
 

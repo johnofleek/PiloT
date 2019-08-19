@@ -7,7 +7,7 @@ Documents a method of automatically managing network interfaces with
 At this time it is experimental and has only been tested on a very limited set of RPi
 , Rasbian OS variants and Pilot variants 
 
-Note that using the following the installation process below the Raspbian default network manager
+Note that by following the installation process below the Raspbian default network manager
  method *dhcpcd* will be replaced with network-manager and that if the network manager GUI
  is installed it will replace the dhcpcd GUI
 

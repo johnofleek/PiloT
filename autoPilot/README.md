@@ -25,8 +25,7 @@ to be adapted to suit the particular modem fitted to the Pilot*
 1. Check [to see if we tested that your Pilot / modem / Rpi /  will work with network
  manager](./test_configurationRecords.md)
 1. Clone [this](./git.md#checkout) project into your RPi
-
- ```
+  ```
 git clone http://github.com/johnofleek/Pilot
 
 ```

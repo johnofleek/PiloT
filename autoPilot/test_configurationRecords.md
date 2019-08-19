@@ -20,7 +20,7 @@
 | nmcli tool | version 1.14.6 |
 | dpkg -s network-manager \| grep '^Version:' | Version: 1.14.6-2 |
 | Notes | Modem MBIM didn't function correctly with earlier FW version |
- |  
+| Notes | Speed test ~9Mbps down 4.2Mbps up |
 
 
 <br/>

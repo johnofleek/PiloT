@@ -1,22 +1,24 @@
 ## This documents purpose 
-Document methods of automatically managing the wwanX interface(s) provided by the PiloT 
-HAT board when used with a Raspberry PI and Raspian.
+Documents a method of automatically managing network interfaces with 
+[network manager](https://developer.gnome.org/NetworkManager/stable/NetworkManager.html),
+ including the cellular wwanX 
+ interface(s) provided by the PiloT HAT board, when used with a Raspberry PI and Raspian.
 
 At this time it is experimental and has only been tested on a very limited set of RPi
- and Rasbian variants 
+, Rasbian OS variants and Pilot variants 
 
-So far the following connection methods are documented
+So far the following modem network interface technologies have been tried
 * Network manager MBIM
 * Network manager PPP
 
 ## Quick start
-
+This method uses network managers GUI [NetworkManager Applet] to configure and monitor the Pilot
+Cellular networking RPi HAT and it therefore requires a standard Raspian desktop install
   
 
-Note that  
-*The following is a general process it may need 
+*Note that the following is a general process it may need 
 to be adapted to suit the particular modem fitted to the Pilot*  
-*Not all combinations of Pilot / RPi / Rasbian OS have been tested*  
+*and that not all combinations of Pilot / RPi / Rasbian OS have been tested*  
 
 **Install required RPi apps**  
 
@@ -29,7 +31,7 @@ to be adapted to suit the particular modem fitted to the Pilot*
 
 **Uninstall RPi apps not required**
 
-1. Remove openresolve and dhcpcd as they interfere with the operation of network manager
+1. Remove openresolv and dhcpcd as they interfere with the operation of network manager
 1. In a shell
 ```
 sudo apt purge openresolv dhcpcd5
@@ -62,7 +64,7 @@ one click .exe installer from [here](https://source.sierrawireless.com/)
   1. If your RPi variant doesn't appear [here](test_configurationRecords.md) I haven't tested it
   1. If your Raspian variant doesn't appear [here](test_configurationRecords.md) I haven't tested it
 1. Configure the Pilot modem as required (based on firmware identified above)
-  1. [some configuration examples are here](test_configurationRecords.md)
+  1. [Some configuration examples are here](test_configurationRecords.md)
 1. Reboot the RPi
 
   
@@ -75,7 +77,11 @@ $ ./Pilot/autoPilot/pilotOn.sh
 1. Use the *network manager applet*  to configure 
 your wwan0 settings such as APN / username / password etc
 1. If everything is installed and configured correctly network manager should 
- connect the modem when the Mobile broadband profile you created is clicked
+ connect the modem with the Mobile broadband profile you created is clicked
+1. To power down the Pilot 
+```
+$ ./Pilot/autoPilot/pilotOff.sh
+```
 
 ### Further network manager notes
 * With dhcpcd disabled - network manager manages all of the RPi networking interfaces
@@ -100,6 +106,14 @@ manual hacking of the config files
 ## System test records
 
 [Test records](test_configurationRecords.md)  
+
+
+##  Modem configuration notes
+[EM7455](./instructions_EM7455.md)  
+[HL7692](./instructions_HL7692.md)  
+[HL8548](./instructions_HL8548.md)  
+
+
 
 ## Network manager 
 

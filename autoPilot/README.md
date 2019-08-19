@@ -47,18 +47,19 @@ to be adapted to suit the particular modem fitted to the Pilot
    ```
    ATi9
    ```
-  1. If the modem firmware reported doesn't appear in [here](test_configurationRecords.md) I haven't tested it
-  1. If the modem does appear in [here](test_configurationRecords.md) but the
- firmware reported is older - then update the modem firmware by connecting the 
- Pilot USB port to a Windows PC using a 
-one click .exe installer from [here](https://source.sierrawireless.com/)   
-  1. If your RPi variant doesn't appear [here](test_configurationRecords.md) I haven't tested it
-  1. If your Raspian variant doesn't appear [here](test_configurationRecords.md) I haven't tested it
+
+   1. If the modem firmware reported doesn't appear in [here](test_configurationRecords.md) I haven't tested it
+   1. If the modem does appear in [here](test_configurationRecords.md) but the
+      firmware reported is older - then update the modem firmware by connecting the 
+      Pilot USB port to a Windows PC using a 
+      one click .exe installer from [here](https://source.sierrawireless.com/)   
+   1. If your RPi variant doesn't appear [here](test_configurationRecords.md) I haven't tested it
+   1. If your Raspian variant doesn't appear [here](test_configurationRecords.md) I haven't tested it
 1. Configure the Pilot modem as required (based on firmware identified above)
-  1. [Some configuration examples are here](test_configurationRecords.md)
-  1. Pay particular attention to the usb composition setting - if in doubt check the 
-     AT command manual for the particular modem that is being used - a composition with an MBIM setting is 
-     recommended
+   1. [Some configuration examples are here](test_configurationRecords.md)
+   1. Pay particular attention to the usb composition setting - if in doubt check the 
+      AT command manual for the particular modem that is being used - a composition with an MBIM setting is 
+      recommended
 1. Power off the Pilot HAT - run the following script
    ```
    /Pilot/autoPilot/pilotOff.sh

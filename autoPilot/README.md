@@ -30,12 +30,19 @@ to be adapted to suit the particular modem fitted to the Pilot
 
 
 **Power up the Pilot / modem**  
- 
+1. Clone [this](./git.md#checkout) project into your RPi (using a shell terminal)
+   ```
+   git clone http://github.com/johnofleek/Pilot
+   ```
+1. Install text-based modem control and terminal emulation  application [minicom](./instructions_howToInstall_gpioAndNetworkManager.md#install-minicom)
+   ```
+   sudo apt-get install minicom
+   ```
 1. From a shell terminal - power on the Pilot using a convenient script (doesn't apply to uPilot)
    ```
    ./Pilot/autoPilot/pilotOn.sh
    ```
-1. For further information on expected Pilot [LED behaviour](#pilot_modem_configuration_notes)
+1. Click this link for information on expected Pilot [LED behaviour](#pilot_modem_configuration_notes)
    
 
 **Pilot / modem configuration**  
@@ -48,11 +55,13 @@ to be adapted to suit the particular modem fitted to the Pilot
    ATi9
    ```
 
-   1. If the modem firmware reported doesn't appear in [here](test_configurationRecords.md) I haven't tested it
+   1. If the modem firmware reported doesn't appear in [here](test_configurationRecords.md) we haven't 
+      tested it
    1. If the modem does appear in [here](test_configurationRecords.md) but the
       firmware reported is older - then update the modem firmware by connecting the 
-      Pilot USB port to a Windows PC using a 
-      one click .exe installer from [here](https://source.sierrawireless.com/)   
+      Pilot USB port to a Windows PC and use a 
+      one click .exe installer from [here](https://source.sierrawireless.com/) to install updated firmware
+      into the Pilot modem
    1. If your RPi variant doesn't appear [here](test_configurationRecords.md) I haven't tested it
    1. If your Raspian variant doesn't appear [here](test_configurationRecords.md) I haven't tested it
 1. Configure the Pilot modem as required (based on firmware identified above)
@@ -60,7 +69,9 @@ to be adapted to suit the particular modem fitted to the Pilot
    1. Pay particular attention to the usb composition setting - if in doubt check the 
       AT command manual for the particular modem that is being used - a composition with an MBIM setting is 
       recommended
-1. Power off the Pilot HAT - run the following script
+1. [Check](./test_configurationRecords.md) to see if we tested your Rpi / Raspbian will work with network
+ manager
+1. Power down the Pilot HAT - run the following script
    ```
    /Pilot/autoPilot/pilotOff.sh
    ```
@@ -68,14 +79,10 @@ to be adapted to suit the particular modem fitted to the Pilot
 
 
 **Install required RPi apps**  
-
-1. Check [to see if we tested that your Pilot / modem / Rpi /  will work with network
- manager](./test_configurationRecords.md)
-1. Clone [this](./git.md#checkout) project into your RPi (using a shell terminal)
+1. Power down the Pilot HAT
    ```
-   git clone http://github.com/johnofleek/Pilot
+   /Pilot/autoPilot/pilotOff.sh
    ```
-
 1. Install [network-manager](./instructions_howToInstall_gpioAndNetworkManager.md#install-network-manager)
    ```
    sudo apt-get install network-manager
@@ -86,10 +93,6 @@ to be adapted to suit the particular modem fitted to the Pilot
    sudo apt-get install network-manager-gnome
    ```
 
-1. Install text-based modem control and terminal emulation  application [minicom](./instructions_howToInstall_gpioAndNetworkManager.md#install-minicom)
-   ```
-   sudo apt-get install minicom
-   ```
 
 **Uninstall RPi apps not required**
 

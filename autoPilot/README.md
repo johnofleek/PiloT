@@ -27,33 +27,29 @@ to be adapted to suit the particular modem fitted to the Pilot*
 1. Clone [this](./git.md#checkout) project into your RPi
    ```
    git clone http://github.com/johnofleek/Pilot
-
    ```
 
 1. Install [network-manager](./instructions_howToInstall_gpioAndNetworkManager.md#install-network-manager)
-    ```
-sudo apt-get install network-manager
-
-    ```
+   ```
+   sudo apt-get install network-manager
+   ```
 
 1. Install the GUI [network-manager-gnome](./instructions_howToInstall_gpioAndNetworkManager.md#install-network-manager-gnome)
-
-    ```
-sudo apt-get install network-manager-gnome
-    ```
+   ```
+   sudo apt-get install network-manager-gnome
+   ```
 
 1. Install text-based modem control and terminal emulation  application [minicom](./instructions_howToInstall_gpioAndNetworkManager.md#install-minicom)
-    ```
-sudo apt-get install minicom
-    ```
+   ```
+   sudo apt-get install minicom
+   ```
 
 **Uninstall RPi apps not required**
 
 1. Remove openresolv and dhcpcd as they interfere with the operation of network manager - in a shell
-
-    ```
-sudo apt purge openresolv dhcpcd5
-    ```
+   ```
+   sudo apt purge openresolv dhcpcd5
+   ```
 
 **Power up the Pilot / modem**  
  
@@ -61,19 +57,19 @@ sudo apt purge openresolv dhcpcd5
    1. Hold down keys [CTRL] [ALT] T or 
    1. Use the RPi Terminal icon
 1. From the terminal session - power on the Pilot (doesn't apply to uPilot)
-```
-$ ./Pilot/autoPilot/pilotOn.sh
-```
+   ```
+   $ ./Pilot/autoPilot/pilotOn.sh
+   ```
 
 **Pilot / modem configuration**  
 1. Run minicom to enable AT commands to be sent to the Pilot modem [(check the actual serial port to use)](test_configurationRecords.md)
-```
-sudo minicom -D /dev/ttyUSB2
-```
+   ```
+   sudo minicom -D /dev/ttyUSB2
+   ```
 1. Check the Pilot modems firmware version -- type 
-```
-ATi9
-```
+   ```
+   ATi9
+   ```
   1. If the modem firmware doesn't appear in [here](test_configurationRecords.md) I haven't tested it
   1. If the modem does appear in [here](test_configurationRecords.md) but the
  firmware reported is older - then update the modem firmware by connecting the 
@@ -88,18 +84,18 @@ one click .exe installer from [here](https://source.sierrawireless.com/)
   
 **Configure the cellular network connection**  
 1. From a shell terminal - power on the Pilot
-```
-$ ./Pilot/autoPilot/pilotOn.sh
-```
+   ```
+   $ ./Pilot/autoPilot/pilotOn.sh
+   ```
 1. Wait for Mobile Broadband to appear in the *network manager applet* (should be visible on the Rpi Panel)
 1. Use the *network manager applet*  to configure 
 your wwan0 settings such as APN / username / password etc
 1. If everything is installed and configured correctly network manager should 
  connect the modem with the Mobile broadband profile you created is clicked
 1. To power down the Pilot 
-```
-$ ./Pilot/autoPilot/pilotOff.sh
-```
+   ```
+   $ ./Pilot/autoPilot/pilotOff.sh
+   ```
 
 ### Further network manager notes
 * With dhcpcd disabled - network manager manages all of the RPi networking interfaces

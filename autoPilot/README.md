@@ -19,15 +19,20 @@ So far the following modem network interface technologies have been tried
 This method uses network managers GUI [NetworkManager Applet] to configure and monitor the Pilot
 Cellular networking RPi HAT and it therefore requires a standard Raspian desktop install
 
-*Note that the following is a general process it may need 
+*Notes*
+1.The following is a general process it may need 
 to be adapted to suit the particular modem fitted to the Pilot*  
-*and that not all combinations of Pilot / RPi / Rasbian OS have been tested*  
+2. Not all combinations of Pilot / RPi / Rasbian OS have been tested  
+3. How to start a shell terminal 
+   1. Hold down keys [CTRL] [ALT] T or 
+   1. Use the RPi Terminal icon
+
 
 **Install required RPi apps**  
 
 1. Check [to see if we tested that your Pilot / modem / Rpi /  will work with network
  manager](./test_configurationRecords.md)
-1. Clone [this](./git.md#checkout) project into your RPi
+1. Clone [this](./git.md#checkout) project into your RPi (using a shell terminal)
    ```
    git clone http://github.com/johnofleek/Pilot
    ```
@@ -56,16 +61,13 @@ to be adapted to suit the particular modem fitted to the Pilot*
 
 **Power up the Pilot / modem**  
  
-1. Start a shell terminal 
-   1. Hold down keys [CTRL] [ALT] T or 
-   1. Use the RPi Terminal icon
-1. From the terminal session - power on the Pilot (doesn't apply to uPilot)
+1. From a shell terminal session - power on the Pilot (doesn't apply to uPilot)
    ```
-   $ ./Pilot/autoPilot/pilotOn.sh
+   ./Pilot/autoPilot/pilotOn.sh
    ```
 
 **Pilot / modem configuration**  
-1. Run minicom to enable AT commands to be sent to the Pilot modem [(check the actual serial port to use)](test_configurationRecords.md)
+1. To enable AT commands to be sent to the Pilot modem - run minicom [(check the actual serial port to use)](test_configurationRecords.md)
    ```
    sudo minicom -D /dev/ttyUSB2
    ```

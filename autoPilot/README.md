@@ -36,7 +36,7 @@ sudo apt-get install network-manager
 ```
 sudo apt-get install network-manager-gnome
 ```
-1. Install [minicom](./instructions_howToInstall_gpioAndNetworkManager.md#install-minicom)
+1. Install text-based modem control and terminal emulation  application [minicom](./instructions_howToInstall_gpioAndNetworkManager.md#install-minicom)
 ```
 sudo apt-get install minicom
 ```

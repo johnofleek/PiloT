@@ -42,8 +42,8 @@ to be adapted to suit the particular modem fitted to the Pilot
    ```
    ./Pilot/autoPilot/pilotOn.sh
    ```
-1. Click this link for information on expected Pilot [LED behaviour](#pilot-modem-configuration-notes)
-   
+1. For information on your Pilot's LED behaviour click [LED behaviour](#pilot-modem-configuration-notes)
+   and follow the links
 
 **Pilot / modem configuration**  
 1. To enable AT commands to be sent to the Pilot modem - run minicom [(check the actual serial port to use)](test_configurationRecords.md)
@@ -69,7 +69,7 @@ to be adapted to suit the particular modem fitted to the Pilot
    1. Pay particular attention to the usb composition setting - if in doubt check the 
       AT command manual for the particular modem that is being used - a composition with an MBIM setting is 
       recommended
-1. [Check](./test_configurationRecords.md) to see if we tested your Rpi / Raspbian will work with network
+1. [Check](./test_configurationRecords.md) to see if we tested your Rpi / Raspbian OS will work with network
  manager
 1. Power down the Pilot HAT - run the following script
    ```
@@ -145,9 +145,12 @@ manual hacking of the config files
 
 
 ##  Pilot modem configuration notes
-4G LTE [EM7455](./instructions_EM7455.md)  
-4G LTE [HL7692](./instructions_HL7692.md)  
-3G [HL8548](./instructions_HL8548.md)  
+For expected Pilot LED behaviour and other modem specific information click the link below that 
+matches the modem fitted to your Pilot HAT  
+
+   [EM7455](./instructions_EM7455.md) 4G LTE     
+   [HL7692](./instructions_HL7692.md) 4G LTE   
+   [HL8548](./instructions_HL8548.md) 3G   
 
 
 

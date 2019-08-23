@@ -1,9 +1,10 @@
 ## The method
-Use Linux NetworkManager to provide automatation of the Pilot cellular modules 
+Use Linux network manager to provide automatation of the Pilot cellular modules 
 IP interface bringup in Linux
 
-For some documentation on NetworkManager --- https://wiki.debian.org/NetworkManager
+[Documentation on network Manager](https://wiki.debian.org/NetworkManager)  
 
+[Documentation on network manager cellular command line configuration](https://docs.ubuntu.com/core/en/stacks/network/network-manager/docs/configure-cellular-connections)
 
 
 ## Connection start 
@@ -86,6 +87,9 @@ After editing settings - this needs to be done
 ```
 sudo service network-manager restart
 ```
+
+even better [see](https://www.freedesktop.org/wiki/Software/ModemManager/Debugging/)
+
 
 **Have a look at running processes**  
 ```

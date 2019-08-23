@@ -1,0 +1,109 @@
+connection.id:                          GSM connection
+connection.uuid:                        b61f0895-72e6-4da2-bd9a-450039b2b6f6
+connection.stable-id:                   --
+connection.type:                        gsm
+connection.interface-name:              --
+connection.autoconnect:                 yes
+connection.autoconnect-priority:        0
+connection.autoconnect-retries:         -1 (default)
+connection.multi-connect:               0 (default)
+connection.auth-retries:                -1
+connection.timestamp:                   1566553375
+connection.read-only:                   no
+connection.permissions:                 --
+connection.zone:                        --
+connection.master:                      --
+connection.slave-type:                  --
+connection.autoconnect-slaves:          -1 (default)
+connection.secondaries:                 --
+connection.gateway-ping-timeout:        0
+connection.metered:                     unknown
+connection.lldp:                        default
+connection.mdns:                        -1 (default)
+connection.llmnr:                       -1 (default)
+ipv4.method:                            auto
+ipv4.dns:                               --
+ipv4.dns-search:                        --
+ipv4.dns-options:                       ""
+ipv4.dns-priority:                      0
+ipv4.addresses:                         --
+ipv4.gateway:                           --
+ipv4.routes:                            --
+ipv4.route-metric:                      -1
+ipv4.route-table:                       0 (unspec)
+ipv4.ignore-auto-routes:                no
+ipv4.ignore-auto-dns:                   no
+ipv4.dhcp-client-id:                    --
+ipv4.dhcp-timeout:                      0 (default)
+ipv4.dhcp-send-hostname:                yes
+ipv4.dhcp-hostname:                     --
+ipv4.dhcp-fqdn:                         --
+ipv4.never-default:                     no
+ipv4.may-fail:                          yes
+ipv4.dad-timeout:                       -1 (default)
+ipv6.method:                            auto
+ipv6.dns:                               --
+ipv6.dns-search:                        --
+ipv6.dns-options:                       ""
+ipv6.dns-priority:                      0
+ipv6.addresses:                         --
+ipv6.gateway:                           --
+ipv6.routes:                            --
+ipv6.route-metric:                      -1
+ipv6.route-table:                       0 (unspec)
+ipv6.ignore-auto-routes:                no
+ipv6.ignore-auto-dns:                   no
+ipv6.never-default:                     no
+ipv6.may-fail:                          yes
+ipv6.ip6-privacy:                       0 (disabled)
+ipv6.addr-gen-mode:                     stable-privacy
+ipv6.dhcp-duid:                         --
+ipv6.dhcp-send-hostname:                yes
+ipv6.dhcp-hostname:                     --
+ipv6.token:                             --
+gsm.number:                             *99#
+gsm.username:                           --
+gsm.password:                           <hidden>
+gsm.password-flags:                     1 (agent-owned)
+gsm.apn:                                --
+gsm.network-id:                         --
+gsm.pin:                                <hidden>
+gsm.pin-flags:                          0 (none)
+gsm.home-only:                          no
+gsm.device-id:                          --
+gsm.sim-id:                             --
+gsm.sim-operator-id:                    --
+gsm.mtu:                                auto
+proxy.method:                           none
+proxy.browser-only:                     no
+proxy.pac-url:                          --
+proxy.pac-script:                       --
+GENERAL.NAME:                           GSM connection
+GENERAL.UUID:                           b61f0895-72e6-4da2-bd9a-450039b2b6f6
+GENERAL.DEVICES:                        cdc-wdm0
+GENERAL.STATE:                          activated
+GENERAL.DEFAULT:                        no
+GENERAL.DEFAULT6:                       yes
+GENERAL.SPEC-OBJECT:                    --
+GENERAL.VPN:                            no
+GENERAL.DBUS-PATH:                      /org/freedesktop/NetworkManager/ActiveConnection/11
+GENERAL.CON-PATH:                       /org/freedesktop/NetworkManager/Settings/3
+GENERAL.ZONE:                           --
+GENERAL.MASTER-PATH:                    --
+IP4.ADDRESS[1]:                         10.3.219.61/24
+IP4.GATEWAY:                            10.3.219.1
+IP4.ROUTE[1]:                           dst = 10.3.219.0/24, nh = 0.0.0.0, mt = 700
+IP4.ROUTE[2]:                           dst = 0.0.0.0/0, nh = 10.3.219.1, mt = 700
+IP4.DNS[1]:                             109.249.185.228
+IP4.DNS[2]:                             109.249.185.229
+IP6.ADDRESS[1]:                         fe80::13:126b:3c19:bbcf/64
+IP6.GATEWAY:                            fe80::5
+IP6.ROUTE[1]:                           dst = fe80::/64, nh = ::, mt = 700
+IP6.ROUTE[2]:                           dst = ::/0, nh = fe80::5, mt = 700
+IP6.ROUTE[3]:                           dst = ff00::/8, nh = ::, mt = 256, table=255
+DHCP6.OPTION[1]:                        dad_wait_time = 0
+DHCP6.OPTION[2]:                        dhcp6_client_id = 0:4:8c:d0:bc:27:e5:83:a0:bb:4d:70:81:db:56:f1:6c:8c
+DHCP6.OPTION[3]:                        dhcp6_server_id = 0:2:0:0:7:db:95:fe:80:18
+DHCP6.OPTION[4]:                        requested_dhcp6_client_id = 1
+DHCP6.OPTION[5]:                        requested_dhcp6_domain_search = 1
+DHCP6.OPTION[6]:                        requested_dhcp6_name_servers = 1

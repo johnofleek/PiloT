@@ -125,15 +125,19 @@ your wwan0 settings such as APN / username / password etc
 * Network manager profiles can be configured to automatically start the 
 mobile broadband connection on power up.   
 * Network manager profiles can be set to retry if a network connection is lost - however network manager 
-won't test to see if the IP connection is functional. This is a task for a different tool 
+won't test to see if the IP connection is functional. This is a task for a different tool - maybe read 
+[this](./checkIp/README.md)
 * With dhcpcd uninstalled it's GUI is still visible in the Raspbian Task bar
-it reports "Connection to dhcpcpd lost"   
+it reports "Connection to dhcpcd lost"   
 the functionality of this GUI is replaced by the NetworkManager Applet icon  
 * Configuration of the network interfaces can be via the NetworkManager Applet GUI or the command 
 line "nmcli" or 
 manual hacking of the config files  
 * The command line tool nmtui doesn't appear to be able to edit cellular device configuration
-
+* network manager settings are not actioned until network manager restarts - to do this manually
+  ```
+  sudo service network-manager restart
+  ```
 
 ## RPi app installation instructions
 [Pilot RPi GPIO scripts and install network manager](./instructions_howToInstall_gpioAndNetworkManager.md)  

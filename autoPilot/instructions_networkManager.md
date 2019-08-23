@@ -69,8 +69,26 @@ sudo service network-manager restart
 
 ## Debug stuff
 
-Have a look at the syslog  
+**Have a look at the syslog**  
 ```
 sudo tail -f /var/log/syslog
 
 ```
+
+**Stop network manager**  
+```
+sudo /etc/init.d/network-manager stop
+```
+
+** restart network manager
+After editing settings - this needs to be done
+
+```
+sudo service network-manager restart
+```
+
+**Have a look at running processes**  
+```
+ps -U0 -o 'tty,pid,comm' | grep ^?
+```
+

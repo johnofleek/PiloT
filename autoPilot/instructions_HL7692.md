@@ -92,21 +92,27 @@ overide the RPi's GPIO default state which may not be a stable signal.
 
 
 
-## O2 network and PAP authentication
-====================================
+## O2 PAYG SIM 
 
 Many networks appear to work without PAP or CHAP authentication.
  O2 requires PAP authentication - we tested using a PAYG SIM  
 
-On O2 the modem also often connected to 2G edge - to workaround this during testing
- we locked the modem to LTE only
+On O2 the network seemed to prefer a connection to 2G edge - to workaround this during testing
+ we locked the modem to 4g / LTE only
 
-### Rpi Rasbian
-* Lock the modem to LTE by using AT command AT+KSRAT=5 
+###  Configuring NetworkManager
+
+* Lock the modem to 4G / LTE by using AT command AT+KSRAT=5 
 * Manually configure the modems context 1 using AT command
- AT+CGDCONT = 1,"IP","payandgo.o2.co.uk",,,
-* Use the Network manager GUI to configure network manager as follows - note that APN and Number are
- blank and that only PAP authentication is selected 
+  AT+CGDCONT = 1,"IP","payandgo.o2.co.uk",,,  
+  We think this may be necessary  because network manager losses track of the
+   of the modems AT+CGDCONT setting but this could be incorrect 
+* Use the NetworkManager Applet (GUI) to configure network manager
+
+The following is an example of using the NetworkManager Applet to configure 
+ an O2 connection  
+
+Note that APN and Number are blank and that only PAP authentication is selected 
 
 ![Setting Mobile Broadband](./o2_networkManagerGui_mobileBroadband.png)
 
@@ -120,16 +126,30 @@ Note that the PPP setting is picked up by network manager and used via the MBIM 
 
 ## Vodafone PAYG
 
+With a new PAYG SIM it was discovered by experimentation that the Vodaphone network prefers
+ a 3G connection when the SIM is new and not associated with an account.
+Initially to fix this we enabled 2G on the HL7692.  
+After setting up a Vodafone account and adding the PAYG SIM to the account the modem was able
+ to connect as an LTE device 
+ 
+
+
+```
 AT+CGDCONT = 1,"IP","pp.vodafone.co.uk",,,
 AT+CGDCONT = 2,"IP","pp.vodafone.co.uk",,,
+```
+Then set up via NetworkManager Applet as per O2 above.
 
-Then set up  
-Username wap  
-Password wap
+Note that clearing the apn setting from the NetworkManager Applet
+ (right click -> edit connections) seems to be necessary for normal operation of NetworkManager
+ 
+| Value         | Setting            |
+| ------------- | ------------------ |
+| apn    	| pp.vodafone.co.uk  |
+| username 	| wap  |
+| password 	| wap  |
+| Authentication | PAP |
 
-AT+KSRAT=9 
-
-Then as per O2 above. This works but only gives a 2G EDGE connection
 
 
 ## Debugging notes

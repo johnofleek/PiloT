@@ -1,12 +1,10 @@
 # HL7692 Pilot
-==============
 
 The aim is to configure the Raspberry Pi Raspian OS and the HL7692 to use the USB MBIM 
 protocol to enable cellular communications between the Raspberry PI and the HL7692
 
 
 ## HL7692 module AT command configuration
-=========================================
 
 With network manager and associated helpers disabled it is possible to manually
  command / configure the HL7692 via it's USB serial port  
@@ -68,7 +66,7 @@ This a change from the modules default setting
 At this time (August 2019) the Sierra AT command guide indicated that three USB serial ports 
 will be made available but this wasn't the case with the available FW RHL769x.2.26 and RHL769x.2.27.
 
-Configure the composition
+Configure the composition to enable and MBIM interface  
 ```
 AT+KUSBCOMP=2
 ```
@@ -126,30 +124,42 @@ Note that the PPP setting is picked up by network manager and used via the MBIM 
 
 ## Vodafone PAYG
 
-With a new PAYG SIM it was discovered by experimentation that the Vodaphone network prefers
- a 3G connection when the SIM is new and not associated with an account.
-Initially to fix this we enabled 2G on the HL7692.  
-After setting up a Vodafone account and adding the PAYG SIM to the account the modem was able
- to connect as an LTE device 
- 
+Notes from using a new PAYG SIM  
+1. When purchased the SIM is not activated on the network
+1. To activate the SIM add credit 
+1. After activation the SIM will enable cellular devices to connect on 3G / 2G
+1. The HL7692 does not support 3G - to work around this we enabled 2G on the HL7692
+1. To enable 4G the following steps were carried out.  
+   1. Added a £10 big bundle 
+   1. Created a Vodafone online account
+   1. Added the SIM phone number to the online account 
 
+
+Then set up via NetworkManager Applet as per O2 above.
+
+Note that after initial configuration clearing the apn setting from the NetworkManager Applet
+ (right click -> edit connections) appears to be necessary for normal operation of NetworkManager
+ 
+| Value          | Setting            |
+| -------------- | ------------------ |
+| apn    	 | pp.vodafone.co.uk  |
+| username 	 | wap                |
+| password 	 | wap                |
+| Authentication | PAP                |
+
+
+It's possible that NetworkManager Applet silently fails to set the modules apn - 
+if NetworkManager fails to connect check the modems setting by using serial AT command 
+```
+AT+CGDCONT? 
+```
+to check the modules internal apn setting - if it's not correct use something like the
+ following to correct it
 
 ```
 AT+CGDCONT = 1,"IP","pp.vodafone.co.uk",,,
 AT+CGDCONT = 2,"IP","pp.vodafone.co.uk",,,
 ```
-Then set up via NetworkManager Applet as per O2 above.
-
-Note that clearing the apn setting from the NetworkManager Applet
- (right click -> edit connections) seems to be necessary for normal operation of NetworkManager
- 
-| Value         | Setting            |
-| ------------- | ------------------ |
-| apn    	| pp.vodafone.co.uk  |
-| username 	| wap  |
-| password 	| wap  |
-| Authentication | PAP |
-
 
 
 ## Debugging notes

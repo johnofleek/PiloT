@@ -21,6 +21,7 @@
 | dpkg -s network-manager \| grep '^Version:' | Version: 1.14.6-2 |
 | Notes | Modem MBIM didn't function correctly with earlier FW version |
 | Notes | Speed test ~9Mbps down 4.2Mbps up |
+| Notes | UK SIMs Tested - EE PAYG, Three PAYG, 02 PAYG, Vodafone PAYG | 
 
 
 <br/>
@@ -69,6 +70,7 @@
 | dpkg -s network-manager \| grep '^Version:' | Version: 1.14.6-2 |
 | Notes | Network manager made connection first time using MBIM cdc-wdm0
 | Notes | Speed test ~20Mbps down 13Mbps/29Mbps up at+cops? +cops: 0,0,"3",7 |
+| Notes | UK SIMs Tested - EE PAYG, Three PAYG, 02 PAYG, Vodafone PAYG |
 
 <br/>
 

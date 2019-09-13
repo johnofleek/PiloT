@@ -15,14 +15,13 @@ Install the scripts by cloning this project from github onto the RPi [like this 
 
 To power up the Pilot module
 ```
-cd ~
-./Pilot/autoPilot/pilotOn.sh
+cd to correct folder
+./pilotOn.sh
 ```
 
 To power down the Pilot module
 ```
-cd ~
-./Pilot/autoPilot/pilotOff.sh
+./pilotOff.sh
 ```
 
 ### Use of raspbian built in wiringPi RPi4  -- update the wiringPi app
@@ -45,10 +44,16 @@ gpio -v
 
 
 ## Install network-manager
-NetworkManager is a linux daemon
-"
-The NetworkManager daemon attempts to make networking configuration and operation as painless and automatic as possible by managing the primary network connection and other network interfaces, like Ethernet, Wi-Fi, and Mobile Broadband devices. NetworkManager will connect any network device when a connection for that device becomes available, unless that behavior is disabled. Information about networking is exported via a D-Bus interface to any interested application, providing a rich API with which to inspect and control network settings and operation.
-"
+NetworkManager is a linux daemon  
+
+> The NetworkManager daemon attempts to make networking configuration and operation as
+ painless and automatic as possible by managing the primary network connection and
+ other network interfaces, like Ethernet, Wi-Fi, and Mobile Broadband devices. 
+ NetworkManager will connect any network device when a connection for that device
+ becomes available, unless that behavior is disabled. Information about networking is
+ exported via a D-Bus interface to any interested application, providing a rich API
+ with which to inspect and control network settings and operation.
+
 
 [For more info](https://developer.gnome.org/NetworkManager/stable/NetworkManager.html)
 

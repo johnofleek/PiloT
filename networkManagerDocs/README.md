@@ -4,7 +4,7 @@ Documents a method of automatically managing network interfaces with
  including the cellular wwanX 
  interface(s) provided by the PiloT HAT board, when used with a Raspberry PI and Raspian.
 
-At this time it is experimental and has only been tested on a very limited set of RPi
+At this time it is experimental and has only been tested on a limited set of RPi
 , Rasbian OS variants and Pilot variants 
 
 Note that by following the installation process below the Raspbian default network manager
@@ -26,6 +26,7 @@ to be adapted to suit the particular modem fitted to the Pilot
 3. How to start a shell terminal
    1. Hold down keys [CTRL] [ALT] T or 
    1. Use the RPi Terminal icon
+4. At the time of writting the shell scripts below (.sh) are in this folder ~/Pilot/scripts_pilotControl/
 
 
 
@@ -40,8 +41,13 @@ to be adapted to suit the particular modem fitted to the Pilot
    ```
 1. From a shell terminal - power on the Pilot using a convenient script (doesn't apply to uPilot)
    ```
-   ./Pilot/autoPilot/pilotOn.sh
+   ./pilotOn.sh
+   
    ```
+   If this script fails to power up the Pilot - check that the wiringPi version installed on
+    on your RPi Raspian is compatible with the RPi hardware in use. For example at the time
+    of writing the RPi4 HW needs an updated wiringPi install   
+
 1. For information on your Pilot's LED behaviour click [LED behaviour](#pilot-modem-configuration-notes)
    and follow the links
 
@@ -73,7 +79,7 @@ to be adapted to suit the particular modem fitted to the Pilot
  manager
 1. Power down the Pilot HAT - run the following script
    ```
-   /Pilot/autoPilot/pilotOff.sh
+   ./pilotOff.sh
    ```
 1. Reboot the RPi
 
@@ -81,7 +87,7 @@ to be adapted to suit the particular modem fitted to the Pilot
 **Install required RPi apps**  
 1. Power down the Pilot HAT
    ```
-   /Pilot/autoPilot/pilotOff.sh
+   ./pilotOff.sh
    ```
 1. Install [network-manager](./instructions_howToInstall_gpioAndNetworkManager.md#install-network-manager)
    ```
@@ -107,7 +113,7 @@ to be adapted to suit the particular modem fitted to the Pilot
 **Configure the cellular network connection**  
 1. From a shell terminal - power on the Pilot
    ```
-   ./Pilot/autoPilot/pilotOn.sh
+   ./pilotOn.sh
    ```
 1. Wait for Mobile Broadband to appear in the *network manager applet* (should be visible on the Rpi Panel)
 1. Use the *network manager applet*  to configure 
@@ -116,7 +122,7 @@ your wwan0 settings such as APN / username / password etc
  connect the modem using the Mobile broadband profile you created is clicked
 1. To power down the Pilot run the following script
    ```
-   /Pilot/autoPilot/pilotOff.sh
+   ./pilotOff.sh
    ```
 
 ### Further network manager notes
@@ -161,9 +167,9 @@ Click the link below that matches the modem fitted to your Pilot HAT
 *If you don't know the modem type try sending AT command ATi9 to the modem via
  a command serial port*
 
-* [EM7455](./instructions_EM7455.md) 4G/3G      
-* [HL7692](./instructions_HL7692.md) 4G/2G    
-* [HL8548](./instructions_HL8548.md) 3G/2G   
+* [EM7455](./instructions_EM7455.md) 4G/3G - supports MBIM  
+* [HL7692](./instructions_HL7692.md) 4G/2G - supports MBIM  
+* [HL8548](./instructions_HL8548.md) 3G/2G - PPP - possibly better to not use network manager
 
 
 

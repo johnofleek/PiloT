@@ -1,8 +1,8 @@
 # Purpose
-Automate testing of wwan0 network connection provided by the Pilot board by using ICMP ping
-Restart the wwan0 network connection on failure  
-Current version is experimental - seems to work but is very basic - maybe view this
-as a starting point to develop a better solution
+Automate testing of wwan0 network connection provided by the Pilot board by using ICMP ping  
+Restart the wwan0 network connection on failure   
+Current version is experimental - seems to work but is very basic - maybe view this  
+as a starting point to develop a better solution  
 
 ## Quick start
 ```
@@ -10,9 +10,9 @@ pip install python-crontab
 ```
 
 This assumes the Pilot project was installed in the pi@raspberrypi: home folder - the code 
-currently has hardcoded paths
+currently has hardcoded paths  
 
-Add the cron custom job
+Add the cron custom job  
 ```
 python cronJobAdd.py
 ```

@@ -130,7 +130,7 @@ IP6.ROUTE[1]:                           dst = fe80::/64, nh = ::, mt = 700
 IP6.ROUTE[2]:                           dst = ff00::/8, nh = ::, mt = 256, table=255
 ```
 
-and tested HL7692 modem information
+# HL7692 modem information
 ```
 mmcli -m 5
   --------------------------
@@ -172,3 +172,21 @@ mmcli -m 5
   --------------------------
   Bearer   |      dbus path: /org/freedesktop/ModemManager1/Bearer/7
 ```
+
+# HL7692 details
+
+
+
+```
+ati9
+RHL769x.2.26.180400.201802141030.x7120m_1
+HL7692
+HL769x.2.26
+x7120m
+FUSED
+2018-02-14 12:02:13
+r12309
+
+```
+
+

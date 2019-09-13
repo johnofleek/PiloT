@@ -118,6 +118,19 @@ Note that the PPP setting is picked up by network manager and used via the MBIM 
 [Read back settings via the networkmanager CLI](./example_nmcli_configRead_O2_HL7692.md)
 
 
+## Vodafone PAYG
+
+AT+CGDCONT = 1,"IP","pp.vodafone.co.uk",,,
+AT+CGDCONT = 2,"IP","pp.vodafone.co.uk",,,
+
+Then set up  
+Username wap  
+Password wap
+
+AT+KSRAT=9 
+
+Then as per O2 above. This works but only gives a 2G EDGE connection
+
 
 ## Debugging notes
 ==================

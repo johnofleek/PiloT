@@ -30,3 +30,11 @@ With modem forced to LTE only
 DOWN 	9.02 Mbps
 UP 	 4.7 Mbps
 
+
+## RPi4 - Pilot - HL7692 - Vodafone PAYG
+Window antenna 
+With modem LTE / 2G 
+DOWN 	8.42 Mbps
+UP 	4.65 Mbps
+
+Ping 33ms

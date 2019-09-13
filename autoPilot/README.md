@@ -159,6 +159,22 @@ matches the modem fitted to your Pilot HAT
 
 
 ## Network manager 
+Network manager has multiple user interfaces
+* Command line - nmcli
+* Gui - NetworkManager Applet
+* API
 
 [Further use notes](./instructions_networkManager.md#connection-start)  
+
+## Modem manager
+
+When Network manager is loaded it also loads modem manager.
+ A command line interface mmcli is available. It is also possible to install 
+ a GUI
+
+```
+$ sudo apt-get install modem-manager-gui
+```
+
+Modem manager can be used for diagnostic and also to SMS interaction
 

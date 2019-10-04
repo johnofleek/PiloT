@@ -36,7 +36,7 @@ Note that during the quick start installation process the Raspbian default
 [Quick start click](./Quickstart.md)
 
 ## Further network manager notes
-
+* Configuring profiles for network SIMs - [examples](./simUse_info.md) 
 * With dhcpcd disabled - network manager manages all of the RPi networking interfaces
  e.g. Ethernet, WiFi, Cellular ...
 * Network manager profiles can be configured to automatically start the 

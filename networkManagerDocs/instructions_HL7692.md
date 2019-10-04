@@ -92,7 +92,9 @@ overide the RPi's GPIO default state which may not be a stable signal.
 ## Debugging notes
 ==================
 
-Using the physical serial port between the Pi and Pilot - note that this can be tricky t
+Using the physical serial port between the Pi and Pilot - note that this can be tricky
+ the reason to use physical serial is that the single USB serial port is managed by 
+ network manager
 
 Check radio access technology
 ```

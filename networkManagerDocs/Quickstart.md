@@ -101,7 +101,7 @@ to be adapted to suit the particular modem fitted to the Pilot
    ```
 1. Wait for Mobile Broadband to appear in the *network manager applet* (should be visible on the Rpi Panel)
 1. Use the *network manager applet*  to configure 
-your wwan0 settings such as APN / username / password etc
+your wwan0 settings such as APN / username / password etc - maybe some variant of these [examples](./simUse_info.md)
 1. If everything is installed and configured correctly network manager should 
  connect the modem using the Mobile broadband profile you created is clicked
 1. To power down the Pilot run the following script

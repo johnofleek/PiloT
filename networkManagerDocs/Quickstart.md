@@ -1,5 +1,7 @@
+## Quick start guide - network manager GUI
+
 This method uses network managers GUI [NetworkManager Applet] to configure and monitor the Pilot
-Cellular networking RPi HAT and it therefore requires a standard Raspian desktop install
+Cellular networking RPi HAT and it therefore requires a standard Raspian desktop install.
 
 *Notes*  
 1. The following is a general process it may need 

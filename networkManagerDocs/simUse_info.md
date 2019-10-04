@@ -1,5 +1,12 @@
-    
-     
+## Network manager V cellular SIM examples    
+We'll add to the examples as and when we test SIMs  
+So far the following have worked ok
+
+* PAYG EE
+* PAYG O2
+* PAYG Vodafone
+* PAYG Three
+
 ## O2 PAYG SIM 
 
 Many networks appear to work without PAP or CHAP authentication.

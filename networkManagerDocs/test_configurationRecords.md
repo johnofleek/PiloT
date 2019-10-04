@@ -5,42 +5,42 @@ Pilot board with Raspberry Pi and Raspian OS - record info on what was tested in
 
   
 
-| What | Info |
-|:---- |:---- |  
-| Module | HL7692 |
-|  [Y] | Working Connection |
-|  [Y] | Via MBIM |
-| Raspberry | RPi4 , RPi3B+ |
-| OS | Buster |
-| OS Version (uname -a) | Linux raspberrypi 4.19.58-v7l+ #1245 SMP Fri Jul 12 17:31:45 BST 2019 armv7l GNU/Linux |
-| Module Firmware |RHL769x.2.26.180400.201802141030.x7120m_1 2018-02-14 12:02:13 r12309 |
-| Module Firmware |RHL769x.2.27.183100.201809071813.x7120m_3  |
-| Module Config Serial Port | /dev/ttyACM0  |
-| Module Config |  Set to MBIM mode
-| --- |   AT+KUSBCOMP=2 |  
+| **What**                      | **Info** |
+|:----                          |:---- |  
+| Module                        | HL7692 |
+|  [Y]                          | Working Connection |
+|  [Y]                          | Via MBIM |
+| Raspberry                     | RPi4 , RPi3B+ |
+| OS                            | Buster |
+| OS Version (uname -a)         | Linux raspberrypi 4.19.58-v7l+ #1245 SMP Fri Jul 12 17:31:45 BST 2019 armv7l GNU/Linux |
+| Module Firmware               | RHL769x.2.26.180400.201802141030.x7120m_1 2018-02-14 12:02:13 r12309 |
+| Module Firmware               | RHL769x.2.27.183100.201809071813.x7120m_3  |
+| Module Config Serial Port     | /dev/ttyACM0  |
+| Module Config                 | Set to MBIM mode
+| ---                           |  AT+KUSBCOMP=2 |  
 | NetworkManager Applet Version | 1.8.20 |
-| nmcli tool | version 1.14.6 |
+| nmcli tool                    | version 1.14.6 |
 | dpkg -s network-manager \| grep '^Version:' | Version: 1.14.6-2 |
-| Notes | Modem MBIM didn't function correctly with earlier FW version |
-| Notes | Speed test ~9Mbps down 4.2Mbps up |
-| Notes | UK SIMs Tested - EE PAYG, Three PAYG, 02 PAYG, Vodafone PAYG | 
+| Notes                         | Modem MBIM didn't function correctly with earlier FW version |
+| Notes                         | Speed test ~9Mbps down 4.2Mbps up |
+| Notes                         | UK SIMs Tested - EE PAYG, Three PAYG, 02 PAYG, Vodafone PAYG | 
 
 
 <br/>
 
-| What | Info |
-|:---- |:---- |  
-| Module | HL8548 |
-|  [Y] | Working Connection |
-|  [N] | Via MBIM |
-| Raspberry | RPi4 |
-| OS | Buster |
-| OS Version (uname -a) | Linux raspberrypi 4.19.58-v7l+ #1245 SMP Fri Jul 12 17:31:45 BST 2019 armv7l GNU/Linux |
-| Module Firmware | |
-| Module Config Serial Port | /dev/ttyACM0  |
-| Module Config |  Set to CDC-ECM mode
-| --- |   AT+KUSBCOMP=2 | 
-| nmcli tool | version 1.14.6 |
+| **What**                      | **Info** |
+|:----                          |:---- |  
+| Module                        | *HL8548* |
+|  [Y]                          | Working Connection |
+|  [N]                          | Via MBIM |
+| Raspberry                     | RPi4 |
+| OS                            | Buster |
+| OS Version (uname -a)         | Linux raspberrypi 4.19.58-v7l+ #1245 SMP Fri Jul 12 17:31:45 BST 2019 armv7l GNU/Linux |
+| Module Firmware               |   |
+| Module Config Serial Port     | /dev/ttyACM0  |
+| Module Config                 |  Set to CDC-ECM mode
+| ---                           |   AT+KUSBCOMP=2 | 
+| nmcli tool                    | version 1.14.6 |
 | NetworkManager Applet Version | 1.8.20 |
 | dpkg -s network-manager \| grep '^Version:' | Version: 1.14.6-2 |
 | Notes | Network manager doesn't try to connect the CDC-ECM port |
@@ -51,9 +51,9 @@ Pilot board with Raspberry Pi and Raspian OS - record info on what was tested in
 
 <br/>
 
-| What | Info |
+| **What | Info** |
 |:---- |:---- |  
-| Module | EM7455 |
+| Module | *EM7455* |
 |  [Y] | Working Connection |
 |  [Y] | Via MBIM |
 |  [Y] | [some speed testing](./speedtests/Rpi4EM7455_uPilot_USB3_threeNetwork_2019-08-13-111021_1920x1200_scrot.png) 
@@ -77,9 +77,9 @@ Pilot board with Raspberry Pi and Raspian OS - record info on what was tested in
 <br/>
 
 
-| What | Info |
+| **What | Info** |
 |:---- |:---- |  
-| Module | EM7455 |
+| Module | *EM7455* |
 |  [N] | Working Connection |
 |  [N] | Via MBIM |
 | Raspberry | RPi4 |

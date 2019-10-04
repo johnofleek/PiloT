@@ -23,12 +23,11 @@ AT!usbcomp?
 Config Index: 1                                                                 
 Config Type:  1 (Generic)                                                       
 Interface bitmask: 0000050D (diag,nmea,modem,rmnet0,rmnet1)
+```
+So instead enable just MBIM 
 
-So maybe try 
 
+```
 AT!usbcomp=1,1,0000100D
-
-
-
 ```
 

@@ -1,17 +1,20 @@
 # Network manager
-This section explores the use of network manager and the RPi / Rasbian OS.
+This section explores the use of network manager in combination with the RPi / Rasbian
+ OS and the Pilot cellular HAT board.
 
-It can replace the function provided by *dhcpcd* which is installed by default in the current versions (2019) of Raspbian 
+Network manager can replace the functionality provided by *dhcpcd* which is installed
+ by default in the current versions (2019) of Raspbian and has the advantage that it
+ is able to manage celluar modems as well as the usual WiFi and Ethernet network interfaces
 
-For a quick overview of network manager take a look at https://en.wikipedia.org/wiki/NetworkManager. As mentioned in wikipedia - network manager has multiple interfaces - graphical, command line and an API. Network manager uses another component called modem manager. Modem manager also has GUI, CLI and API interfaces. 
+For a quick overview of network manager take a look at [wikipedia](https://en.wikipedia.org/wiki/NetworkManager).
+ Network manager has multiple interfaces - graphical, command line and an API.
+ Network manager uses another component called modem manager. Modem manager also has
+ GUI, CLI and API interfaces. 
 
-Please be aware that network manager can only check if the modem is connected to a network or not - it cannot test if a IP link is working - for this an external app is need that tests IP connectivity - for example in routers this function is typically implemented in a separate app that sends / receives periodic ping requests 
-
-## Network manager and Raspian 
-This page Documents a method of automatically managing network interfaces with 
-[network manager](https://developer.gnome.org/NetworkManager/stable/NetworkManager.html),
- including the cellular wwanX 
- interface(s) provided by the PiloT HAT board, when used with a Raspberry PI and Raspian.
+Please be aware that network manager can only check if the modem is connected to a network or not
+ - it cannot test if a IP link is working - for this an external app is need that tests
+ IP connectivity - for example in routers this function is typically implemented in a
+ separate app that sends / receives periodic ping requests 
 
 The method is experimental and has only been tested on a limited set of RPi's,
  Rasbian OS variants and Pilot variants 

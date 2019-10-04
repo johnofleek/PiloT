@@ -1,6 +1,7 @@
 # Network manager
+
 This section explores the use of network manager in combination with the RPi / Rasbian
- OS and the Pilot cellular HAT board.
+ OS and the USB interface of the Pilot cellular HAT board.
 
 Network manager can replace the functionality provided by *dhcpcd* which is installed
  by default in the current versions (2019) of Raspbian and has the advantage that it
@@ -11,27 +12,31 @@ For a quick overview of network manager take a look at [wikipedia](https://en.wi
  Network manager uses another component called modem manager. Modem manager also has
  GUI, CLI and API interfaces. 
 
-Please be aware that network manager can only check if the modem is connected to a network or not
- - it cannot test if a IP link is working - for this an external app is need that tests
- IP connectivity - for example in routers this function is typically implemented in a
- separate app that sends / receives periodic ping requests 
+Please be aware that network manager can only manage and check the modems network connectivity, it
+ cannot test if a connection will support IP traffic. To test that an IP link can transport IP an 
+ external app is needed  to perform a link test.
+ For example in routers this function is typically implemented in a separate 
+ app that sends / receives periodic ping requests 
 
-The method is experimental and has only been tested on a limited set of RPi's,
+The method described here is experimental and has only been tested on a limited set of RPi's,
  Rasbian OS variants and Pilot variants 
 
-Note that by following the installation process below the Raspbian default network manager
- method *dhcpcd* will be replaced with network-manager and that if the network manager GUI
- is installed it will replace the dhcpcd GUI
 
-So far the following modem network interface technologies have been tried
+The following the following USB modem connectivity has been tried
 * Network manager MBIM
 * Network manager PPP
 
 
 ## Quick start guide
-[click](./Quickstart.md)
+
+Note that during the quick start installation process the Raspbian default 
+ method *dhcpcd* is uninstalled and replaced by network-manager and the network manager GUI
+ is installed as a replacement for the dhcpcd GUI
+
+[Quick start click](./Quickstart.md)
 
 ## Further network manager notes
+
 * With dhcpcd disabled - network manager manages all of the RPi networking interfaces
  e.g. Ethernet, WiFi, Cellular ...
 * Network manager profiles can be configured to automatically start the 

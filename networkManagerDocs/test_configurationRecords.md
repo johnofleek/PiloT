@@ -6,7 +6,7 @@ Pilot board with Raspberry Pi and Raspian OS - record info on what was tested in
   
 
 | What | Info |
-| ---- | ---- |  
+|:---- |:---- |  
 | Module | HL7692 |
 |  [Y] | Working Connection |
 |  [Y] | Via MBIM |
@@ -29,7 +29,7 @@ Pilot board with Raspberry Pi and Raspian OS - record info on what was tested in
 <br/>
 
 | What | Info |
-| ---- | ---- |  
+|:---- |:---- |  
 | Module | HL8548 |
 |  [Y] | Working Connection |
 |  [N] | Via MBIM |
@@ -52,7 +52,7 @@ Pilot board with Raspberry Pi and Raspian OS - record info on what was tested in
 <br/>
 
 | What | Info |
-| ---- | ---- |  
+|:---- |:---- |  
 | Module | EM7455 |
 |  [Y] | Working Connection |
 |  [Y] | Via MBIM |
@@ -78,7 +78,7 @@ Pilot board with Raspberry Pi and Raspian OS - record info on what was tested in
 
 
 | What | Info |
-| ---- | ---- |  
+|:---- |:---- |  
 | Module | EM7455 |
 |  [N] | Working Connection |
 |  [N] | Via MBIM |

@@ -1,5 +1,5 @@
 # Pilot
-Place to store info on the Raspberry Pi Pilot project  
+The Pilot - a Raspberry Pi Cellular HAT  
 
 For information on automating Pilot connectivity see  
 [network manager documentation](./networkManagerDocs/README.md)  

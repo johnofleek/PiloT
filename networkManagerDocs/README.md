@@ -1,11 +1,20 @@
-## This documents purpose 
-Documents a method of automatically managing network interfaces with 
+# Network manager
+This section explores the use of network manager and the RPi / Rasbian OS.
+
+It can replace the function provided by *dhcpcd* which is installed by default in the current versions (2019) of Raspbian 
+
+For a quick overview of network manager take a look at https://en.wikipedia.org/wiki/NetworkManager. As mentioned in wikipedia - network manager has multiple interfaces - graphical, command line and an API. Network manager uses another component called modem manager. Modem manager also has GUI, CLI and API interfaces. 
+
+Please be aware that network manager can only check if the modem is connected to a network or not - it cannot test if a IP link is working - for this an external app is need that tests IP connectivity - for example in routers this function is typically implemented in a separate app that sends / receives periodic ping requests 
+
+## Network manager and Raspian 
+This page Documents a method of automatically managing network interfaces with 
 [network manager](https://developer.gnome.org/NetworkManager/stable/NetworkManager.html),
  including the cellular wwanX 
  interface(s) provided by the PiloT HAT board, when used with a Raspberry PI and Raspian.
 
-At this time it is experimental and has only been tested on a limited set of RPi
-, Rasbian OS variants and Pilot variants 
+The method is experimental and has only been tested on a limited set of RPi's,
+ Rasbian OS variants and Pilot variants 
 
 Note that by following the installation process below the Raspbian default network manager
  method *dhcpcd* will be replaced with network-manager and that if the network manager GUI

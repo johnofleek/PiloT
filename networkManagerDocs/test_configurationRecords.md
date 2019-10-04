@@ -77,7 +77,7 @@ Pilot board with Raspberry Pi and Raspian OS - record info on what was tested in
 <br/>
 
 
-| **What | Info** |
+| **What** | **Info** |
 |:---- |:---- |  
 | Module | *EM7455* |
 |  [N] | Working Connection |

@@ -71,7 +71,7 @@ Pilot board with Raspberry Pi and Raspian OS - record info on what was tested in
 | nmcli tool | version 1.14.6 |
 | dpkg -s network-manager \| grep '^Version:' | Version: 1.14.6-2 |
 | Notes | Network manager made connection first time using MBIM cdc-wdm0
-| Notes | Speed test ~20Mbps down 13Mbps/29Mbps up at+cops? +cops: 0,0,"3",7 |
+| Notes | Speed test ~39Mbps down 29Mbps up -- at+cops? +cops: 0,0,"3",7 |
 | Notes | UK SIMs Tested - EE PAYG, Three PAYG, 02 PAYG, Vodafone PAYG |
 
 <br/>

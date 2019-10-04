@@ -86,8 +86,8 @@ overide the RPi's GPIO default state which may not be a stable signal.
 | RPi    |  HL7692 power up state                             |
 | ------ | -------------------------------------------------- |
 | RPi3B+ | Default GPIO state causes Pilot to power up        |
-| RPi4   | Default GPIO state causes Pilot to be powered down |
-
+| RPi4   | Default GPIO state causes Pilot to be powered down |  
+  
 
 
 ## O2 PAYG SIM 
@@ -120,7 +120,7 @@ Note that the PPP setting is picked up by network manager and used via the MBIM 
  not an actual PPP session
 
 [Read back settings via the networkmanager CLI](./example_nmcli_configRead_O2_HL7692.md)
-
+  
 
 ## Vodafone PAYG
 

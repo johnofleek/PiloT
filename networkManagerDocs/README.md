@@ -44,7 +44,7 @@ Cellular modems with the following USB connectivity have been tried
 * MBIM  
 * PPP  
 
-[More notes](./instructions_NetworkManagerMore.md)  
+[Even more notes](./instructions_NetworkManagerMore.md)  
 
 
 ## Modem manager

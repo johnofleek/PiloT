@@ -6,15 +6,15 @@ Cellular networking RPi HAT and it therefore requires a standard Raspian desktop
 *Notes*  
 1. The following is a general process it may need 
 to be adapted to suit the particular modem fitted to the Pilot
-2. Not all combinations of Pilot / RPi / Rasbian OS have been tested  
-3. How to start a shell terminal
+1. Not all combinations of Pilot / RPi / Rasbian OS have been tested  
+1. How to start a shell terminal
    1. Hold down keys [CTRL] [ALT] T or 
    1. Use the RPi Terminal icon
-4. At the time of writting the shell scripts below (.sh) are in this folder ~/Pilot/scripts_pilotControl/
+1. At the time of writting the shell scripts below (.sh) are in this folder ~/Pilot/scripts_pilotControl/
+<BR>
 
 
-
-**Power up the Pilot / modem**  
+## Power up the Pilot / modem  
 1. Clone [this](./git.md#checkout) project into your RPi (using a shell terminal)
    ```
    git clone http://github.com/johnofleek/Pilot
@@ -33,9 +33,10 @@ to be adapted to suit the particular modem fitted to the Pilot
     of writing the RPi4 HW needs an updated wiringPi install   
 
 1. For information on your Pilot's LED behaviour click [LED behaviour](#pilot-modem-configuration-notes)
-   and follow the links
+   and follow the links  
+<BR>
 
-**Pilot / modem configuration**  
+## Pilot / modem configuration  
 1. To enable AT commands to be sent to the Pilot modem - run minicom [(check the actual serial port to use)](test_configurationRecords.md)
    ```
    sudo minicom -D /dev/ttyACM0
@@ -66,9 +67,9 @@ to be adapted to suit the particular modem fitted to the Pilot
    ./pilotOff.sh
    ```
 1. Reboot the RPi
+<BR>
 
-
-**Install required RPi apps**  
+## Install required RPi apps  
 1. Power down the Pilot HAT
    ```
    ./pilotOff.sh
@@ -82,19 +83,19 @@ to be adapted to suit the particular modem fitted to the Pilot
    ```
    sudo apt-get install network-manager-gnome
    ```
+<BR>
 
-
-**Uninstall RPi apps not required**
+## Uninstall RPi apps not required**
 
 1. Remove openresolv and dhcpcd as they interfere with the operation of network manager
    ```
    sudo apt purge openresolv dhcpcd5
    ```
 1. Reboot the RPi
-
+<BR>
 
   
-**Configure the cellular network connection**  
+## Configure the cellular network connection  
 1. From a shell terminal - power on the Pilot
    ```
    ./pilotOn.sh

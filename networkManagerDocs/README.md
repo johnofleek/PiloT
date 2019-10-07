@@ -68,10 +68,6 @@ manual hacking of the config files
 [Click](./instructions_modemConfiguration.md)
 
 
-
-## Network manager - development notes
-[Further use notes](./instructions_networkManager.md#connection-start)  
-
 ## Modem manager
 When Network manager is loaded it also loads modem manager.
  A command line interface mmcli is available. It is also possible to install 
@@ -81,5 +77,5 @@ When Network manager is loaded it also loads modem manager.
 $ sudo apt-get install modem-manager-gui
 ```
 
-Modem manager can be used for diagnostic and also to SMS interaction
+Modem manager can be used for diagnostics and also enables SMS interaction via a graphical interface
 

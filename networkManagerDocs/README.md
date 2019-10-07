@@ -33,39 +33,17 @@ Note that during the quick start installation process the Raspbian default
  method *dhcpcd* is uninstalled and replaced by network-manager and the network manager GUI
  is installed as a replacement for the dhcpcd GUI
 
-[Quick start click](./Quickstart.md)
-
-## Further network manager notes
-* Configuring profiles for network SIMs - [examples](./simUse_info.md) 
-* With dhcpcd disabled - network manager manages all of the RPi networking interfaces
- e.g. Ethernet, WiFi, Cellular ...
-* Network manager profiles can be configured to automatically start the 
-mobile broadband connection on power up.   
-* Network manager profiles can be set to retry if a network connection is lost - however network manager 
-won't test to see if the IP connection is functional. This is a task for a different tool - maybe read 
-[this](./checkIp/README.md)
-* With dhcpcd uninstalled it's GUI is still visible in the Raspbian Task bar
-it reports "Connection to dhcpcd lost"   
-the functionality of this GUI is replaced by the NetworkManager Applet icon  
-* Configuration of the network interfaces can be via the NetworkManager Applet GUI or the command 
-line "nmcli" or 
-manual hacking of the config files  
-* The command line tool nmtui doesn't appear to be able to edit cellular device configuration
-* network manager settings are not actioned until network manager restarts - to do this manually
-  ```
-  sudo service network-manager restart
-  ```
-
-## RPi app installation instructions
-[Pilot RPi GPIO scripts and install network manager](./instructions_howToInstall_gpioAndNetworkManager.md)  
+[Quick start guide](./Quickstart.md)
 
 
-## System test records
-[Test records](test_configurationRecords.md)  
+Configuring profiles for network SIMs - [examples](./simUse_info.md) 
+
+## Pilot test records
+[Pilot test records](test_configurationRecords.md)  
 
 
-##  Pilot modem configuration notes
-[Click](./instructions_modemConfiguration.md)
+##  More notes
+[More notes](./instructions_NetworkManagerMore.md)
 
 
 ## Modem manager

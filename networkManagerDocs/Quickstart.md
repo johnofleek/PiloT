@@ -10,7 +10,7 @@ Cellular networking RPi HAT and it therefore requires a standard Raspian desktop
 1. Not all combinations of Pilot / RPi / Rasbian OS have been tested  
 1. Ubuntu - start a shell terminal - hold down keys [CTRL] [ALT] T or use the RPi Terminal icon
 1. The paths below (such as ./) are examples - for example for ./pilotOn.sh to execute the shell
-   need to be in a folder which contains the pilotOn.sh script.
+   need to be in a folder which contains the pilotOn.sh script - the shell command ls will list what is available
 <BR>
 
 
@@ -32,32 +32,32 @@ Cellular networking RPi HAT and it therefore requires a standard Raspian desktop
    Check that the wiringPi version installed on on your RPi Raspian is compatible with the RPi hardware
     in use. For example at the time of writing the RPi4 HW needs an updated wiringPi install  
 
-1. For information on your Pilot's LED behaviour click [LED behaviour](#pilot-modem-configuration-notes)
-   and follow the links  
+1. For information on your Pilot's LED behaviour click [LED behaviour](./instructions_modemConfiguration.md)
+   and follow the links to the module fitted to your Pilot 
 <BR>
 
 ## Pilot / modem configuration  
-1. To enable AT commands to be sent to the Pilot modem - run minicom [(check the actual serial port to use)](test_configurationRecords.md)
+1. To enable AT commands to be sent to the Pilot modem - run minicom [(check the actual serial port to use)](test_configurationRecords.md)  
    ```
    sudo minicom -D /dev/ttyACM0
    ```
-1. Check the Pilot modems firmware version -- type AT command
+1. Check the Pilot modems firmware version -- type AT command  
    ```
    ATi9
    ```
 
-   1. If the modem firmware reported doesn't appear in [here](test_configurationRecords.md) we haven't 
+   * If the modem firmware reported doesn't appear in [here](test_configurationRecords.md) we haven't 
       tested it
-   1. If the modem does appear in [here](test_configurationRecords.md) but the
+   * If the modem does appear in [here](test_configurationRecords.md) but the
       firmware reported is older - then update the modem firmware by connecting the 
       Pilot USB port to a Windows PC and use a 
       one click .exe installer from [here](https://source.sierrawireless.com/) to install updated firmware
       into the Pilot modem
-   1. If your RPi variant doesn't appear [here](test_configurationRecords.md) I haven't tested it
-   1. If your Raspian variant doesn't appear [here](test_configurationRecords.md) I haven't tested it
+   * If your RPi variant doesn't appear [here](test_configurationRecords.md) I haven't tested it
+   * If your Raspian variant doesn't appear [here](test_configurationRecords.md) I haven't tested it
 1. Configure the Pilot modem as required (based on firmware identified above)
-   1. [Some configuration examples are here](test_configurationRecords.md)
-   1. Pay particular attention to the usb composition setting - if in doubt check the 
+   * [Some configuration examples are here](test_configurationRecords.md)
+   * Pay particular attention to the usb composition setting - if in doubt check the 
       AT command manual for the particular modem that is being used - a composition with an MBIM setting is 
       recommended
 1. [Check](./test_configurationRecords.md) to see if we tested your Rpi / Raspbian OS will work with network

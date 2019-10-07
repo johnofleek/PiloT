@@ -5,5 +5,5 @@ For information on automating Pilot connectivity see
 For scripts that power up / down the Pilot HAT  
 [scripts pilot control](./scripts_pilotControl/)
   
-![Picture of pilot_should appear here](./PilotPCA.png "Pilot")
+![Picture of pilot_should appear here](./images/PilotPCA.png "Pilot")
 

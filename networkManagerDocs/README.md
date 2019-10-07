@@ -48,7 +48,7 @@ Cellular modems with the following USB connectivity have been tried
 
 
 ## Modem manager
-When Network manager is loaded it also loads modem manager.  A command line interface for modemManager is available - mmcli. 
+When Network manager is installed modem manager is also installed.  A command line interface for modemManager is available - mmcli. 
  It is also possible to install a GUI. For example  
 
 ```

@@ -114,6 +114,16 @@ sudo service network-manager restart
 ```
 
 
+## Further network manager notes
+
+* With dhcpcd disabled - network manager manages all of the RPi networking interfaces
+ e.g. Ethernet, WiFi, Cellular ...
+* With dhcpcd uninstalled but the GUI is not - it's GUI is still visible in the Raspbian Task bar
+it reports "Connection to dhcpcd lost"   
+the functionality of this GUI is replaced by the NetworkManager Applet icon  
+* The command line tool nmtui doesn't appear to be able to edit cellular device configuration
+
+
 
 ## Debug stuff
 Debug modemManager [see](https://www.freedesktop.org/wiki/Software/ModemManager/Debugging/)  

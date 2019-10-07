@@ -7,6 +7,4 @@ For scripts that power up / down the Pilot HAT
   
 ![Picture of pilot_should appear here alt <](./images/PilotPCA.png "Pilot")
 
-img[alt$=">"] {
-  float: left;
-}
+

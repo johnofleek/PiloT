@@ -7,7 +7,7 @@ Cellular networking RPi HAT and it therefore requires a standard Raspian desktop
 1. The following is a general process it may need 
 to be adapted to suit the particular modem fitted to the Pilot
 1. Not all combinations of Pilot / RPi / Rasbian OS have been tested  
-1. How to start a shell terminal
+1. How to start a shell terminal  
    1. Hold down keys [CTRL] [ALT] T or 
    1. Use the RPi Terminal icon
 1. At the time of writting the shell scripts below (.sh) are in this folder ~/Pilot/scripts_pilotControl/
@@ -85,7 +85,7 @@ to be adapted to suit the particular modem fitted to the Pilot
    ```
 <BR>
 
-## Uninstall RPi apps not required**
+## Uninstall RPi apps not required
 
 1. Remove openresolv and dhcpcd as they interfere with the operation of network manager
    ```

@@ -13,18 +13,11 @@ For a quick overview of network manager take a look at [wikipedia](https://en.wi
  GUI, CLI and API interfaces. 
 
 Please be aware that network manager can only manage and check the modems network connectivity, it
- cannot test if a connection will support IP traffic. To test that an IP link can transport IP an 
- external app is needed  to perform a link test.
- For example in routers this function is typically implemented in a separate 
+ cannot test if a network connection will support IP traffic. To test that the network connection
+ can transport IP traffic an additional application is needed to perform a link test.
+ For example - in routers the link test function is typically implemented in a separate 
  app that sends / receives periodic ping requests 
 
-The method described here is experimental and has only been tested on a limited set of RPi's,
- Rasbian OS variants and Pilot variants 
-
-
-The following the following USB modem connectivity has been tried
-* Network manager MBIM
-* Network manager PPP
 
 
 ## Quick start guide
@@ -43,13 +36,20 @@ Configuring profiles for network SIMs - [examples](./simUse_info.md)
 
 
 ##  More notes
-[More notes](./instructions_NetworkManagerMore.md)
+
+The method described here is experimental and has only been tested on a limited set of RPi's,
+ Rasbian OS variants and Pilot variants  
+
+Cellular modems with the following USB connectivity have been tried
+* MBIM  
+* PPP  
+
+[More notes](./instructions_NetworkManagerMore.md)  
 
 
 ## Modem manager
-When Network manager is loaded it also loads modem manager.
- A command line interface mmcli is available. It is also possible to install 
- a GUI
+When Network manager is loaded it also loads modem manager.  A command line interface for modemManager is available - mmcli. 
+ It is also possible to install a GUI. For example  
 
 ```
 $ sudo apt-get install modem-manager-gui

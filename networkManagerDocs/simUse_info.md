@@ -1,6 +1,6 @@
-## Network manager V cellular SIM examples    
+## Network manager GUI V cellular SIM examples    
 We'll add to the examples as and when we test SIMs  
-So far the following have worked ok
+So far the following have worked ok  
 
 * PAYG EE
 * PAYG O2

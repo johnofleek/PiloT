@@ -1,19 +1,25 @@
-## tested in uPilot 
+The following was developed in the uPilot board 
 
 ## AT Config
 
+For more details take a look at the AT command manual available on this [site](source.sierra.co.uk)
+
+Unlock  
 ```
-Unlock
-
 AT!entercnd="A710"
+```
 
+Check modem type and firmware rev
+```
 ati9                                                                            
 Manufacturer: Sierra Wireless, Incorporated                                     
 Model: EM7455                                                                   
 Revision: SWI9X30C_02.24.05.06 r7040 CARMD-EV-FRMWR2 2017/05/19 0
+```
 
-Composition
+USB composition settings
 
+```
 AT!usbcomp=?
 !USBCOMP:                                                                       
 AT!USBCOMP=<Config Index>,<Config Type>,<Interface bitmask>                     
@@ -24,8 +30,8 @@ Config Index: 1
 Config Type:  1 (Generic)                                                       
 Interface bitmask: 0000050D (diag,nmea,modem,rmnet0,rmnet1)
 ```
-So instead enable just MBIM 
 
+Enable just MBIM 
 
 ```
 AT!usbcomp=1,1,0000100D

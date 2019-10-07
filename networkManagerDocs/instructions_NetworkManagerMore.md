@@ -116,12 +116,11 @@ sudo service network-manager restart
 
 
 ## Debug stuff
-even better [see](https://www.freedesktop.org/wiki/Software/ModemManager/Debugging/)
+Debug modemManager [see](https://www.freedesktop.org/wiki/Software/ModemManager/Debugging/)  
 
-**Have a look at the syslog**  
+**Have a look at the syslog**   
 ```
 sudo tail -f /var/log/syslog
-
 ```
 
 

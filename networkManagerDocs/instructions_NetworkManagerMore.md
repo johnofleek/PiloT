@@ -113,11 +113,10 @@ After editing settings - the network manager daemon needs to be restarted for th
 sudo service network-manager restart
 ```
 
-even better [see](https://www.freedesktop.org/wiki/Software/ModemManager/Debugging/)
-
 
 
 ## Debug stuff
+even better [see](https://www.freedesktop.org/wiki/Software/ModemManager/Debugging/)
 
 **Have a look at the syslog**  
 ```

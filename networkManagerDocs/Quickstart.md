@@ -4,17 +4,13 @@ This method uses network managers GUI [NetworkManager Applet] to configure and m
 Cellular networking RPi HAT and it therefore requires a standard Raspian desktop install.
 
 *Notes*  
-* L1
-* L1
-  * L2
 
-1. The following is a general process it may need 
-to be adapted to suit the particular modem fitted to the Pilot
+1. The following is a general process it may need to be adapted to suit the particular modem
+ fitted to the Pilot
 1. Not all combinations of Pilot / RPi / Rasbian OS have been tested  
-1. How to start a shell terminal  
-   1. Hold down keys [CTRL] [ALT] T or 
-   1. Use the RPi Terminal icon
-1. At the time of writting the shell scripts below (.sh) are in this folder ~/Pilot/scripts_pilotControl/
+1. Ubuntu - start a shell terminal - hold down keys [CTRL] [ALT] T or use the RPi Terminal icon
+1. The paths below (such as ./) are examples - for example for ./pilotOn.sh to execute the shell
+   need to be in a folder which contains the pilotOn.sh script.
 <BR>
 
 
@@ -32,9 +28,9 @@ to be adapted to suit the particular modem fitted to the Pilot
    ./pilotOn.sh
    
    ```
-   If this script fails to power up the Pilot - check that the wiringPi version installed on
-    on your RPi Raspian is compatible with the RPi hardware in use. For example at the time
-    of writing the RPi4 HW needs an updated wiringPi install   
+   *If this script fails to power up the Pilot*  
+   Check that the wiringPi version installed on on your RPi Raspian is compatible with the RPi hardware
+    in use. For example at the time of writing the RPi4 HW needs an updated wiringPi install  
 
 1. For information on your Pilot's LED behaviour click [LED behaviour](#pilot-modem-configuration-notes)
    and follow the links  
@@ -66,7 +62,7 @@ to be adapted to suit the particular modem fitted to the Pilot
       recommended
 1. [Check](./test_configurationRecords.md) to see if we tested your Rpi / Raspbian OS will work with network
  manager
-1. Power down the Pilot HAT - run the following script
+1. Power down the Pilot HAT - run the following script  
    ```
    ./pilotOff.sh
    ```

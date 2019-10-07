@@ -4,6 +4,10 @@ This method uses network managers GUI [NetworkManager Applet] to configure and m
 Cellular networking RPi HAT and it therefore requires a standard Raspian desktop install.
 
 *Notes*  
+* L1
+* L1
+  * L2
+
 1. The following is a general process it may need 
 to be adapted to suit the particular modem fitted to the Pilot
 1. Not all combinations of Pilot / RPi / Rasbian OS have been tested  

@@ -2,7 +2,7 @@ The following was developed in the uPilot board
 
 ## AT Config
 
-For more details take a look at the AT command manual available on this [site](source.sierra.co.uk)
+For more details take a look at the AT command manual available on [the_source](https://source.sierrawireless.com)
 
 Unlock  
 ```

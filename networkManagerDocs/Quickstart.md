@@ -1,3 +1,7 @@
+---
+title: Quick start
+---
+
 ## Quick start guide - network manager GUI
 
 This method uses network managers GUI [NetworkManager Applet] to configure and monitor the Pilot

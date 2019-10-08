@@ -1,3 +1,6 @@
+# GIT commands
+
+
 ## Checkin
 ```
 git add .
@@ -8,7 +11,7 @@ git push -u origin master
 ```
 
 
-## Checkout
+## Make a Local Copy of the Repo
 ```
 git clone http://github.com/johnofleek/Pilot
 ```

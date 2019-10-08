@@ -91,6 +91,7 @@ Cellular networking RPi HAT and it therefore requires a standard Raspian desktop
    ```
    sudo apt purge openresolv dhcpcd5
    ```
+   It is also possible to uninstall the dhcpcd GUI as it's no longer functional
 1. Reboot the RPi
 <BR>
 

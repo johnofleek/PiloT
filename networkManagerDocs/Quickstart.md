@@ -5,11 +5,11 @@ Cellular networking RPi HAT and it therefore requires a standard Raspian desktop
 
 *Notes*  
 
-1. The following is a general process it may need to be adapted to suit the particular modem
+* The following is a general process it may need to be adapted to suit the particular modem
  fitted to the Pilot
-1. Not all combinations of Pilot / RPi / Rasbian OS have been tested  
-1. Rasbian - start a shell terminal - hold down keys [CTRL] [ALT] T or use the RPi Terminal icon
-1. The paths below (such as ./) are examples - for example for ./pilotOn.sh to execute the shell
+* Not all combinations of Pilot / RPi / Rasbian OS have been tested  
+* Rasbian - start a shell terminal - hold down keys [CTRL] [ALT] T or use the RPi Terminal icon
+* The paths below (such as ./) are examples - for example for ./pilotOn.sh to execute the shell
    need to be in a folder which contains the pilotOn.sh script - the shell command ls will list what is available
 <BR>
 

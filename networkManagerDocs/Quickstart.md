@@ -74,12 +74,12 @@ Cellular networking RPi HAT and it therefore requires a standard Raspian desktop
    ```
    ./pilotOff.sh
    ```
-1. Install [network-manager](./instructions_howToInstall_gpioAndNetworkManager.md#install-network-manager)
+1. Install network-manager
    ```
    sudo apt-get install network-manager
    ```
 
-1. Install the GUI [network-manager-gnome](./instructions_howToInstall_gpioAndNetworkManager.md#install-network-manager-gnome)
+1. Install the GUI network-manager-gnome
    ```
    sudo apt-get install network-manager-gnome
    ```

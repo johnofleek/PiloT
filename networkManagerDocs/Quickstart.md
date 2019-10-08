@@ -13,6 +13,10 @@ Cellular networking RPi HAT and it therefore requires a standard Raspian desktop
    need to be in a folder which contains the pilotOn.sh script - the shell command ls will list what is available
 <BR>
 
+# 1
+## 2
+### 3
+#### 4
 
 ## Power up the Pilot / modem  
 1. Clone [this](./git.md#checkout) project into your RPi (using a shell terminal)

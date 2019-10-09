@@ -2,21 +2,19 @@
 permalink: /
 title: PiloT Technical Documentation Home
 ---
-The PiloT is a Raspberry Pi \(RPi\) HAT compliant board which provides cellular connectivity and for some variants GNSS location.
-
-
+The PiloT is a Raspberry Pi \(RPi\) HAT compliant board which provides cellular connectivity some variants also have GNSS location capability.
 
 The PiloT power state is controlled via the Rpi GPIO and the Pilot is powered via the RPi 40 pin header.
 
 Control and data communications between the PiloT with the RPi is via USB or the RPi physical serial port.
 
-Note that some RPi variants use the physical serial port to communicate with the RPi on board WiFi / Bluetooth module 
+Note that some RPi variants use the physical serial port to communicate with the RPi on board WiFi / Bluetooth systems 
 
 ## Technical information links
 
-[Network manager documentation](./networkManagerDocs/README.md) for information on a method of automating PiloT Cellular IP connectivity. Can also provide an developers with API's for networking control, cellular SMS and general radio information   
+Click [Network manager documentation](./networkManagerDocs/README.md) for information on an alternative method of automating PiloT cellular IP connectivity. Network manager also provide an developers with API's for networking control, cellular SMS and general radio information   
   
-[Shell Scripts](./scripts_pilotControl/) for scripts that power up / down the PiloT HAT - if your reading this as a web page take a look at the github or image that you cloned from github
+Click [Shell Scripts](./scripts_pilotControl/) for example scripts that power up and down the PiloT HAT
 
 
 ## Compatibility

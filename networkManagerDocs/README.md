@@ -4,8 +4,9 @@ This section explores the use of network manager in combination with the RPi / R
  OS and the USB interface of the Pilot cellular HAT board.
 
 Network manager can replace the functionality provided by *dhcpcd* which is installed
- by default in the current versions (2019) of Raspbian and has the advantage that it
- is able to manage celluar modems as well as the usual WiFi and Ethernet network interfaces
+ by default in the current versions (2019) of Raspbian. Network manager has the advantage that it
+ is able to automate the management of many cellular modems as well as managing the usual WiFi and
+ Ethernet network interfaces
 
 For a quick overview of network manager take a look at [wikipedia](https://en.wikipedia.org/wiki/NetworkManager).
  Network manager has multiple interfaces - graphical, command line and an API.
@@ -19,15 +20,13 @@ Please be aware that network manager can only manage and check the modems networ
  app that sends / receives periodic ping requests 
 
 
-
-## Quick start guide
+## [Quick start guide](./Quickstart.md)
 
 Note that during the quick start installation process the Raspbian default 
  method *dhcpcd* is uninstalled and replaced by network-manager and the network manager GUI
  is installed as a replacement for the dhcpcd GUI
 
 [Quick start guide](./Quickstart.md)
-
 
 Configuring profiles for network SIMs - [examples](./simUse_info.md) 
 

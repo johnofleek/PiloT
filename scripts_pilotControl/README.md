@@ -1,5 +1,6 @@
 ---
-permalink: /
+permalink: /scripts_pilotControl/
+
 title: "PiloT Power Control Scripts"
 ---
 

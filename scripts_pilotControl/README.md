@@ -1,4 +1,5 @@
 ---
+permalink: /
 title: "PiloT Power Control Scripts"
 ---
 

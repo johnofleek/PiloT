@@ -20,33 +20,40 @@ Please be aware that network manager can only manage and check the modems networ
  app that sends / receives periodic ping requests 
 
 
-## [Quick start guide](./Quickstart.md)
+## [Quickstart Guide](./Quickstart.md)
+
+[Quickstart](./Quickstart.md)
 
 Note that during the quick start installation process the Raspbian default 
  method *dhcpcd* is uninstalled and replaced by network-manager and the network manager GUI
  is installed as a replacement for the dhcpcd GUI
 
-[Quick start guide](./Quickstart.md)
+## [SIM Information](./simUse_info.md) 
 
-Configuring profiles for network SIMs - [examples](./simUse_info.md) 
+[examples](./simUse_info.md) 
 
-## Pilot test records
-[Pilot test records](test_configurationRecords.md)  
+Click the link for information on our experiments configuring network manager cellular profiles for different
+cellular operators SIMs
+
+## [PiloT Testing Information](./test_configurationRecords.md)  
+
+[PiloT test records](./test_configurationRecords.md)  
 
 
 ##  More notes
 
 The method described here is experimental and has only been tested on a limited set of RPi's,
- Rasbian OS variants and Pilot variants  
+ Rasbian OS variants and PiloT variants  
 
-Cellular modems with the following USB connectivity have been tried
+Cellular modems which support the following connectivity over USB have been tried
 * MBIM  
 * PPP  
 
-[Even more notes](./instructions_NetworkManagerMore.md)  
+For [Even more notes](./instructions_NetworkManagerMore.md) 
 
 
 ## Modem manager
+
 When Network manager is installed modem manager is also installed.  A command line interface for modemManager is available - mmcli. 
  It is also possible to install a GUI. For example  
 

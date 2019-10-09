@@ -1,4 +1,5 @@
 ---
+permalink: /
 title: Pilot Technical Documentation Home
 ---
 The PiloT is a Raspberry Pi \(RPi\) HAT compliant board which provides cellular connectivity and for some variants GNSS location.

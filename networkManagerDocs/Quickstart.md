@@ -1,5 +1,5 @@
 ---
-title: QuickStart
+title: QuickStart Guide
 ---
 
 # Using the NetworkManager GUI

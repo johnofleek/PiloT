@@ -1,7 +1,21 @@
-# GIT commands
+
+---
+permalink: /
+title: GIT
+---
+
+## Make a Local Copy of the Repo
+Copies the latest version of this project that resides on the github system to a local machine
+
+```
+git clone http://github.com/johnofleek/Pilot
+```
 
 
-## Checkin
+## Upload local copy to Github
+
+Only useful to developers
+
 ```
 git add .
 
@@ -11,7 +25,4 @@ git push -u origin master
 ```
 
 
-## Make a Local Copy of the Repo
-```
-git clone http://github.com/johnofleek/Pilot
-```
+

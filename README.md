@@ -1,6 +1,6 @@
----
+
 title: Pilot Technical Documentation Home
----
+
 The PiloT is a Raspberry Pi \(RPi\) HAT compliant board.
 
 The PiloT power state is controlled via the Rpi GPIO.

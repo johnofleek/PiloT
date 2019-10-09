@@ -1,6 +1,4 @@
-
 ---
-permalink: /
 title: GIT
 ---
 

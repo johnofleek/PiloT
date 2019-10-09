@@ -1,5 +1,5 @@
 
-title: Pilot Technical Documentation Home
+title Pilot Technical Documentation Home
 
 The PiloT is a Raspberry Pi \(RPi\) HAT compliant board.
 
@@ -10,11 +10,9 @@ Control and data communications between the PiloT with the RPi is via USB or the
 Note that some RPi variants use the physical serial port to communicate with the RPi on board WiFi / Bluetooth module 
 
 ## Technical information links
-For information on automating Pilot connectivity see  
-[network manager documentation](./networkManagerDocs/README.md)  
+For information on automating Pilot connectivity see [Network manager documentation](./networkManagerDocs/README.md)  
   
-For scripts that power up / down the Pilot HAT  
-[scripts pilot control](./scripts_pilotControl/)
+For scripts that power up / down the Pilot HAT [Scripts pilot control](./scripts_pilotControl/)
   
 ![Picture of pilot_should appear here alt <](./images/PilotPCA.png "Pilot")
 

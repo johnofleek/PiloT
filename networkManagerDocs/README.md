@@ -30,7 +30,7 @@ Note that during the quick start installation process the Raspbian default
 
 ## [SIM Information](./simUse_info.md) 
 
-[examples](./simUse_info.md) 
+[Examples](./simUse_info.md) 
 
 Click the link for information on our experiments configuring network manager cellular profiles for different
 cellular operators SIMs

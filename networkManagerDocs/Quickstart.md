@@ -60,14 +60,14 @@ Cellular networking RPi HAT and it therefore requires a standard Raspian desktop
    ATi9
    ```
    
-    * If the modem firmware reported doesn't appear in [here](test_configurationRecords.md) we haven't 
-         tested it  
-    * If the modem does appear in [here](test_configurationRecords.md) but the firmware reported is
-      older - then update the modem firmware by connecting the PiloT USB port to a Windows PC and use a 
-      one click .exe installer from [here](https://source.sierrawireless.com/) to install updated firmware
-      into the PiloT modem  
-     * If your RPi variant doesn't appear [here](test_configurationRecords.md) I haven't tested it  
-     * If your Raspian variant doesn't appear [here](test_configurationRecords.md) I haven't tested it  
+    1. If the modem firmware reported doesn't appear in [here](test_configurationRecords.md) we haven't 
+        tested it  
+    1. If the modem does appear in [here](test_configurationRecords.md) but the firmware reported is
+       older - then update the modem firmware by connecting the PiloT USB port to a Windows PC and use a 
+       one click .exe installer from [here](https://source.sierrawireless.com/) to install updated firmware
+       into the PiloT modem  
+    1. If your RPi variant doesn't appear [here](test_configurationRecords.md) I haven't tested it  
+    1. If your Raspian variant doesn't appear [here](test_configurationRecords.md) I haven't tested it  
     
 1. Configure the PiloT modem as required (based on firmware identified above)
    * Check the modem specific [configuration](instructions_modemConfiguration.md) instructions

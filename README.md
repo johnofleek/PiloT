@@ -27,7 +27,7 @@ Click [Shell Scripts](./scripts_pilotControl/) for example scripts that
 Click [IP link check automation](./scripts_python_checkIp/README.md) for a demo
  project which adds IP ping link checking to the RPi
  
-Click [Speed tests] (./speedtests/README.md) for records of practical
+Click [Speed tests](./speedtests/README.md) for records of practical
  network speed testing
 
 ## Compatibility

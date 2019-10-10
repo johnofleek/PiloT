@@ -4,68 +4,79 @@ title: QuickStart Guide
 
 # Using the NetworkManager GUI
 
-This method uses network managers GUI [NetworkManager Applet] to configure and monitor the Pilot
+This method uses network managers GUI [NetworkManager Applet] to configure and monitor the PiloT
 Cellular networking RPi HAT and it therefore requires a standard Raspian desktop install.
 
 *Notes*  
 
 * The following is a general process it may need to be adapted to suit the particular modem
- fitted to the Pilot
-* Not all combinations of Pilot / RPi / Rasbian OS have been tested  
+  fitted to the PiloT
+* Not all combinations of PiloT / RPi / Rasbian OS have been tested  
 * Rasbian - start a shell terminal - hold down keys [CTRL] [ALT] T or use the RPi Terminal icon
 * The paths below (such as ./) are examples - for example for ./pilotOn.sh to execute the shell
-   need to be in a folder which contains the pilotOn.sh script - the shell command ls will list what is available
+  need to be in a folder which contains the pilotOn.sh script - the shell command ls will list
+  what is available
+
+  The following assumes that the git project has been cloned into the users home directory -
+   to access or run the power control scripts
+ 
+   ```
+    cd ~/Pilot/scripts_pilotControl
+   ```
+
 <BR>
 
 
-## Power up the Pilot / modem  
+## Power up the PiloT / modem  
 1. Clone [this](./git.md#checkout) project into your RPi (using a shell terminal)
    ```
-   git clone http://github.com/johnofleek/Pilot
+   git clone http://github.com/johnofleek/PiloT
    ```
 1. Install text-based modem control and terminal emulation  application [minicom](./instructions_howToInstall_gpioAndNetworkManager.md#install-minicom)
    ```
    sudo apt-get install minicom
    ```
-1. From a shell terminal - power on the Pilot using a convenient script (doesn't apply to uPilot)
+1. From a shell terminal - power on the PiloT using a convenient script (doesn't apply to uPiloT)
    ```
    ./pilotOn.sh
    
    ```
-   *If this script fails to power up the Pilot*  
+   *If this script fails to power up the PiloT*  
+   
    Check that the wiringPi version installed on on your RPi Raspian is compatible with the RPi hardware
-    in use. For example at the time of writing the RPi4 HW needs an updated wiringPi install  
+   in use. For example at the time of writing the RPi4 HW needs an updated wiringPi install  
 
-1. For information on your Pilot's LED behaviour click [LED behaviour](./instructions_modemConfiguration.md)
-   and follow the links to the module fitted to your Pilot 
+1. For information on your PiloT's LED behaviour click [LED behaviour](./instructions_modemConfiguration.md)
+   and follow the links to the module fitted to your PiloT 
 <BR>
 
-## Pilot / modem configuration  
-1. To enable AT commands to be sent to the Pilot modem - run minicom [(check the actual serial port to use)](test_configurationRecords.md)  
+## PiloT / modem configuration  
+1. To enable AT commands to be sent to the PiloT modem - run minicom [(check the actual serial port to use)](test_configurationRecords.md)  
    ```
    sudo minicom -D /dev/ttyACM0
    ```
-1. Check the Pilot modems firmware version -- type AT command  
+1. Check the PiloT modems firmware version -- type AT command  
    ```
    ATi9
    ```
-       * If the modem firmware reported doesn't appear in [here](test_configurationRecords.md) we haven't 
-         tested it
-       * If the modem does appear in [here](test_configurationRecords.md) but the
-         firmware reported is older - then update the modem firmware by connecting the 
-         Pilot USB port to a Windows PC and use a 
-         one click .exe installer from [here](https://source.sierrawireless.com/) to install updated firmware
-         into the Pilot modem
-       * If your RPi variant doesn't appear [here](test_configurationRecords.md) I haven't tested it
-       * If your Raspian variant doesn't appear [here](test_configurationRecords.md) I haven't tested it
-1. Configure the Pilot modem as required (based on firmware identified above)
+   
+    * If the modem firmware reported doesn't appear in [here](test_configurationRecords.md) we haven't 
+         tested it  
+    * If the modem does appear in [here](test_configurationRecords.md) but the firmware reported is
+      older - then update the modem firmware by connecting the PiloT USB port to a Windows PC and use a 
+      one click .exe installer from [here](https://source.sierrawireless.com/) to install updated firmware
+      into the PiloT modem  
+     * If your RPi variant doesn't appear [here](test_configurationRecords.md) I haven't tested it  
+     * If your Raspian variant doesn't appear [here](test_configurationRecords.md) I haven't tested it  
+    
+1. Configure the PiloT modem as required (based on firmware identified above)
    * Check the modem specific [configuration](instructions_modemConfiguration.md) instructions
    * Pay particular attention to the usb composition setting - if in doubt check the 
       AT command manual for the particular modem that is being used - if it's supported by the modem
       a composition with an MBIM setting is recommended
 1. [Check](./test_configurationRecords.md) to see if we tested your Rpi / Raspbian OS will work with network
  manager
-1. Power down the Pilot HAT - run the following script  
+1. Power down the PiloT HAT - run the following script  
    ```
    ./pilotOff.sh
    ```
@@ -73,7 +84,8 @@ Cellular networking RPi HAT and it therefore requires a standard Raspian desktop
 <BR>
 
 ## Install required RPi apps  
-1. Power down the Pilot HAT
+
+1. Power down the PiloT HAT
    ```
    ./pilotOff.sh
    ```
@@ -100,7 +112,7 @@ Cellular networking RPi HAT and it therefore requires a standard Raspian desktop
 
   
 ## Configure the cellular network connection  
-1. From a shell terminal - power on the Pilot
+1. From a shell terminal - power on the PiloT
    ```
    ./pilotOn.sh
    ```
@@ -109,7 +121,7 @@ Cellular networking RPi HAT and it therefore requires a standard Raspian desktop
 your wwan0 settings such as APN / username / password etc - maybe some variant of these [examples](./simUse_info.md)
 1. If everything is installed and configured correctly network manager should 
  connect the modem using the Mobile broadband profile you created is clicked
-1. To power down the Pilot run the following script
+1. To power down the PiloT run the following script
    ```
    ./pilotOff.sh
    ```

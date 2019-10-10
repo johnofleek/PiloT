@@ -1,4 +1,4 @@
-# Purpose
+## Purpose
 Automate testing of wwan0 network connection provided by the Pilot board by using ICMP ping  
 Restart the wwan0 network connection on failure   
 Current version is experimental - seems to work but is very basic - maybe view this  

@@ -3,7 +3,9 @@ The following was developed in the uPilot board
 ## AT Config
 
 For more details take a look at the AT command manual available on [the_source](https://source.sierrawireless.com)  
-NetworkManager / ModemManager occupies and interferes on the Modem/AT serial interfaces so it is recommended to stop its process first  
+
+NetworkManager / ModemManager occupies and transacts on the Modem/AT serial interfaces so it is recommended to
+stop their processes before sending AT commands to the modem  
 
 Unlock  
 ```

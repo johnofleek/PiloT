@@ -49,21 +49,20 @@ Cellular networking RPi HAT and it therefore requires a standard Raspian desktop
    ```
    ATi9
    ```
-
-    * If the modem firmware reported doesn't appear in [here](test_configurationRecords.md) we haven't 
-      tested it
-    * If the modem does appear in [here](test_configurationRecords.md) but the
-      firmware reported is older - then update the modem firmware by connecting the 
-      Pilot USB port to a Windows PC and use a 
-      one click .exe installer from [here](https://source.sierrawireless.com/) to install updated firmware
-      into the Pilot modem
-    * If your RPi variant doesn't appear [here](test_configurationRecords.md) I haven't tested it
-    * If your Raspian variant doesn't appear [here](test_configurationRecords.md) I haven't tested it
+       * If the modem firmware reported doesn't appear in [here](test_configurationRecords.md) we haven't 
+         tested it
+       * If the modem does appear in [here](test_configurationRecords.md) but the
+         firmware reported is older - then update the modem firmware by connecting the 
+         Pilot USB port to a Windows PC and use a 
+         one click .exe installer from [here](https://source.sierrawireless.com/) to install updated firmware
+         into the Pilot modem
+       * If your RPi variant doesn't appear [here](test_configurationRecords.md) I haven't tested it
+       * If your Raspian variant doesn't appear [here](test_configurationRecords.md) I haven't tested it
 1. Configure the Pilot modem as required (based on firmware identified above)
-   * [Some configuration examples are here](test_configurationRecords.md)
+   * Check the modem specific [configuration](instructions_modemConfiguration.md) instructions
    * Pay particular attention to the usb composition setting - if in doubt check the 
-      AT command manual for the particular modem that is being used - a composition with an MBIM setting is 
-      recommended
+      AT command manual for the particular modem that is being used - if it's supported by the modem
+      a composition with an MBIM setting is recommended
 1. [Check](./test_configurationRecords.md) to see if we tested your Rpi / Raspbian OS will work with network
  manager
 1. Power down the Pilot HAT - run the following script  

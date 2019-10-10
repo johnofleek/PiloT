@@ -2,7 +2,8 @@ The following was developed in the uPilot board
 
 ## AT Config
 
-For more details take a look at the AT command manual available on [the_source](https://source.sierrawireless.com)
+For more details take a look at the AT command manual available on [the_source](https://source.sierrawireless.com)  
+NetworkManager / ModemManager occupies and interferes on the Modem/AT serial interfaces so it is recommended to stop its process first  
 
 Unlock  
 ```
@@ -37,3 +38,13 @@ Enable just MBIM
 AT!usbcomp=1,1,0000100D
 ```
 
+
+## Others - untested
+
+
+```
+EM75xx series:
+AT!ENTERCND="A710"
+AT#USBCOMP=1,3,100D
+AT!RESET
+```

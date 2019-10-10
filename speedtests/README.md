@@ -1,10 +1,7 @@
 ## 02 PAYG SIM testing
 With a new PAYG SIM the modem could not IP connect.  
-
-After a £10 top up - still no connection
-
-After £20 the 5GB contracted started and it worked
-
+After a £10 top up - still no connection  
+After £20 the 5GB contracted started and it worked  
 Disconnecting / reconnecting the antenna caused a massive 
  delay before the modem could reconnect
  

@@ -1,5 +1,5 @@
 ---
-title: QuickStart Guide
+title: NetworkManager QuickStart Guide
 ---
 
 This guide installs a universal IP cellular connectivity solution onto the Raspbian OS targeting the PiloT HAT board and Raspberry

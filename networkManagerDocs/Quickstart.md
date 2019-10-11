@@ -19,7 +19,7 @@ This QuickStart guide requires
 <BR>
 
 
-## Power up the PiloT board  
+## Install PiloT scripts  
 1. Clone the project into your RPi (maybe use a shell terminal). This creates a local copy of the project which includes this documentation and any project related scripts
    ```
    git clone http://github.com/johnofleek/PiloT
@@ -29,14 +29,13 @@ This QuickStart guide requires
    ```
    sudo apt-get install minicom
    ```
-   
+
+## Power up the PiloT board 
 1. From a shell terminal - power on the PiloT using a convenient script (doesn't apply to uPiloT)
    ```
-   ./pilotOn.sh
-   
+   ./pilotOn.sh 
    ```
    *If this script fails to power up the PiloT*  
-   
    Check that the wiringPi version installed on on your RPi Raspian is compatible with the RPi hardware
    in use. For example at the time of writing the RPi4 HW needs an updated wiringPi install  
 
@@ -51,22 +50,22 @@ trying to send commands to the modem
    sudo minicom -D /dev/ttyACM0
    ```
 1. Read the PiloT modem information
-   Type the following AT command into minicom - the modem will report information about itself such as it's Firmware version.
+   Type the following AT command into minicom - the PiloT modem will report information about itself such as it's Firmware version.
    On some modems the serial port times out when there is no activity - the first carriage return will wake the modem up
    ```
    <CR>
    ATi9<CR>
    ```
-1. Check the PiloT modem information
-   Only a limited number of combinations have been tried - take a look at [this](test_configurationRecords.md)
-   to see what we have tested then compare this to the information obtained about the modem
-    * Does the modem does appear in our record but the firmware reported is older - it's possible to  update
+1. Check the PiloT modem information  
+   A number of PiloT + RPi + Raspbian combinations have been tested, they are listed [here](test_configurationRecords.md)   
+   Here are some things to check if a problem occurs at some point later in the QuickStart process
+    * Does the modem appear in the list but the reported modem firmware is older than in the list? It's possible to update
       the modem firmware by connecting the PiloT USB port to a Windows PC and use a one click .exe installer from
       [here](https://source.sierrawireless.com/) to install updated firmware into the PiloT modem  
-    * If the reported modem type reported doesn't appear - please contact us
-    * If your RPi variant doesn't appear - it might work please let us know
-    * If your Raspian variant doesn't appear - it might work please let us know
-    * If we tested your PiloT has been tested with NetworkManager
+    * Check the reported PiloT modem type is listed?
+    * Check if your RPi variant is listed?
+    * Check if your Raspian version is listed
+    * Check the NetworkManager version?
     
 1. Configure the PiloT modem as required (based on firmware identified above)
    * Carry out the modem specific configuration [instructions](instructions_modemConfiguration.md)  
@@ -79,11 +78,12 @@ trying to send commands to the modem
    ./pilotOff.sh
    ```
 1. Reboot the RPi
+
 <BR>
 
 ## Install required RPi apps  
 
-1. Power down the PiloT HAT
+1. If necessary - power down the PiloT HAT
    ```
    ./pilotOff.sh
    ```
@@ -104,21 +104,22 @@ trying to send commands to the modem
    ```
    sudo apt purge openresolv dhcpcd5
    ```
-   It is also possible to uninstall the dhcpcd GUI as it's no longer functional
+   It is also possible to uninstall the dhcpcd GUI as it's no longer functional  
+   
 1. Reboot the RPi
 <BR>
 
   
 ## Configure the cellular network connection  
-1. From a shell terminal - power on the PiloT
+1. From a shell terminal power on the PiloT by executing the script
    ```
    ./pilotOn.sh
    ```
-1. Wait for Mobile Broadband to appear in the *network manager applet* (should be visible on the Rpi Panel)
-1. Use the *network manager applet*  to configure 
-your wwan0 settings such as APN / username / password etc - maybe some variant of these [examples](./simUse_info.md)
-1. If everything is installed and configured correctly network manager should 
- connect the modem using the Mobile broadband profile you created is clicked
+1. Wait for Mobile Broadband to appear in the NetworkManager GUI this should be visible on the Rpi Panel (probably top right)
+1. Use the NetworkManager GUI to configure your wwan0 settings such as APN / username / password
+   etc - maybe use some variant of these [examples](./simUse_info.md)
+1. If everything is installed and configured correctly NetworkManager should 
+   connect the modem when the mobile broadband profile you created is clicked in the NetworkManager GUI
 1. To power down the PiloT run the following script
    ```
    ./pilotOff.sh
@@ -143,3 +144,6 @@ your wwan0 settings such as APN / username / password etc - maybe some variant o
 * Desktop installation was selected so that NetworkManager GUI can be used.
   NetworkManager GUI provides a simple way to control and observe NetManager behaviour,
   however, the underlying technology will work with a non-GUI system
+  
+* The NetworkManager GUI is called the *network manager applet* in it's *about* box
+

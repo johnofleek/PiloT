@@ -15,13 +15,11 @@ This QuickStart guide requires
 * Standard Raspian desktop installation ***
 * Pilot board and USB cable
 
-*** Desktop installation is required because NetworkManager GUI is used for in
- this guide because it provides a simple way to observe the system behaviour, however,
- the underlying technology will work with a non-GUI system
-
+*** Desktop installation is required because NetworkManager GUI is used in
+ this guide.This because NetworkManager GUI provides a simple way to observe the
+ system behaviour, however, the underlying technology will work with a non-GUI system
   
 <BR>
-
 
 
 ## Power up the PiloT board  
@@ -144,5 +142,4 @@ your wwan0 settings such as APN / username / password etc - maybe some variant o
   what is available in a directory
 
 When using the guide please consider
-* Not all combinations of PiloT / RPi / Rasbian OS have been tested  
 * To start a Raspbian shell terminal - hold down keys [CTRL] [ALT] T or use the RPi Terminal icon

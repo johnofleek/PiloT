@@ -50,33 +50,37 @@ Cellular networking RPi HAT and it therefore requires a standard Raspian desktop
    and follow the links to the module fitted to your PiloT 
 <BR>
 
-## PiloT / modem configuration  
-1. To enable AT commands to be sent to the PiloT modem - run minicom [(check the actual serial port to use)](test_configurationRecords.md)  
+## PiloT modem check and set configuration  
+1. To enable AT commands to be sent to the PiloT modem - run minicom [(check the actual serial port to use)](test_configurationRecords.md) - note that if NetworkManager ModemManager is running then stop them before
+trying to send commands to the modem
    ```
    sudo minicom -D /dev/ttyACM0
    ```
-1. Check the PiloT modems firmware version -- type AT command  
+1. Read the PiloT modem information
+   Type the following AT command into minicom - the modem will report information about itself such as it's Firmware version.
+   On some modems the serial port times out when there is no activity - the first carriage return will wake the modem up
    ```
-   ATi9
+   <CR>
+   ATi9<CR>
    ```
-   
-    1. If the modem firmware reported doesn't appear in [here](test_configurationRecords.md) we haven't 
-        tested it  
-    1. If the modem does appear in [here](test_configurationRecords.md) but the firmware reported is
-       older - then update the modem firmware by connecting the PiloT USB port to a Windows PC and use a 
-       one click .exe installer from [here](https://source.sierrawireless.com/) to install updated firmware
-       into the PiloT modem  
-    1. If your RPi variant doesn't appear [here](test_configurationRecords.md) I haven't tested it  
-    1. If your Raspian variant doesn't appear [here](test_configurationRecords.md) I haven't tested it  
+1. Check the PiloT modem information
+   Only a limited number of combinations have been tried - take a look at [this](test_configurationRecords.md)
+   to see what we have tested then compare this to the information obtained about the modem
+    * Does the modem does appear in our record but the firmware reported is older - it's possible to  update
+      the modem firmware by connecting the PiloT USB port to a Windows PC and use a one click .exe installer from
+      [here](https://source.sierrawireless.com/) to install updated firmware into the PiloT modem  
+    * If the reported modem type reported doesn't appear - please contact us
+    * If your RPi variant doesn't appear - it might work please let us know
+    * If your Raspian variant doesn't appear - it might work please let us know
+    * If we tested your PiloT has been tested with NetworkManager
     
 1. Configure the PiloT modem as required (based on firmware identified above)
-   * Check the modem specific [configuration](instructions_modemConfiguration.md) instructions
-   * Pay particular attention to the usb composition setting - if in doubt check the 
-      AT command manual for the particular modem that is being used - if it's supported by the modem
-      a composition with an MBIM setting is recommended
-1. [Check](./test_configurationRecords.md) to see if we tested your Rpi / Raspbian OS will work with network
- manager
-1. Power down the PiloT HAT - run the following script  
+   * Carry out the modem specific [configuration](instructions_modemConfiguration.md) instructions  
+     llease pay particular attention to the usb composition setting - if in doubt check the 
+     AT command manual for the particular modem that is being used - if it's supported by the modem
+     a composition with an MBIM setting is recommended
+
+1. Power down the PiloT HAT by running the following script  
    ```
    ./pilotOff.sh
    ```

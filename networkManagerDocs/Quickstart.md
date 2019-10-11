@@ -2,19 +2,23 @@
 title: QuickStart Guide
 ---
 
-# Using the NetworkManager GUI
+This guide installs a universal IP cellular connectivity solution onto the Raspbian OS targeting the PiloT HAT board and Raspberry
+PI \(RPi\) hardware.
 
-This method uses network managers GUI [NetworkManager Applet] to configure and monitor the PiloT
-Cellular networking RPi HAT and it therefore requires a standard Raspian desktop install.
+NetWorkManager, NetworkManager GUI and ModemManager are installed onto a Raspbian OS  
 
-*Notes*  
+NetworkManagers GUI [NetworkManager Applet] is used to configure cellular IP
+ connectivity and is used to stop, start and monitor IP connections   
 
-* The following is a general process it may need to be adapted to suit the particular modem
-  fitted to the PiloT
+For this QuickStart guide a standard Raspian desktop is required because NetworkManager GUI provides a simple
+ way to observe the system behaviour, however, the underlying technology will work
+ with a non-GUI system
+
+When using the guide please consider
 * Not all combinations of PiloT / RPi / Rasbian OS have been tested  
-* Rasbian - start a shell terminal - hold down keys [CTRL] [ALT] T or use the RPi Terminal icon
-* The paths below (such as ./) are examples - for example for ./pilotOn.sh to execute the shell
-  need to be in a folder which contains the pilotOn.sh script - the shell command \[ls\[ will list
+* To start a Raspbian shell terminal - hold down keys [CTRL] [ALT] T or use the RPi Terminal icon
+* The paths used in this guide - for example for ./pilotOn.sh - to execute a shellscript
+  need to be in a folder which contains the pilotOn.sh script - the shell command **\[ls\]** will list
   what is available
 
   The following assumes that the git project has been cloned into the users home directory -

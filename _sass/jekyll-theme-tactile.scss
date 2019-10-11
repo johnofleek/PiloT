@@ -313,18 +313,28 @@ ul li {
   list-style-position: inside;
   list-style: disc;
   padding-left: 20px;
+   margin-left: 20px;
 }
 
+/* numbered sub list  */
 ol li ol li {
-  list-style: disc;
-  padding-left: 10x;
+  list-style: decimal;
+  padding-left: 3x;
+  margin-left: 20px;
 }
 
+/* bullet point sub list */
+ol li ul li {
+  list-style: disc;
+  padding-left: 3x;
+  margin-left: 20px;	
+}
 
 ol li {
   list-style-position: inside;
   list-style: decimal;
   padding-left: 3px;
+   margin-left: 20px;
 }
 
 dl dt {

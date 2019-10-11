@@ -15,10 +15,7 @@ This QuickStart guide requires
 * Standard Raspian desktop installation ***
 * Pilot board and USB cable
 
-*** Desktop installation is required because NetworkManager GUI is used in
- this guide.This because NetworkManager GUI provides a simple way to observe the
- system behaviour, however, the underlying technology will work with a non-GUI system
-  
+ 
 <BR>
 
 
@@ -128,7 +125,7 @@ your wwan0 settings such as APN / username / password etc - maybe some variant o
    ```
 
 
-## Assumptions and notes
+## Notes
 
 * The instructions assume that the git project has been cloned into the users home directory.
   To access or run the power control scripts  
@@ -141,5 +138,8 @@ your wwan0 settings such as APN / username / password etc - maybe some variant o
   directory to the directory which contains the pilotOn.sh script - the shell command **\[ls\]** will list
   what is available in a directory
 
-When using the guide please consider
 * To start a Raspbian shell terminal - hold down keys [CTRL] [ALT] T or use the RPi Terminal icon
+
+* Desktop installation was selected so that NetworkManager GUI can be used.
+  NetworkManager GUI provides a simple way to control and observe NetManager behaviour,
+  however, the underlying technology will work with a non-GUI system

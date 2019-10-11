@@ -7,31 +7,24 @@ PI \(RPi\) hardware.
 
 NetWorkManager, NetworkManager GUI and ModemManager are installed onto a Raspbian OS  
 
-NetworkManagers GUI [NetworkManager Applet] is used to configure cellular IP
- connectivity and is used to stop, start and monitor IP connections   
+NetworkManagers GUI (NetworkManager Applet) is used to configure cellular IP
+ connectivity and to stop, start and monitor IP connections   
 
-For this QuickStart guide a standard Raspian desktop is required because NetworkManager GUI provides a simple
- way to observe the system behaviour, however, the underlying technology will work
- with a non-GUI system
+This QuickStart guide requires 
+* Raspberry Pi
+* Standard Raspian desktop installation ***
+* Pilot board and USB cable
 
-When using the guide please consider
-* Not all combinations of PiloT / RPi / Rasbian OS have been tested  
-* To start a Raspbian shell terminal - hold down keys [CTRL] [ALT] T or use the RPi Terminal icon
-* The paths used in this guide - for example for ./pilotOn.sh - to execute a shellscript
-  need to be in a folder which contains the pilotOn.sh script - the shell command **\[ls\]** will list
-  what is available
+*** Desktop installation is required because NetworkManager GUI is used for in
+ this guide because it provides a simple way to observe the system behaviour, however,
+ the underlying technology will work with a non-GUI system
 
-  The following assumes that the git project has been cloned into the users home directory -
-   to access or run the power control scripts
- 
-   ```
-    cd ~/Pilot/scripts_pilotControl
-   ```
-
+  
 <BR>
 
 
-## Power up the PiloT / modem  
+
+## Power up the PiloT board  
 1. Clone the project into your RPi (maybe use a shell terminal). This creates a local copy of the project which includes this documentation and any project related scripts
    ```
    git clone http://github.com/johnofleek/PiloT
@@ -135,3 +128,21 @@ your wwan0 settings such as APN / username / password etc - maybe some variant o
    ```
    ./pilotOff.sh
    ```
+
+
+## Assumptions and notes
+
+* The instructions assume that the git project has been cloned into the users home directory.
+  To access or run the power control scripts  
+ 
+  ```
+  cd ~/Pilot/scripts_pilotControl
+  ```
+
+* The paths used in this guide - for example **./pilotOn.sh** assumes that the user has changed
+  directory to the directory which contains the pilotOn.sh script - the shell command **\[ls\]** will list
+  what is available in a directory
+
+When using the guide please consider
+* Not all combinations of PiloT / RPi / Rasbian OS have been tested  
+* To start a Raspbian shell terminal - hold down keys [CTRL] [ALT] T or use the RPi Terminal icon

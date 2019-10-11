@@ -28,14 +28,16 @@ Cellular networking RPi HAT and it therefore requires a standard Raspian desktop
 
 
 ## Power up the PiloT / modem  
-1. Clone [this](./git.md#checkout) project into your RPi (using a shell terminal)
+1. Clone the project into your RPi (maybe use a shell terminal). This creates a local copy of the project which includes this documentation and any project related scripts
    ```
    git clone http://github.com/johnofleek/PiloT
    ```
-1. Install text-based modem control and terminal emulation  application [minicom](./instructions_howToInstall_gpioAndNetworkManager.md#install-minicom)
+   
+1. Install the minicom command line terminal emulation application 
    ```
    sudo apt-get install minicom
    ```
+   
 1. From a shell terminal - power on the PiloT using a convenient script (doesn't apply to uPiloT)
    ```
    ./pilotOn.sh

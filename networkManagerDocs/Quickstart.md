@@ -14,7 +14,7 @@ Cellular networking RPi HAT and it therefore requires a standard Raspian desktop
 * Not all combinations of PiloT / RPi / Rasbian OS have been tested  
 * Rasbian - start a shell terminal - hold down keys [CTRL] [ALT] T or use the RPi Terminal icon
 * The paths below (such as ./) are examples - for example for ./pilotOn.sh to execute the shell
-  need to be in a folder which contains the pilotOn.sh script - the shell command ls will list
+  need to be in a folder which contains the pilotOn.sh script - the shell command \[ls\[ will list
   what is available
 
   The following assumes that the git project has been cloned into the users home directory -
@@ -75,8 +75,8 @@ trying to send commands to the modem
     * If we tested your PiloT has been tested with NetworkManager
     
 1. Configure the PiloT modem as required (based on firmware identified above)
-   * Carry out the modem specific [configuration](instructions_modemConfiguration.md) instructions  
-     llease pay particular attention to the usb composition setting - if in doubt check the 
+   * Carry out the modem specific configuration [instructions](instructions_modemConfiguration.md)  
+     Please pay particular attention to the usb composition setting - if in doubt check the 
      AT command manual for the particular modem that is being used - if it's supported by the modem
      a composition with an MBIM setting is recommended
 

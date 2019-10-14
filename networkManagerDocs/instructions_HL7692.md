@@ -59,12 +59,14 @@ the LED should momentarily flash on
 
 ### HL7692 USB port composition
 
-Currently network manager effectively manages the HL7692 network interface 
-if the HL7692 is reconfigured to USB composition 2 which gives 1 MBIM and 1 USB port.
-This a change from the modules default setting 
+Currently network manager manages the HL7692 network interface via MBIM 
+ if the HL7692 is reconfigured to USB composition 2 which gives 1 MBIM and 1 USB port.
+ This a change from the modules default setting 
 
-At this time (August 2019) the Sierra AT command guide indicated that three USB serial ports 
-will be made available but this wasn't the case with the available FW RHL769x.2.26 and RHL769x.2.27.
+Note that at the time of writing (August 2019) the Sierra AT command guide indicated that
+ three USB serial ports will be made available.
+ But this wasn't the case with FW RHL769x.2.26 and RHL769x.2.27 one MBIM and one serial
+ AT port is available
 
 Configure the composition to enable and MBIM interface  
 ```
@@ -78,23 +80,22 @@ AT+KUSBCOMP?
 ```
 
 ## HL7692 and power on signal
-=============================
 
-Recommend using the power ON / OFF scripts to ensure correct state of modem operation - this will 
-overide the RPi's GPIO default state which may not be a stable signal.
+We recommend using the power ON / OFF scripts to ensure correct state of modem operation
+ - this will override the RPi's GPIO default state which may not be a stable signal state
 
-| RPi    |  HL7692 power up state                             |
-| ------ | -------------------------------------------------- |
+| RPi    | HL7692 power up state                              |
+|:------ |:-------------------------------------------------- |
 | RPi3B+ | Default GPIO state causes Pilot to power up        |
 | RPi4   | Default GPIO state causes Pilot to be powered down |  
+
+   
   
-
 ## Debugging notes
-==================
 
-Using the physical serial port between the Pi and Pilot - note that this can be tricky
- the reason to use physical serial is that the single USB serial port is managed by 
- network manager
+Using the physical serial port between the Pi and Pilot can be useful during debug as the
+ single USB serial port is managed by networkManager. 
+If only the USB serial port is available stopping networkManager may be useful
 
 Check radio access technology
 ```
@@ -109,7 +110,7 @@ AT+CGDCONT= 1,"IPV4V6","payandgo.o2.co.uk",,,
 ```
 
 
-### Windows
+## Windows
 I also tested the HL7692 Pilot on a Windows 10 machine 
 
 On the windows machine to get the HL7692 to work I had to 
@@ -118,8 +119,7 @@ On the windows machine to get the HL7692 to work I had to
 * Manually configure the modems context 1 by using AT command
  AT+CGDCONT = 1,"IP","payandgo.o2.co.uk",,, 
 
-## debugging aids
-=================
+## Debugging aids
 
 Using
 ``` 

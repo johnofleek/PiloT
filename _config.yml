@@ -1,2 +1,8 @@
-theme: jekyll-theme-tactile
+plugins:
+##    - jekyll-include-cache
+
+remote_theme: 	"pmarsceill/just-the-docs"
+
+# Footer content appears at the bottom of every page's main content
+footer_content: "Update this footer in _config.yml"
 

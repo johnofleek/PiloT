@@ -1,7 +1,18 @@
+---
+layout: default
+title: Automation - IP link check
+parent: Pilot
+
+nav_order: 10
+has_children: false
+---
+
+
 ## Purpose
-Automate testing of wwan0 network connection provided by the Pilot board by using ICMP ping  
-Restart the wwan0 network connection on failure   
-Current version is experimental - seems to work but is very basic - maybe view this  
+Automates IP link availablity - reboots the PiloT if the IP link fails.
+By testing wwan0 network connection provided by the Pilot board using ICMP ping  
+Restarts the wwan0 network connection on ping failure   
+The current version is experimental - seems to work but is very basic - maybe view this  
 as a starting point to develop a better solution  
 
 ## Quick start
@@ -36,7 +47,7 @@ After this [checkIp.py] should execute every minute
 https://stackabuse.com/scheduling-jobs-with-python-crontab/
 ```
 
-# Further stuff
+## Further stuff
 
 list all the jobs from the command line   
 ```

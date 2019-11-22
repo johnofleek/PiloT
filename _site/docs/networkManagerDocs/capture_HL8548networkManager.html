@@ -1,0 +1,131 @@
+<!DOCTYPE html> <html lang="en-US"> <head> <meta charset="UTF-8"> <meta http-equiv="X-UA-Compatible" content="IE=Edge"> <title> - Pilot</title> <link rel="shortcut icon" href="http://localhost:4000/favicon.ico" type="image/x-icon"> <link rel="stylesheet" href="http://localhost:4000/assets/css/just-the-docs.css"> <script type="text/javascript" src="http://localhost:4000/assets/js/vendor/lunr.min.js"></script> <script type="text/javascript" src="http://localhost:4000/assets/js/just-the-docs.js"></script> <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Begin Jekyll SEO tag v2.5.0 --> <title>Pilot | PiloT Raspberry Pi Cellular HAT</title> <meta name="generator" content="Jekyll v3.8.5" /> <meta property="og:title" content="Pilot" /> <meta property="og:locale" content="en_US" /> <meta name="description" content="PiloT Raspberry Pi Cellular HAT" /> <meta property="og:description" content="PiloT Raspberry Pi Cellular HAT" /> <link rel="canonical" href="http://localhost:4000/docs/networkManagerDocs/capture_HL8548networkManager.html" /> <meta property="og:url" content="http://localhost:4000/docs/networkManagerDocs/capture_HL8548networkManager.html" /> <meta property="og:site_name" content="Pilot" /> <script type="application/ld+json"> {"@type":"WebPage","url":"http://localhost:4000/docs/networkManagerDocs/capture_HL8548networkManager.html","headline":"Pilot","description":"PiloT Raspberry Pi Cellular HAT","@context":"http://schema.org"}</script> <!-- End Jekyll SEO tag --> </head> <body> <svg xmlns="http://www.w3.org/2000/svg" style="display: none;"> <symbol id="link" viewBox="0 0 16 16"> <title>Link</title> <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path> </symbol> </svg> <div class="page-wrap"> <div class="side-bar"> <div class="site-header"> <a href="http://localhost:4000" class="site-title lh-tight"> Pilot </a> <button class="menu-button fs-3 js-main-nav-trigger" data-text-toggle="Hide" type="button">Menu</button> </div> <div class="navigation main-nav js-main-nav"> <nav role="navigation" aria-label="Main navigation"> <ul class="navigation-list"><li class="navigation-list-item active"><a href="http://localhost:4000/docs/networkManagerDocs/capture_HL8548networkManager.html" class="navigation-list-link active"></a></li><li class="navigation-list-item active"><a href="http://localhost:4000/docs/networkManagerDocs/exampleNetworkManagerConfigFile.html" class="navigation-list-link"></a></li><li class="navigation-list-item active"><a href="http://localhost:4000/docs/networkManagerDocs/example_nmcli_configRead_O2_HL7692.html" class="navigation-list-link"></a></li><li class="navigation-list-item active"><a href="http://localhost:4000/docs/uPilot_m.2/RPi4_USB_EM7455.html" class="navigation-list-link"></a></li><li class="navigation-list-item active"><a href="http://localhost:4000/docs/uPilot_m.2/" class="navigation-list-link"></a></li><li class="navigation-list-item"><a href="http://localhost:4000/" class="navigation-list-link">Pilot</a><ul class="navigation-list-child-list "><li class="navigation-list-item "><a href="http://localhost:4000/docs/networkManagerDocs/instructions_modemConfiguration.html" class="navigation-list-link">Pilot Configuration</a><ul class="navigation-list-child-list"><li class="navigation-list-item "> <a href="http://localhost:4000/docs/networkManagerDocs/instructions_EM7455.html" class="navigation-list-link">EM7455</a> </li><li class="navigation-list-item "> <a href="http://localhost:4000/docs/networkManagerDocs/instructions_HL7692.html" class="navigation-list-link">HL7692</a> </li><li class="navigation-list-item "> <a href="http://localhost:4000/docs/networkManagerDocs/instructions_HL8548.html" class="navigation-list-link">HL8548</a> </li></ul></li><li class="navigation-list-item "><a href="http://localhost:4000/scripts_python_checkIp/README.html" class="navigation-list-link">Automation - IP link check</a></li><li class="navigation-list-item "><a href="http://localhost:4000/docs/networkManagerDocs/git.html" class="navigation-list-link">Pilot GIT repo</a></li></ul></li><li class="navigation-list-item"><a href="http://localhost:4000/docs/networkManagerDocs/networkManagerIndex.html" class="navigation-list-link">Network Manager</a><ul class="navigation-list-child-list "><li class="navigation-list-item "><a href="http://localhost:4000/docs/networkManagerDocs/Quickstart.html" class="navigation-list-link">Quickstart Guide</a><ul class="navigation-list-child-list"></ul></li><li class="navigation-list-item "><a href="http://localhost:4000/docs/networkManagerDocs/simUse_info.html" class="navigation-list-link">SIM Practical Testing</a></li><li class="navigation-list-item "><a href="http://localhost:4000/docs/networkManagerDocs/instructions_networkManager.html" class="navigation-list-link">Further notes 1</a></li><li class="navigation-list-item "><a href="http://localhost:4000/docs/networkManagerDocs/instructions_NetworkManagerMore.html" class="navigation-list-link">Further notes 2</a></li><li class="navigation-list-item "><a href="http://localhost:4000/docs/speedtests/README.html" class="navigation-list-link">Speed test results</a></li><li class="navigation-list-item "><a href="http://localhost:4000/docs/networkManagerDocs/test_configurationRecords.html" class="navigation-list-link">Pilot Module Test Records</a></li><li class="navigation-list-item "><a href="http://localhost:4000/docs/networkManagerDocs/exampleNmcliConnectShow.html" class="navigation-list-link">Shell example - read connection settings</a></li></ul></li></ul> </nav> </div> <footer class="site-footer"> <p class="text-small text-grey-dk-000 mb-4">This site uses <a href="https://github.com/pmarsceill/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll.</p> </footer> </div> <div class="main-content-wrap js-main-content" tabindex="0"> <div class="main-content"> <div class="page-header js-page-header"> <div class="search"> <div class="search-input-wrap"> <input type="text" class="js-search-input search-input" tabindex="0" placeholder="Search Pilot" aria-label="Search Pilot" autocomplete="off"> <svg width="14" height="14" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg" class="search-icon"><title>Search</title><g fill-rule="nonzero"><path d="M17.332 20.735c-5.537 0-10-4.6-10-10.247 0-5.646 4.463-10.247 10-10.247 5.536 0 10 4.601 10 10.247s-4.464 10.247-10 10.247zm0-4c3.3 0 6-2.783 6-6.247 0-3.463-2.7-6.247-6-6.247s-6 2.784-6 6.247c0 3.464 2.7 6.247 6 6.247z"/><path d="M11.672 13.791L.192 25.271 3.02 28.1 14.5 16.62z"/></g></svg> </div> <div class="js-search-results search-results-wrap"></div> </div> </div> <div class="page"> <div id="main-content" class="page-content" role="main"> <p>Disconnect</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pi@raspberrypi:~ $ sudo tail -f /var/log/syslog
+Aug 12 14:38:22 raspberrypi NetworkManager[394]: &lt;info&gt;  [1565617102.6322] manager: NetworkManager state is now CONNECTED_GLOBAL
+Aug 12 14:38:22 raspberrypi systemd[1]: Starting Network Manager Script Dispatcher Service...
+Aug 12 14:38:22 raspberrypi dbus-daemon[391]: [system] Successfully activated service 'org.freedesktop.nm_dispatcher'
+Aug 12 14:38:22 raspberrypi systemd[1]: Started Network Manager Script Dispatcher Service.
+Aug 12 14:38:22 raspberrypi nm-dispatcher: req:1 'up' [ppp0]: new request (1 scripts)
+Aug 12 14:38:22 raspberrypi nm-dispatcher: req:1 'up' [ppp0]: start running ordered scripts...
+Aug 12 14:38:22 raspberrypi nm-dispatcher: req:2 'connectivity-change': new request (1 scripts)
+Aug 12 14:38:23 raspberrypi nm-dispatcher: req:2 'connectivity-change': start running ordered scripts...
+Aug 12 14:38:33 raspberrypi systemd[1]: NetworkManager-dispatcher.service: Succeeded.
+Aug 12 14:38:54 raspberrypi systemd-timesyncd[375]: Synchronized to time server for the first time 188.114.116.1:123 (0.debian.pool.ntp.org).
+Aug 12 14:43:39 raspberrypi NetworkManager[394]: &lt;info&gt;  [1565617419.0795] device (ttyACM4): state change: activated -&gt; deactivating (reason 'user-requested', sys-iface-state: 'managed')
+Aug 12 14:43:39 raspberrypi NetworkManager[394]: &lt;info&gt;  [1565617419.0813] manager: NetworkManager state is now DISCONNECTING
+Aug 12 14:43:39 raspberrypi dbus-daemon[391]: [system] Activating via systemd: service name='org.freedesktop.nm_dispatcher' unit='dbus-org.freedesktop.nm-dispatcher.service' requested by ':1.8' (uid=0 pid=394 comm="/usr/sbin/NetworkManager --no-daemon ")
+Aug 12 14:43:39 raspberrypi systemd[1]: Starting Network Manager Script Dispatcher Service...
+Aug 12 14:43:39 raspberrypi NetworkManager[394]: &lt;info&gt;  [1565617419.1247] audit: op="device-disconnect" interface="ppp0" ifindex=11 pid=761 uid=1000 result="success"
+Aug 12 14:43:39 raspberrypi NetworkManager[394]: Terminating on signal 15
+Aug 12 14:43:39 raspberrypi pppd[2972]: Terminating on signal 15
+Aug 12 14:43:39 raspberrypi pppd[2972]: nm-ppp-plugin: (nm_phasechange): status 10 / phase 'terminate'
+Aug 12 14:43:39 raspberrypi pppd[2972]: nm-ppp-plugin: (nm_phasechange): status 8 / phase 'network'
+Aug 12 14:43:39 raspberrypi ModemManager[403]: &lt;info&gt;  Modem /org/freedesktop/ModemManager1/Modem/3: state changed (connected -&gt; disconnecting)
+Aug 12 14:43:39 raspberrypi pppd[2972]: Connect time 5.3 minutes.
+Aug 12 14:43:39 raspberrypi NetworkManager[394]: &lt;info&gt;  [1565617419.1361] modem["ttyACM4"]: modem state changed, 'connected' --&gt; 'disconnecting' (reason: user-requested)
+Aug 12 14:43:39 raspberrypi NetworkManager[394]: Connect time 5.3 minutes.
+Aug 12 14:43:39 raspberrypi NetworkManager[394]: Sent 4953 bytes, received 2709 bytes.
+Aug 12 14:43:39 raspberrypi pppd[2972]: Sent 4953 bytes, received 2709 bytes.
+Aug 12 14:43:39 raspberrypi pppd[2972]: nm-ppp-plugin: (nm_phasechange): status 5 / phase 'establish'
+Aug 12 14:43:39 raspberrypi NetworkManager[394]: &lt;info&gt;  [1565617419.1424] device (ppp0): state change: disconnected -&gt; unmanaged (reason 'connection-assumed', sys-iface-state: 'external')
+Aug 12 14:43:39 raspberrypi NetworkManager[394]: &lt;info&gt;  [1565617419.1511] dns-mgr: Removing DNS information from /sbin/resolvconf
+Aug 12 14:43:39 raspberrypi dbus-daemon[391]: [system] Successfully activated service 'org.freedesktop.nm_dispatcher'
+Aug 12 14:43:39 raspberrypi systemd[1]: Started Network Manager Script Dispatcher Service.
+Aug 12 14:43:39 raspberrypi nm-dispatcher: req:1 'connectivity-change': new request (1 scripts)
+Aug 12 14:43:39 raspberrypi nm-dispatcher: req:1 'connectivity-change': start running ordered scripts...
+Aug 12 14:43:39 raspberrypi pppd[2972]: Modem hangup
+Aug 12 14:43:39 raspberrypi NetworkManager[394]: Modem hangup
+Aug 12 14:43:39 raspberrypi NetworkManager[394]: Connection terminated.
+Aug 12 14:43:39 raspberrypi pppd[2972]: nm-ppp-plugin: (nm_phasechange): status 11 / phase 'disconnect'
+Aug 12 14:43:39 raspberrypi pppd[2972]: Connection terminated.
+Aug 12 14:43:40 raspberrypi ModemManager[403]: &lt;info&gt;  mobile equipment request to deactivate context (type IP, address 0.0.0.0, cid 2)
+Aug 12 14:43:40 raspberrypi ModemManager[403]: &lt;info&gt;  Bearer /org/freedesktop/ModemManager1/Bearer/4: explicitly disconnected
+Aug 12 14:43:40 raspberrypi ModemManager[403]: &lt;warn&gt;  (ttyACM4): could not re-acquire serial port lock: (5) Input/output error
+Aug 12 14:43:40 raspberrypi ModemManager[403]: &lt;info&gt;  Modem /org/freedesktop/ModemManager1/Modem/3: state changed (disconnecting -&gt; registered)
+Aug 12 14:43:40 raspberrypi ModemManager[403]: &lt;info&gt;  mobile equipment request to deactivate context (type IP, address 0.0.0.0, cid 2)
+Aug 12 14:43:40 raspberrypi NetworkManager[394]: Too few arguments.
+Aug 12 14:43:40 raspberrypi NetworkManager[394]: Too few arguments.
+Aug 12 14:43:40 raspberrypi NetworkManager[394]: &lt;info&gt;  [1565617420.2522] modem["ttyACM4"]: modem state changed, 'disconnecting' --&gt; 'registered' (reason: user-requested)
+Aug 12 14:43:40 raspberrypi pppd[2972]: nm-ppp-plugin: (nm_phasechange): status 1 / phase 'dead'
+Aug 12 14:43:40 raspberrypi pppd[2972]: nm-ppp-plugin: (nm_exit_notify): cleaning up
+Aug 12 14:43:40 raspberrypi pppd[2972]: Exit.
+Aug 12 14:43:41 raspberrypi ModemManager[403]: &lt;info&gt;  mobile equipment request to deactivate context (type IP, address 0.0.0.0, cid 2)
+Aug 12 14:43:41 raspberrypi ModemManager[403]: &lt;info&gt;  mobile equipment request to deactivate context (type IP, address 0.0.0.0, cid 2)
+Aug 12 14:43:42 raspberrypi NetworkManager[394]: &lt;info&gt;  [1565617422.1125] device (ttyACM4): state change: deactivating -&gt; disconnected (reason 'user-requested', sys-iface-state: 'managed')
+Aug 12 14:43:42 raspberrypi NetworkManager[394]: &lt;info&gt;  [1565617422.1230] manager: NetworkManager state is now DISCONNECTED
+Aug 12 14:43:42 raspberrypi nm-dispatcher: req:2 'down' [ttyACM4]: new request (1 scripts)
+Aug 12 14:43:42 raspberrypi nm-dispatcher: req:2 'down' [ttyACM4]: start running ordered scripts...
+Aug 12 14:43:52 raspberrypi systemd[1]: NetworkManager-dispatcher.service: Succeeded.
+Aug 12 14:44:09 raspberrypi dbus-daemon[663]: [session uid=1000 pid=663] Activating via systemd: service name='org.gtk.vfs.Metadata' unit='gvfs-metadata.service' requested by ':1.8' (uid=1000 pid=741 comm="pcmanfm --desktop --profile LXDE-pi ")
+Aug 12 14:44:09 raspberrypi systemd[625]: Starting Virtual filesystem metadata service...
+Aug 12 14:44:09 raspberrypi dbus-daemon[663]: [session uid=1000 pid=663] Successfully activated service 'org.gtk.vfs.Metadata'
+Aug 12 14:44:09 raspberrypi systemd[625]: Started Virtual filesystem metadata service.
+</code></pre></div></div> <h1 id="connect"> <a href="#connect" class="anchor-heading"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#link"></use></svg></a> connect </h1> <p>pi@raspberrypi:~ $ sudo tail -f /var/log/syslog</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Aug 12 14:55:58 raspberrypi NetworkManager[394]: &lt;info&gt;  [1565618158.1554] device (ttyACM4): Activation: starting connection '3 Internet' (f23612eb-7b35-4524-9e3d-67bc86003e04)
+Aug 12 14:55:58 raspberrypi NetworkManager[394]: &lt;info&gt;  [1565618158.1576] audit: op="connection-activate" uuid="f23612eb-7b35-4524-9e3d-67bc86003e04" name="3 Internet" pid=761 uid=1000 result="success"
+Aug 12 14:55:58 raspberrypi NetworkManager[394]: &lt;info&gt;  [1565618158.1594] device (ttyACM4): state change: disconnected -&gt; prepare (reason 'none', sys-iface-state: 'managed')
+Aug 12 14:55:58 raspberrypi NetworkManager[394]: &lt;info&gt;  [1565618158.1658] manager: NetworkManager state is now CONNECTING
+Aug 12 14:55:58 raspberrypi ModemManager[403]: &lt;info&gt;  Simple connect started...
+Aug 12 14:55:58 raspberrypi ModemManager[403]: &lt;info&gt;  Simple connect state (4/8): Wait to get fully enabled
+Aug 12 14:55:58 raspberrypi ModemManager[403]: &lt;info&gt;  Simple connect state (5/8): Register
+Aug 12 14:55:58 raspberrypi ModemManager[403]: &lt;info&gt;  Simple connect state (6/8): Bearer
+Aug 12 14:55:58 raspberrypi ModemManager[403]: &lt;info&gt;  Simple connect state (7/8): Connect
+Aug 12 14:55:58 raspberrypi ModemManager[403]: &lt;info&gt;  Modem /org/freedesktop/ModemManager1/Modem/3: state changed (registered -&gt; connecting)
+Aug 12 14:55:58 raspberrypi NetworkManager[394]: &lt;info&gt;  [1565618158.1800] modem["ttyACM4"]: modem state changed, 'registered' --&gt; 'connecting' (reason: user-requested)
+Aug 12 14:55:58 raspberrypi ModemManager[403]: &lt;info&gt;  Modem /org/freedesktop/ModemManager1/Modem/3: state changed (connecting -&gt; connected)
+Aug 12 14:55:58 raspberrypi ModemManager[403]: &lt;info&gt;  Simple connect state (8/8): All done
+Aug 12 14:55:58 raspberrypi NetworkManager[394]: &lt;info&gt;  [1565618158.2225] modem["ttyACM4"]: modem state changed, 'connecting' --&gt; 'connected' (reason: user-requested)
+Aug 12 14:55:58 raspberrypi NetworkManager[394]: &lt;info&gt;  [1565618158.2267] device (ttyACM4): state change: prepare -&gt; config (reason 'none', sys-iface-state: 'managed')
+Aug 12 14:55:58 raspberrypi NetworkManager[394]: &lt;info&gt;  [1565618158.2301] device (ttyACM4): state change: config -&gt; ip-config (reason 'none', sys-iface-state: 'managed')
+Aug 12 14:55:58 raspberrypi NetworkManager[394]: &lt;warn&gt;  [1565618158.2350] device (ttyACM4): interface ttyACM4 not up for IP configuration
+Aug 12 14:55:58 raspberrypi NetworkManager[394]: &lt;info&gt;  [1565618158.2359] modem["ttyACM4"]: using modem-specified IP timeout: 20 seconds
+Aug 12 14:55:58 raspberrypi NetworkManager[394]: &lt;info&gt;  [1565618158.2376] ppp-manager: starting PPP connection
+Aug 12 14:55:58 raspberrypi NetworkManager[394]: &lt;info&gt;  [1565618158.2428] ppp-manager: pppd started with pid 3307
+Aug 12 14:55:58 raspberrypi pppd[3307]: Plugin /usr/lib/pppd/2.4.7/nm-pppd-plugin.so loaded.
+Aug 12 14:55:58 raspberrypi NetworkManager[394]: Plugin /usr/lib/pppd/2.4.7/nm-pppd-plugin.so loaded.
+Aug 12 14:55:58 raspberrypi pppd[3307]: nm-ppp-plugin: (plugin_init): initializing
+Aug 12 14:55:58 raspberrypi pppd[3307]: pppd 2.4.7 started by root, uid 0
+Aug 12 14:55:58 raspberrypi pppd[3307]: nm-ppp-plugin: (nm_phasechange): status 3 / phase 'serial connection'
+Aug 12 14:55:58 raspberrypi pppd[3307]: Using interface ppp0
+Aug 12 14:55:58 raspberrypi pppd[3307]: nm-ppp-plugin: (nm_phasechange): status 5 / phase 'establish'
+Aug 12 14:55:58 raspberrypi NetworkManager[394]: Using interface ppp0
+Aug 12 14:55:58 raspberrypi NetworkManager[394]: Connect: ppp0 &lt;--&gt; /dev/ttyACM4
+Aug 12 14:55:58 raspberrypi pppd[3307]: Connect: ppp0 &lt;--&gt; /dev/ttyACM4
+Aug 12 14:55:58 raspberrypi NetworkManager[394]: &lt;info&gt;  [1565618158.2740] manager: (ppp0): new Ppp device (/org/freedesktop/NetworkManager/Devices/16)
+Aug 12 14:55:58 raspberrypi pppd[3307]: nm-ppp-plugin: (nm_phasechange): status 6 / phase 'authenticate'
+Aug 12 14:55:58 raspberrypi pppd[3307]: nm-ppp-plugin: (get_credentials): passwd-hook, requesting credentials...
+Aug 12 14:55:58 raspberrypi pppd[3307]: nm-ppp-plugin: (get_credentials): got credentials from NetworkManager
+Aug 12 14:55:58 raspberrypi pppd[3307]: CHAP authentication succeeded: Welcome!
+Aug 12 14:55:58 raspberrypi NetworkManager[394]: CHAP authentication succeeded: Welcome!
+Aug 12 14:55:58 raspberrypi NetworkManager[394]: CHAP authentication succeeded
+Aug 12 14:55:58 raspberrypi pppd[3307]: nm-ppp-plugin: (nm_phasechange): status 8 / phase 'network'
+Aug 12 14:55:58 raspberrypi pppd[3307]: CHAP authentication succeeded
+Aug 12 14:56:01 raspberrypi pppd[3307]: local  IP address 94.197.91.52
+Aug 12 14:56:01 raspberrypi NetworkManager[394]: local  IP address 94.197.91.52
+Aug 12 14:56:01 raspberrypi NetworkManager[394]: remote IP address 192.200.1.21
+Aug 12 14:56:01 raspberrypi NetworkManager[394]: primary   DNS address 217.171.132.0
+Aug 12 14:56:01 raspberrypi NetworkManager[394]: secondary DNS address 217.171.135.0
+Aug 12 14:56:01 raspberrypi pppd[3307]: nm-ppp-plugin: (nm_phasechange): status 9 / phase 'running'
+Aug 12 14:56:01 raspberrypi pppd[3307]: remote IP address 192.200.1.21
+Aug 12 14:56:01 raspberrypi pppd[3307]: nm-ppp-plugin: (nm_ip_up): ip-up event
+Aug 12 14:56:01 raspberrypi pppd[3307]: primary   DNS address 217.171.132.0
+Aug 12 14:56:01 raspberrypi pppd[3307]: nm-ppp-plugin: (nm_ip_up): sending IPv4 config to NetworkManager...
+Aug 12 14:56:01 raspberrypi pppd[3307]: secondary DNS address 217.171.135.0
+Aug 12 14:56:01 raspberrypi NetworkManager[394]: &lt;info&gt;  [1565618161.3567] device (ppp0): state change: unmanaged -&gt; unavailable (reason 'connection-assumed', sys-iface-state: 'external')
+Aug 12 14:56:01 raspberrypi NetworkManager[394]: &lt;info&gt;  [1565618161.3625] ppp-manager: (IPv4 Config Get) reply received.
+Aug 12 14:56:01 raspberrypi NetworkManager[394]: &lt;info&gt;  [1565618161.3741] device (ttyACM4): state change: ip-config -&gt; ip-check (reason 'none', sys-iface-state: 'managed')
+Aug 12 14:56:01 raspberrypi NetworkManager[394]: &lt;info&gt;  [1565618161.3828] device (ppp0): state change: unavailable -&gt; disconnected (reason 'none', sys-iface-state: 'external')
+Aug 12 14:56:01 raspberrypi NetworkManager[394]: &lt;info&gt;  [1565618161.3889] device (ttyACM4): state change: ip-check -&gt; secondaries (reason 'none', sys-iface-state: 'managed')
+Aug 12 14:56:01 raspberrypi NetworkManager[394]: &lt;info&gt;  [1565618161.3921] device (ttyACM4): state change: secondaries -&gt; activated (reason 'none', sys-iface-state: 'managed')
+Aug 12 14:56:01 raspberrypi NetworkManager[394]: &lt;info&gt;  [1565618161.3967] manager: NetworkManager state is now CONNECTED_LOCAL
+Aug 12 14:56:01 raspberrypi NetworkManager[394]: &lt;info&gt;  [1565618161.4147] manager: NetworkManager state is now CONNECTED_SITE
+Aug 12 14:56:01 raspberrypi NetworkManager[394]: &lt;info&gt;  [1565618161.4151] policy: set '3 Internet' (ppp0) as default for IPv4 routing and DNS
+Aug 12 14:56:01 raspberrypi NetworkManager[394]: &lt;info&gt;  [1565618161.4156] dns-mgr: Writing DNS information to /sbin/resolvconf
+Aug 12 14:56:02 raspberrypi NetworkManager[394]: &lt;info&gt;  [1565618162.4982] device (ttyACM4): Activation: successful, device activated.
+Aug 12 14:56:02 raspberrypi NetworkManager[394]: &lt;info&gt;  [1565618162.5006] manager: NetworkManager state is now CONNECTED_GLOBAL
+Aug 12 14:56:02 raspberrypi dbus-daemon[391]: [system] Activating via systemd: service name='org.freedesktop.nm_dispatcher' unit='dbus-org.freedesktop.nm-dispatcher.service' requested by ':1.8' (uid=0 pid=394 comm="/usr/sbin/NetworkManager --no-daemon ")
+Aug 12 14:56:02 raspberrypi systemd[1]: Starting Network Manager Script Dispatcher Service...
+Aug 12 14:56:02 raspberrypi dbus-daemon[391]: [system] Successfully activated service 'org.freedesktop.nm_dispatcher'
+Aug 12 14:56:02 raspberrypi systemd[1]: Started Network Manager Script Dispatcher Service.
+Aug 12 14:56:02 raspberrypi nm-dispatcher: req:1 'up' [ppp0]: new request (1 scripts)
+Aug 12 14:56:02 raspberrypi nm-dispatcher: req:1 'up' [ppp0]: start running ordered scripts...
+Aug 12 14:56:02 raspberrypi nm-dispatcher: req:2 'connectivity-change': new request (1 scripts)
+Aug 12 14:56:03 raspberrypi nm-dispatcher: req:2 'connectivity-change': start running ordered scripts...
+</code></pre></div></div> <hr> <footer role="contentinfo"> <p class="text-small text-grey-dk-000 mb-0">Update this footer in _config.yml</p> </footer> </div> </div> </div> </div> </body> </html>

@@ -4,8 +4,14 @@ title: Quickstart Guide
 parent: Network Manager
 nav_order: 2
 has_children: true
+has_toc: false
 ---
 ## Quickstart Guide
+{: .no_toc  }
+
+1. TOC
+{:toc}
+
 This guide installs a universal IP cellular connectivity solution onto the Raspbian OS targeting the PiloT HAT board and Raspberry
 PI \(RPi\) hardware.
 

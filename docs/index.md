@@ -51,6 +51,6 @@ Raspberry Pi Zero
 
 
 
-![Picture of PiloT_should appear here alt <](./images/PilotPCA.png "Pilot")
+![Picture of PiloT_should appear here alt <](./images/PilotPCA.png "PiloT")
 
 

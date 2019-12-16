@@ -10,7 +10,6 @@ has_toc: false
 ## Table of contents
 {: .no_toc  }
 
-1. TOC
 {:toc}
 
 

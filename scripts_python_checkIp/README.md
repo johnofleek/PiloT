@@ -1,10 +1,12 @@
 ---
 layout: default
+permalink: /scripts_python_checkIp/
 title: Automation - IP link check
 parent: PiloT
 
 nav_order: 10
 has_children: false
+nav_exclude: true
 ---
 
 

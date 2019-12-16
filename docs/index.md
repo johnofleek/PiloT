@@ -22,7 +22,8 @@ The PiloT power state is controlled via the Rpi GPIO and the Pilot is powered
  via the RPi 40 pin header.
 
 Control and data communications between the PiloT with the RPi is via USB or
- the RPi physical serial port. Note that some RPi variants use the physical serial port to communicate with the RPi on board WiFi / Bluetooth systems 
+ the RPi physical serial port. Note that some RPi variants use the physical serial
+ port to communicate with the RPi on board WiFi / Bluetooth systems 
 
 ## Technical information links
 
@@ -34,7 +35,7 @@ Click [Network manager documentation](./docs/networkManagerDocs/networkManagerIn
 Click [Shell Scripts](./scripts_pilotControl/) for example scripts that
  power up and down the PiloT HAT
 
-Click [IP link check automation](./scripts_python_checkIp/) for a demo
+Click [IP link check automation](./scripts_python_checkIp/) for a demo 
  project which adds IP ping link checking to the RPi
  
 Click [Speed tests](./speedtests/README.md) for records of practical

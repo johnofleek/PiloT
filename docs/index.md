@@ -43,14 +43,14 @@ Click [Speed tests](./speedtests/README.md) for records of practical
 
 ## Compatibility
 
-Raspberry Pi 4 Model B
-Raspberry Pi 3 Model B+
-Raspberry Pi 3 Model B
-Raspberry Pi 2 Model B
-Raspberry Pi Zero W
-Raspberry Pi Zero
+Raspberry Pi 4 Model B  
+Raspberry Pi 3 Model B+  
+Raspberry Pi 3 Model B  
+Raspberry Pi 2 Model B  
+Raspberry Pi Zero W  
+Raspberry Pi Zero  
 
-
+  
 
 ![Picture of PiloT_should appear here alt <](./images/PilotPCA.png "PiloT")
 

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Automation - IP link check
-parent: Pilot
+parent: PiloT
 
 nav_order: 10
 has_children: false

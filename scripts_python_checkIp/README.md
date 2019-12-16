@@ -1,13 +1,13 @@
 ---
 permalink: /scripts_python_checkIp/
 title: "Automation - IP link check"
-nav_exclude: true
+parent: PiloT
 ---
 
 
 ## Purpose
 Automates IP link availablity - reboots the PiloT if the IP link fails.
-By testing wwan0 network connection provided by the Pilot board using ICMP ping  
+By testing wwan0 network connection provided by the PiloT board using ICMP ping  
 Restarts the wwan0 network connection on ping failure   
 The current version is experimental - seems to work but is very basic - maybe view this  
 as a starting point to develop a better solution  
@@ -17,7 +17,7 @@ as a starting point to develop a better solution
 pip install python-crontab
 ```
 
-This assumes the Pilot project was installed in the pi@raspberrypi: home folder - the code 
+This assumes the PiloT project was installed in the pi@raspberrypi: home folder - the code 
 currently has hardcoded paths  
 
 Add the cron custom job  

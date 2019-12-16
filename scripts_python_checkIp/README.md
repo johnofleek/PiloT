@@ -1,11 +1,6 @@
 ---
-layout: default
 permalink: /scripts_python_checkIp/
-title: Automation - IP link check
-parent: PiloT
-
-nav_order: 10
-has_children: false
+title: "Automation - IP link check"
 nav_exclude: true
 ---
 

@@ -1,7 +1,7 @@
 ---
 permalink: /
 layout: default
-title: Pilot
+title: PiloT
 nav_order: 1
 has_children: true
 has_toc: false
@@ -35,7 +35,7 @@ Click [Network manager documentation](./docs/networkManagerDocs/networkManagerIn
 Click [Shell Scripts](./scripts_pilotControl/) for example scripts that
  power up and down the PiloT HAT
 
-Click [IP link check automation](./scripts_python_checkIp/README.md) for a demo
+Click [IP link check automation](./scripts_python_checkIp/) for a demo
  project which adds IP ping link checking to the RPi
  
 Click [Speed tests](./speedtests/README.md) for records of practical

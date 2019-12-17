@@ -1,7 +1,7 @@
 ---
 layout: default
 title: HL7692
-parent: Pilot Configuration
+parent: PiloT Configuration
 grand_parent: PiloT
 nav_order: 2
 has_children: false
@@ -19,7 +19,7 @@ With network manager and associated helpers disabled it is possible to manually
  command / configure the HL7692 via it's USB serial port  
 
 With network manager manger running it's better to use the physical UART connection between
- the RPi and the Pilot / HL7692. This works ok on the RPi's that don't have WiFi or the RPi4.
+ the RPi and the PiloT / HL7692. This works ok on the RPi's that don't have WiFi or the RPi4.
 
 To access the HL7692 USB serial port command interface use a serial
  terminal tool like minicom 
@@ -38,7 +38,7 @@ $ sudo minicom -b 115200  -D /dev/ttyS0
 ### LEDs
 Note that the LED port configuration is erased if the modem firmware is updated
 
-The Pilot board recommended settings are as follows - the modem should be preconfigured
+The PiloT board recommended settings are as follows - the modem should be preconfigured
  like this when the Pilot board is new
 
 #### LED D6

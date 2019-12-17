@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Pilot Configuration
-parent: Pilot
+parent: PiloT
 nav_order: 3
 has_children: true
 has_toc: false

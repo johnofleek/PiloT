@@ -2,7 +2,7 @@
 layout: default
 title: EM7455
 parent: Pilot Configuration
-grand_parent: Pilot
+grand_parent: PiloT
 nav_order: 2
 has_children: false
 ---

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Pilot GIT repo
-parent: Pilot
+parent: PiloT
 has_children: false
 has_toc: false
 nav_order: 100

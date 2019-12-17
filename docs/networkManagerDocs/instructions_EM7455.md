@@ -1,7 +1,7 @@
 ---
 layout: default
 title: EM7455
-parent: Pilot Configuration
+parent: PiloT Configuration
 grand_parent: PiloT
 nav_order: 2
 has_children: false
@@ -9,7 +9,7 @@ has_children: false
 
 ## EM Board 
 
-The following information targets the uPilot board 
+The following information targets the uPiloT board 
 
 ## AT Config
 

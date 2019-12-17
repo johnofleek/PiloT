@@ -1,22 +1,22 @@
 ---
 layout: default
-title: Pilot Configuration
+title: PiloT Configuration
 parent: PiloT
 nav_order: 1
 has_children: true
 has_toc: false
 ---
 
-##  Pilot modem configuration notes
+##  PiloT modem configuration notes
 
-For documentation specific to the modem fitted to your Pilot - such as 
+For documentation specific to the modem fitted to your PiloT - such as 
 
 * Modem Configuration
 * Expected LED behaviour
 * Network specific information
 
 
-Click the link below that matches the modem fitted to your Pilot HAT  
+Click the link below that matches the modem fitted to your PiloT HAT  
 *If you don't know the modem type try sending AT command ATi9 to the modem via
  a command serial port*
 

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Pilot Module Test Records
+title: PiloT Module Test Records
 parent: Network Manager
 nav_order: 111
 has_children: false
@@ -8,7 +8,7 @@ has_toc: false
 ---
 
 ## Test records
-Pilot board with Raspberry Pi and Raspian OS - a record of what was tested
+PiloT board with Raspberry Pi and Raspian OS - a record of what was tested
 
 1. TOC
 {:toc}

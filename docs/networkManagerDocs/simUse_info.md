@@ -2,8 +2,6 @@
 layout: default
 title: SIM Practical Testing
 parent: Network Manager
-
-
 nav_order: 2
 has_children: false
 ---
@@ -32,8 +30,8 @@ On O2 the network seemed to prefer a connection to 2G edge - to workaround this 
 * Lock the modem to 4G / LTE by using AT command AT+KSRAT=5 
 * Manually configure the modems context 1 using AT command
   AT+CGDCONT = 1,"IP","payandgo.o2.co.uk",,,  
-  We think this may be necessary  because network manager losses track of the
-   of the modems AT+CGDCONT setting but this could be incorrect 
+  We think this may be necessary because network manager losses track of the
+   modems AT+CGDCONT setting but this could be incorrect 
 * Use the NetworkManager Applet (GUI) to configure network manager
 
 The following is an example of using the NetworkManager Applet to configure 

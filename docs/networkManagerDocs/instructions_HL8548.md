@@ -2,7 +2,7 @@
 layout: default
 title: HL8548
 parent: Pilot Configuration
-grand_parent: Pilot
+grand_parent: PiloT
 nav_order: 2
 has_children: false
 ---
@@ -67,3 +67,6 @@ $ lsusb
 Bus 001 Device 010: ID 1519:0303 Comneon 
 ...
 ```
+and
+[capture](./capture_HL8548networkManager.md)
+

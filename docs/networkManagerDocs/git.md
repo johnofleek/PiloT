@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Pilot GIT repo
+title: PiloT GIT repo
 parent: PiloT
 has_children: false
 has_toc: false
@@ -14,7 +14,7 @@ nav_order: 100
 Copies the latest version of this project that resides on the github system to a local machine
 
 ```
-git clone http://github.com/johnofleek/Pilot
+git clone http://github.com/johnofleek/PiloT
 ```
 
 

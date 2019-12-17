@@ -7,7 +7,7 @@ nav_order: 2
 has_children: false
 ---
 
-## HL7692 Pilot
+## HL7692 PiloT
 
 The aim is to configure the Raspberry Pi Raspian OS and the HL7692 to use the USB MBIM 
 protocol to enable cellular communications between the Raspberry PI and the HL7692
@@ -39,7 +39,7 @@ $ sudo minicom -b 115200  -D /dev/ttyS0
 Note that the LED port configuration is erased if the modem firmware is updated
 
 The PiloT board recommended settings are as follows - the modem should be preconfigured
- like this when the Pilot board is new
+ like this when the PiloT board is new
 
 #### LED D6
 Set LED D6 as cellular network status indicator with the following command
@@ -95,14 +95,14 @@ We recommend using the power ON / OFF scripts to ensure correct state of modem o
 
 | RPi    | HL7692 power up state                              |
 |:------ |:-------------------------------------------------- |
-| RPi3B+ | Default GPIO state causes Pilot to power up        |
-| RPi4   | Default GPIO state causes Pilot to be powered down |  
+| RPi3B+ | Default GPIO state causes PiloT to power up        |
+| RPi4   | Default GPIO state causes PiloT to be powered down |  
 
    
   
 ## Debugging notes
 
-Using the physical serial port between the Pi and Pilot can be useful during debug as the
+Using the physical serial port between the Pi and PiloT can be useful during debug as the
  single USB serial port is managed by networkManager. 
 If only the USB serial port is available stopping networkManager may be useful
 
@@ -120,7 +120,7 @@ AT+CGDCONT= 1,"IPV4V6","payandgo.o2.co.uk",,,
 
 
 ## Windows
-I also tested the HL7692 Pilot on a Windows 10 machine 
+I also tested the HL7692 PiloT on a Windows 10 machine 
 
 On the windows machine to get the HL7692 to work I had to 
 * Lock the modem to LTE - AT+KSRAT=5 

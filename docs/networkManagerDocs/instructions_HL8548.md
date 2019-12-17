@@ -7,7 +7,7 @@ nav_order: 2
 has_children: false
 ---
 
-## HL8548 Pilot
+## HL8548 PiloT
 
 ## Configuration interface
 

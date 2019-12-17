@@ -1,7 +1,7 @@
 ---
 layout: default
 title: HL8548
-parent: Pilot Configuration
+parent: PiloT Configuration
 grand_parent: PiloT
 nav_order: 2
 has_children: false
@@ -26,8 +26,8 @@ This gives 5 CDC-ACM serial ports and 1x CDC-ECM Network adapter
 ## LEDs
 Note that the LED port configuration is erased if the modem firmware is updated
 
-The Pilot board recommended settings are as follows - the modem should be preconfigured
- like this when the Pilot board is new
+The PiloT board recommended settings are as follows - the modem should be preconfigured
+ like this when the PiloT board is new
 
 ### LED D6
 Set LED D6 as cellular network status indicator with the following command
@@ -42,14 +42,14 @@ With this setting the LED D6 behaviour is as follows
 1. LED 75 ms ON / 3s OFF: connected to the network
 
 ### LED D5
-Set LED D5 as the cellular Pilot module boot and power indicator  
+Set LED D5 as the cellular PiloT module boot and power indicator  
 ```
 at+kgpio=8,1
 ```
 
 With this setting the LED D5 behaviour is as follows
 1. If the modem is off then the LED will be OFF
-1. Following modem powered off - if a power on signal is applied to the Pilot module 
+1. Following modem powered off - if a power on signal is applied to the PiloT module 
 the LED should momentarily flash on
 1. Then the LED will be OFF
 1. After the modem has booted the LED should be ON

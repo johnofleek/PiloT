@@ -54,14 +54,14 @@ With this setting the LED D6 behaviour is as follows
 1. LED 75 ms ON / 3s OFF: connected to the network
 
 #### LED D5
-Set LED D5 as the cellular Pilot module boot and power indicator  
+Set LED D5 as the cellular PiloT module boot and power indicator  
 ```
 at+kgpio=8,1
 ```
 
 With this setting the LED D5 behaviour is as follows
 1. If the modem is off then the LED will be OFF
-1. Following modem powered off - if a power on signal is applied to the Pilot module 
+1. Following modem powered off - if a power on signal is applied to the PiloT module 
 the LED should momentarily flash on
 1. Then the LED will be OFF
 1. After the modem has booted the LED should be ON

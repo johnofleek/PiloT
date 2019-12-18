@@ -30,16 +30,16 @@ Control and data communications between the PiloT with the RPi is via USB or
 Click [Network manager documentation](./docs/networkManagerDocs/networkManagerIndex) for
  information on an alternative method of automating PiloT cellular IP
   connectivity. Network manager also provide an developers with API's for 
-  networking control, cellular SMS and general radio information   
+  networking control, cellular SMS and general radio information.   
   
 Click [Shell Scripts](./scripts_pilotControl/) for example scripts that
- power up and down the PiloT HAT
+ power up and down the PiloT HAT.
 
 Click [IP link check automation](./scripts_python_checkIp/) for a demo 
- project which adds IP ping link checking to the RPi
+ project which adds IP ping link checking to the RPi.
  
 Click [Speed tests](./speedtests/README.md) for records of practical
- network speed testing
+ network speed testing.
 
 ## Compatibility
 

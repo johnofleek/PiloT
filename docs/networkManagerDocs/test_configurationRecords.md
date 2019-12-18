@@ -10,7 +10,6 @@ has_toc: false
 ## Test records
 PiloT board with Raspberry Pi and Raspian OS - a record of what was tested
 
-1. TOC
 {:toc}
 
 ## HL7692  
@@ -62,8 +61,8 @@ PiloT board with Raspberry Pi and Raspian OS - a record of what was tested
   
 
 <br/>
-## EM7455
 
+## EM7455
 
 | **What** | **Info** |
 |:---- |:---- |  

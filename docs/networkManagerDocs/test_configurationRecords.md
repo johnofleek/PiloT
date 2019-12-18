@@ -70,7 +70,6 @@ PiloT board with Raspberry Pi and Raspian OS - a record of what was tested
 | Module | *EM7455* |
 |  [Y] | Working Connection |
 |  [Y] | Via MBIM |
-|  [Y] | [some speed testing](./speedtests/Rpi4EM7455_uPilot_USB3_threeNetwork_2019-08-13-111021_1920x1200_scrot.png) 
 | Raspberry | RPi4 |
 | OS | Buster |
 | OS Version (uname -a) | Linux raspberrypi 4.19.58-v7l+ #1245 SMP Fri Jul 12 17:31:45 BST 2019 armv7l GNU/Linux |
@@ -94,7 +93,7 @@ PiloT board with Raspberry Pi and Raspian OS - a record of what was tested
 | **What** | **Info** |
 |:---- |:---- |  
 | Module | *EM7455* |
-|  [N] | Working Connection |
+|  [N] FW issue | Working Connection |
 |  [N] | Via MBIM |
 | Raspberry | RPi4 |
 | OS | Buster |

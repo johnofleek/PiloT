@@ -43,7 +43,7 @@ Click [Speed tests](./speedtests/README.md) for records of practical
 
 ## Compatibility
 
-Raspberry Pi 4 Model B  
+Raspberry Pi 4 Model B  - with upgrade to wiring pi - [here](http://wiringpi.com/wiringpi-updated-to-2-52-for-the-raspberry-pi-4b/) 
 Raspberry Pi 3 Model B+  
 Raspberry Pi 3 Model B  
 Raspberry Pi 2 Model B  

@@ -15,11 +15,16 @@ Minicom terminal to HL USB serial port
 ```
 $ sudo minicom -D /dev/ttyACM3
 ```
-Change factory default from 0 to 2
+Check the HL8548 is set to the factory default USB composition
+```
+AT+KUSBCOMP?
+```
+Should return composition 0 - if it doesn't then set the modem to 0 with the following command.
+
 ```
 AT+KUSBCOMP=0
 ```
-This gives 7 CDC-ACM serial ports as follows
+USB composition 0 gives 7 CDC-ACM serial ports as follows
 ```
 7 CDC-ACM mode, (PID: 0x0020)
 USB0 – AT / NMEA / modem port
@@ -29,7 +34,7 @@ USB3 – AT / NMEA / modem port
 USB4 – AT / NMEA / modem port
 USB5 – AT / NMEA / modem
 ```
-With this USB configuration netwwork manager will use the PPP protocol to support an IP connection.  
+With this USB configuration netwwork manager will use the PPP protocol to support an IP connection. 
 
 
 ## LEDs

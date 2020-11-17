@@ -8,12 +8,16 @@ has_children: false
 ---
 
 ## HL8548 PiloT
-Assumes that the PiloT shell scripts are installed on the host machine (RPi).
+This page documents basic configuration of the HL8548 PiloT and it's host Raspberry Pi
+
+## Document assumptions
+1. The PiloT shell scripts are installed on the host machine (RPi)
+2. The PiloT + Raspberry Pi has a suitable power supply at least 2.5A 
 
 
 ## Configure HL8548 USB composition
 From the host machines Linux shell - power up the PiloT using shell script.
-
+ Note that you may need to cd to the directory which contains the shell scripts.
 ```
 ./pilotOn.sh 
 ```
@@ -78,17 +82,20 @@ the LED should momentarily flash on
 
 ## HL8548 and power on signal
 
-Recommend using the power ON / OFF scripts to ensure correct state of modem operation - this will 
-overide the RPi's GPIO default state which may not be a stable signal.
+It is recommended to use the ./pilotOn.sh and ./pilotOff.sh scripts to ensure correct
+ state of modem operation. The scripts overide the RPi's GPIO default state which may
+ not be a stable signal.
 
 
 ## Debug
+Power on the PiloT ./pilotOn.sh
+Check the PiloT USB serial ports are available from an RPi shell 
 ```
-$ lsusb
-...
-Bus 001 Device 010: ID 1519:0303 Comneon 
-...
+ls /dev/ttyACM*
 ```
+7 tty ports should be visible
+
+
 and
 [capture](./capture_HL8548networkManager.md)
 

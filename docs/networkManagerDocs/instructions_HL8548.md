@@ -32,7 +32,8 @@ USB1 – Mobile Analyzer traces port
 USB2 – 3G traces port
 USB3 – AT / NMEA / modem port
 USB4 – AT / NMEA / modem port
-USB5 – AT / NMEA / modem
+USB5 – AT / NMEA / modem port
+USB6 – On-chip traces port
 ```
 With this USB configuration netwwork manager will use the PPP protocol to support an IP connection. 
 

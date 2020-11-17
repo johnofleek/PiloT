@@ -8,8 +8,15 @@ has_children: false
 ---
 
 ## HL8548 PiloT
+Assumes that the PiloT shell scripts are installed on the host machine (RPi).
 
-## Configuration interface
+
+## Configure HL8548 USB composition
+From the host machines Linux shell - power up the PiloT using shell script.
+
+```
+./pilotOn.sh 
+```
 
 Minicom terminal to HL USB serial port
 ```
@@ -35,7 +42,7 @@ USB4 – AT / NMEA / modem port
 USB5 – AT / NMEA / modem port
 USB6 – On-chip traces port
 ```
-With this USB configuration netwwork manager will use the PPP protocol to support an IP connection. 
+With this USB configuration netwwork manager will use the PPP protocol to support an IP connection.
 
 
 ## LEDs

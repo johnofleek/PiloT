@@ -17,10 +17,19 @@ $ sudo minicom -D /dev/ttyACM3
 ```
 Change factory default from 0 to 2
 ```
-AT+KUSBCOMP=2
+AT+KUSBCOMP=0
 ```
-This gives 5 CDC-ACM serial ports and 1x CDC-ECM Network adapter
-
+This gives 7 CDC-ACM serial ports as follows
+```
+7 CDC-ACM mode, (PID: 0x0020)
+USB0 – AT / NMEA / modem port
+USB1 – Mobile Analyzer traces port
+USB2 – 3G traces port
+USB3 – AT / NMEA / modem port
+USB4 – AT / NMEA / modem port
+USB5 – AT / NMEA / modem
+```
+With this USB configuration netwwork manager will use the PPP protocol to support an IP connection.  
 
 
 ## LEDs

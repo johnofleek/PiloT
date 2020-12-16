@@ -38,7 +38,9 @@ The examples below were captured using an RC7xxx cellular module connected to a 
 TIPs:   
 The online manuals are difficult to read and could be out of date. Sometimes it's easier to ask nmcli for help, for example "nmcli connection add --help", as it provides quite good information about the arguments required to add a new connection profile. 
 
-However there is an issue with the nmcli local help in that the key names in the help are shortened versions of the actual key names used in the profile - leading to confusion. The reason the shortened names are acceptable is that nmcli is matching the short name to the real name. An example of this is gsm.user - this is documented and accepted by nmcli -  but will be displayed as gsm.username when nmcli queries the connection profile. If you manually edit the real profile only gsm.username is correct / acceptable. [list of KEYs][1.]
+However there is an issue with the nmcli local help in that the key names in the help are shortened versions of the actual key names used in the profile - leading to confusion. The reason the shortened names are acceptable is that nmcli is matching the short name to the real name. 
+
+An example of this is gsm.user - this is documented and accepted by nmcli -  but will be displayed as gsm.username when nmcli queries the connection profile. If you manually edit the real profile only gsm.username is correct / acceptable. [list of KEYs][1.^]
 
 To action changes to the profiles it may be necessary to restart network manager
 
@@ -159,7 +161,8 @@ In the following example I have used the nmcli key / value pair method. On the w
 2. it exactly matches the keys as stored in connection profiles /etc/NetworkManager/system-connections/
 
 
-Create a new profile as follows
+Create a new profile as follows  
+
 Note the connection.interface-name ""
 
 ```
@@ -174,7 +177,10 @@ sudo nmcli connection add connection.id "A_NAME" connection.type gsm connection.
 
 This is a practical example which works with my stream SIM. 
 
-Note in the following example *connection.interface-name ""* instead of *""* we could add an interface name such as cdc-wdm0 then later on we would not need to specify the name when bring a connection up. The reason I have not done this is that the interface name presented changes between different variants of PiloT board
+Note in the following example *connection.interface-name ""* instead of *""* we could add an interface name such as cdc-wdm0. Then we would not need to specify the name when bring a connection up. 
+
+The reason I have used "" is that the interface name presented changes between different variants of PiloT board. An additional benefit is that we then have the option to let nmcli automatically chose the cellular interface.
+
 ```
 sudo nmcli connection add connection.id stream2 connection.type gsm connection.interface-name "" gsm.apn stream.co.uk gsm.username streamip gsm.password streamip
 ```
@@ -349,4 +355,4 @@ ps -U0 -o 'tty,pid,comm' | grep ^?
 
 [Documentation on nmcli](https://developer.gnome.org/NetworkManager/stable/nmcli.html)
 
-[1.] [Documentation on nmcli connection profile key value pairs](https://developer.gnome.org/NetworkManager/stable/nm-settings-nmcli.html)
+[1.^] [Documentation on nmcli connection profile key value pairs](https://developer.gnome.org/NetworkManager/stable/nm-settings-nmcli.html)

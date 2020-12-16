@@ -241,7 +241,8 @@ sudo nmcli connection up stream2
 Connection successfully activated (D-Bus active path: /org/freedesktop/NetworkManager/ActiveConnection/4)
 ```
 
-A check to see the device interface to to connection states
+A check to review the device interface to connection states
+
 ```
 pi@raspberrypi:~ $ nmcli device status
 DEVICE    TYPE      STATE         CONNECTION
@@ -282,21 +283,6 @@ connection.autoconnect-priority:        0
 connection.autoconnect-retries:         -1 (default)
 connection.autoconnect-slaves:          -1 (default)
 ```
-
-nmcli connection modify gsm-stream2 connection.interface-name ""
-
-Check the result
-```
-pi@raspberrypi:~ $ nmcli c show 'stream2' | grep connection.autoconnect
-connection.autoconnect:                 yes
-connection.autoconnect-priority:        0
-connection.autoconnect-retries:         -1 (default)
-connection.autoconnect-slaves:          -1 (default)
-```
-
-
-
-
 
 
 ### Network Manager - connection profile file system locations

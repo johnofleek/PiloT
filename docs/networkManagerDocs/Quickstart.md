@@ -130,7 +130,7 @@ This QuickStart guide requires
 1. It's not advised to use the NetworkManager GUI to configure your wwan0 settings  
    such as APN / username / password - this is because the GUI uses a complex storage method for the cellular credential "password". This then causes issues (Buster) on startup with the GUI prompting for a password
 1. Instead follow the command line method described in detail here  
-   [Further notes 1](instructions_NetworkManager.md)
+   [Further notes 1](instructions_networkManager.md)
 1. If everything is installed and configured correctly NetworkManager should 
    connect the modem when the mobile broadband profile you created is clicked in the NetworkManager GUI
 1. To power down the PiloT run the following script

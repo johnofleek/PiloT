@@ -54,12 +54,13 @@ This QuickStart guide requires
 <BR>
 
 ## PiloT modem check and set configuration  
-1. To enable AT commands to be sent to the PiloT modem - run minicom [(check the actual serial port to use)](test_configurationRecords.md) - note that if NetworkManager ModemManager is running then stop them before
-trying to send commands to the modem
+1. Run minicom [(check the actual serial port to use)](test_configurationRecords.md)  
+   To enable AT commands to be sent to the PiloT modem -  - note that if NetworkManager ModemManager is running then stop them before
+   trying to send commands to the modem
    ```
    sudo minicom -D /dev/ttyACM0
    ```
-1. Read the PiloT modem information
+1. Read the PiloT modem information  
    Type the following AT command into minicom - the PiloT modem will report information about itself such as it's Firmware version.
    On some modems the serial port times out when there is no activity - the first carriage return will wake the modem up
    ```
@@ -77,7 +78,7 @@ trying to send commands to the modem
     * Check if your Raspian version is listed
     * Check the NetworkManager version?
     
-1. Configure the PiloT modem as required (based on firmware identified above)
+1. Configure the PiloT modem as required (based on firmware identified above)  
    * Carry out the modem specific configuration [instructions](instructions_modemConfiguration.md)  
      Please pay particular attention to the usb composition setting - if in doubt check the 
      AT command manual for the particular modem that is being used - if it's supported by the modem
@@ -93,7 +94,7 @@ trying to send commands to the modem
 
 ## Install required RPi apps  
 
-1. If necessary - power down the PiloT HAT
+1. Power down the PiloT HAT
    ```
    ./pilotOff.sh
    ```
@@ -126,8 +127,10 @@ trying to send commands to the modem
    ./pilotOn.sh
    ```
 1. Wait for Mobile Broadband to appear in the NetworkManager GUI this should be visible on the Rpi Panel (probably top right)
-1. Use the NetworkManager GUI to configure your wwan0 settings such as APN / username / password
-   etc - maybe use some variant of these [examples](./simUse_info.md)
+1. It's not advised to use the NetworkManager GUI to configure your wwan0 settings  
+   such as APN / username / password - this is because the GUI uses a complex storage method for the cellular credential "password". This then causes issues (Buster) on startup with the GUI prompting for a password
+1. Instead follow the command line method described in detail here  
+   [Further notes 1](instructions_NetworkManager.md)
 1. If everything is installed and configured correctly NetworkManager should 
    connect the modem when the mobile broadband profile you created is clicked in the NetworkManager GUI
 1. To power down the PiloT run the following script
@@ -146,8 +149,8 @@ trying to send commands to the modem
   ```
 
 * The paths used in this guide - for example **./pilotOn.sh** assumes that the user has changed
-  directory to the directory which contains the pilotOn.sh script - the shell command **\[ls\]** will list
-  what is available in a directory
+  directory to the directory which contains the pilotOn.sh script - the shell command 
+   **\[ls\]** will list what is available in a directory
 
 * To start a Raspbian shell terminal - hold down keys [CTRL] [ALT] T or use the RPi Terminal icon
 

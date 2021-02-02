@@ -106,13 +106,16 @@ https://www.freedesktop.org/software/ModemManager/api/latest/ModemManager-Common
 
 ```
 mmcli -m 0 --output-keyvalue
+```
 
-...
+```...```
+```
 modem.generic.supported-modes.length            : 1
 modem.generic.supported-modes.value[1]          : allowed: 2g, 4g; preferred: none
 modem.generic.current-modes                     : allowed: 2g, 4g; preferred: none
 ...
 ```
+
 
 Ok but we jammed the modem into 2G
 

@@ -92,7 +92,7 @@ E: ID_PATH_TAG=platform-fd500000_pcie-pci-0000_01_00_0-usb-0_1_3_1_2
 E: ID_MM_CANDIDATE=1
 E: DEVLINKS=/dev/serial/by-path/platform-fd500000.pcie-pci-0000:01:00.0-usb-0:1.3:1.2 /dev/serial/by-id/usb-Altair_Semiconductor_ALT1250_IoT_V1.00-if02
 E: TAGS=:systemd:
-``
+```
 
 ```
 pi@raspberrypi:~ $ udevadm info  /sys/devices/platform/scb/fd500000.pcie/pci0000:00/0000:00:00.0/0000:01:00.0/usb1/1-1/1-1.3/1-1.3:1.2

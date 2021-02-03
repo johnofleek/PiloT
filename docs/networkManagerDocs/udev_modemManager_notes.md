@@ -1,11 +1,23 @@
-# modem manager notes
+---
+layout: default
+title: Modem Manager - Debug
+parent: Network Manager
+nav_order: 2
+has_children: false
+has_toc: false
+---
 
-The following are notes on an evaluation of using the Raspberry Pi + WASP2 + HL7802 module with modem manager. They are also a helpful example on how to debug issues with modem manager.
+
+# Modem manager notes
+
+The following are notes on an evaluation of using the Raspberry Pi + WASP2 + HL7802 module with modem manager. 
+
+They are also a helpful example on how to debug issues with modem manager.
 
 At the moment the investigation is stalled due to  
 https://gitlab.freedesktop.org/mobile-broadband/ModemManager/-/issues/305
 
-## modem manager versions
+## Modem manager versions
 Buster version as shipped with Raspian (as of 2020/12)
 ```
 mmcli --version
@@ -65,20 +77,26 @@ Example connection test
 mmcli -m 0 --simple-connect="apn=internet,username=eesecure,password=secure"
 ```
 
-## stop modem manager
-helps with minicom
+## Stop modem manager
+This is helps if you want to configure the modem via a tty interface and modem manager is also using the interface. 
 
+```
 sudo systemctl stop ModemManager
+```
 
 
 
-## HL7802 modem manager bug investigation - WIP 
-
-nmcli debug
+## Debugging modem manager example
+Use nmcli to bring up the IP connection on a modem interface
 ```
 sudo nmcli connection up ee ifname ttyUSB0
 ```
 
+Capture the debug via "tail -f /var/log/syslog"
+
+
+```
+...
 Running registration checks (CS: 'no', PS: 'no', EPS: 'yes')
 
 Jan 11 16:38:32 raspberrypi ModemManager[385]: <debug> (ttyUSB0): --> 'AT+CEREG?<CR>'
@@ -87,8 +105,12 @@ Jan 11 16:38:32 raspberrypi ModemManager[385]: <debug> (ttyUSB0): <-- ',0<CR><LF
 Jan 11 16:38:32 raspberrypi ModemManager[385]: <debug> Modem not yet registered in a 3GPP network... will recheck soon
 
 Running registration checks (CS: 'no', PS: 'no', EPS: 'yes')
+...
+```
 
+## HL7802 modem manager bug investigation - WIP 
 
+### The HL7802 / modem manager registration incompatibility bug
 Do it looks like when jammed in GSM the modem oks creg but not cereg
 
 ```

@@ -1,10 +1,21 @@
+---
+layout: default
+title: Modem Manager v udev investigation
+parent: Network Manager
+nav_order: 2
+has_children: false
+has_toc: false
+---
+
+
+
 # UDEV - investigation
 The following notes are cover an ongoing investigation into an issue with using the HL7802 with modem manager. The focus is on how to make a modem visible to modem manager probing when the modem is attached to physical interface that the OS has not marked (by default) as a modem.
 
-The key point is that udev needs to be configured correctly for an interface that has a modem attached.
+The key point is that udev needs to be configured correctly for an interface that has a modem attached. ACM ports are automatically probed by modem manager.
 
 
-## Notes
+## Examples of  HL7802 composition setting
 AT+KUSBCOMP=1,1,2,3
 
 ```

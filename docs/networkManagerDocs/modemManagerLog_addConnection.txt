@@ -1,0 +1,303 @@
+# Modem manager started here
+Feb  8 11:01:54 raspberrypi kernel: [ 6778.965170] usb 1-1.1: USB disconnect, device number 5
+Feb  8 11:01:54 raspberrypi kernel: [ 6778.966050] qcserial ttyUSB0: Qualcomm USB modem converter now disconnected from ttyUSB0
+Feb  8 11:01:54 raspberrypi kernel: [ 6778.966163] qcserial 1-1.1:1.0: device disconnected
+Feb  8 11:01:54 raspberrypi kernel: [ 6778.966904] qcserial ttyUSB1: Qualcomm USB modem converter now disconnected from ttyUSB1
+Feb  8 11:01:54 raspberrypi kernel: [ 6778.967010] qcserial 1-1.1:1.2: device disconnected
+Feb  8 11:01:54 raspberrypi kernel: [ 6778.967830] qcserial ttyUSB2: Qualcomm USB modem converter now disconnected from ttyUSB2
+Feb  8 11:01:54 raspberrypi kernel: [ 6778.967904] qcserial 1-1.1:1.3: device disconnected
+Feb  8 11:01:54 raspberrypi kernel: [ 6778.968235] qmi_wwan 1-1.1:1.8 wwan0: unregister 'qmi_wwan' usb-0000:01:00.0-1.1, WWAN/QMI device
+Feb  8 11:02:01 raspberrypi kernel: [ 6786.175703] usb 1-1.1: new high-speed USB device number 6 using xhci_hcd
+Feb  8 11:02:01 raspberrypi kernel: [ 6786.306641] usb 1-1.1: config 1 has an invalid interface number: 8 but max is 3
+Feb  8 11:02:01 raspberrypi kernel: [ 6786.306649] usb 1-1.1: config 1 has no interface number 1
+Feb  8 11:02:01 raspberrypi kernel: [ 6786.307699] usb 1-1.1: New USB device found, idVendor=1199, idProduct=68c0, bcdDevice= 0.00
+Feb  8 11:02:01 raspberrypi kernel: [ 6786.307706] usb 1-1.1: New USB device strings: Mfr=3, Product=2, SerialNumber=4
+Feb  8 11:02:01 raspberrypi kernel: [ 6786.307713] usb 1-1.1: Product: Qualcomm CDMA Technologies MSM
+Feb  8 11:02:01 raspberrypi kernel: [ 6786.307720] usb 1-1.1: Manufacturer: Qualcomm, Incorporated
+Feb  8 11:02:01 raspberrypi kernel: [ 6786.307726] usb 1-1.1: SerialNumber: 1abbb14d
+Feb  8 11:02:01 raspberrypi kernel: [ 6786.314948] qcserial 1-1.1:1.0: Qualcomm USB modem converter detected
+Feb  8 11:02:01 raspberrypi kernel: [ 6786.315128] usb 1-1.1: Qualcomm USB modem converter now attached to ttyUSB0
+Feb  8 11:02:01 raspberrypi kernel: [ 6786.316384] qcserial 1-1.1:1.2: Qualcomm USB modem converter detected
+Feb  8 11:02:01 raspberrypi kernel: [ 6786.316580] usb 1-1.1: Qualcomm USB modem converter now attached to ttyUSB1
+Feb  8 11:02:01 raspberrypi kernel: [ 6786.317893] qcserial 1-1.1:1.3: Qualcomm USB modem converter detected
+Feb  8 11:02:01 raspberrypi kernel: [ 6786.318065] usb 1-1.1: Qualcomm USB modem converter now attached to ttyUSB2
+Feb  8 11:02:01 raspberrypi kernel: [ 6786.319490] qmi_wwan 1-1.1:1.8: cdc-wdm0: USB WDM device
+Feb  8 11:02:01 raspberrypi kernel: [ 6786.320099] qmi_wwan 1-1.1:1.8 wwan0: register 'qmi_wwan' at usb-0000:01:00.0-1.1, WWAN/QMI device, 0e:98:d5:83:6a:70
+Feb  8 11:02:01 raspberrypi mtp-probe: checking bus 1, device 6: "/sys/devices/platform/scb/fd500000.pcie/pci0000:00/0000:00:00.0/0000:01:00.0/usb1/1-1/1-1.1"
+Feb  8 11:02:01 raspberrypi mtp-probe: bus: 1, device: 6 was not an MTP device
+Feb  8 11:02:01 raspberrypi systemd-udevd[1459]: Using default interface naming scheme 'v240'.
+Feb  8 11:02:01 raspberrypi mtp-probe: checking bus 1, device 6: "/sys/devices/platform/scb/fd500000.pcie/pci0000:00/0000:00:00.0/0000:01:00.0/usb1/1-1/1-1.1"
+Feb  8 11:02:01 raspberrypi mtp-probe: bus: 1, device: 6 was not an MTP device
+Feb  8 11:02:33 raspberrypi systemd[1]: Starting Modem Manager...
+Feb  8 11:02:33 raspberrypi ModemManager[1481]: <info>  ModemManager (version 1.14.10) starting in system bus...
+Feb  8 11:02:33 raspberrypi systemd[1]: Started Modem Manager.
+Feb  8 11:02:33 raspberrypi NetworkManager[407]: <info>  [1612782153.5479] modem-manager: ModemManager now available
+Feb  8 11:02:35 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0] Opening device with flags 'version-info, proxy'...
+Feb  8 11:02:35 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0] created endpoint
+Feb  8 11:02:35 raspberrypi ModemManager[1481]: cannot connect to proxy: Could not connect: Connection refused
+Feb  8 11:02:35 raspberrypi ModemManager[1481]: spawning new qmi-proxy (try 1)...
+Feb  8 11:02:35 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0] Checking version info (25 retries)...
+Feb  8 11:02:35 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0] QMI Device supports 39 services:
+Feb  8 11:02:35 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0]    ctl (1.5)
+Feb  8 11:02:35 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0]    wds (1.67)
+Feb  8 11:02:35 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0]    dms (1.0)
+Feb  8 11:02:35 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0]    nas (1.25)
+Feb  8 11:02:35 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0]    qos (1.12)
+Feb  8 11:02:35 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0]    wms (1.10)
+Feb  8 11:02:35 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0]    auth (1.3)
+Feb  8 11:02:35 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0]    at (1.4)
+Feb  8 11:02:35 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0]    voice (2.1)
+Feb  8 11:02:35 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0]    cat2 (2.24)
+Feb  8 11:02:35 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0]    uim (1.87)
+Feb  8 11:02:35 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0]    pbm (1.4)
+Feb  8 11:02:35 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0]    test (1.0)
+Feb  8 11:02:35 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0]    loc (2.0)
+Feb  8 11:02:35 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0]    sar (1.0)
+Feb  8 11:02:35 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0]    ims (1.0)
+Feb  8 11:02:35 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0]    csd (1.0)
+Feb  8 11:02:35 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0]    ts (1.0)
+Feb  8 11:02:35 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0]    tmd (1.0)
+Feb  8 11:02:35 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0]    wda (1.16)
+Feb  8 11:02:35 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0]    csvt (1.1)
+Feb  8 11:02:35 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0]    imsp (1.0)
+Feb  8 11:02:35 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0]    imsa (1.0)
+Feb  8 11:02:35 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0]    coex (1.0)
+Feb  8 11:02:35 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0]    pdc (1.0)
+Feb  8 11:02:35 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0]    rfrpe (1.0)
+Feb  8 11:02:35 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0]    dsd (1.0)
+Feb  8 11:02:35 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0]    unknown [0x2d] (1.0)
+Feb  8 11:02:35 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0]    unknown [0x30] (1.0)
+Feb  8 11:02:35 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0]    unknown [0x32] (1.0)
+Feb  8 11:02:35 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0]    unknown [0x36] (1.0)
+Feb  8 11:02:35 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0]    rms (1.0)
+Feb  8 11:02:35 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0]    unknown [0xf2] (1.0)
+Feb  8 11:02:35 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0]    unknown [0xf3] (1.0)
+Feb  8 11:02:35 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0]    unknown [0xf5] (1.0)
+Feb  8 11:02:35 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0]    unknown [0xf6] (1.0)
+Feb  8 11:02:35 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0]    unknown [0xf8] (1.0)
+Feb  8 11:02:35 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0]    unknown [0xf9] (1.0)
+Feb  8 11:02:35 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0]    unknown [0xfe] (1.0)
+Feb  8 11:02:36 raspberrypi ModemManager[1481]: <info>  [base-manager] couldn't check support for device '/sys/devices/platform/scb/fd580000.ethernet': not supported by any plugin
+Feb  8 11:02:36 raspberrypi ModemManager[1481]: <info>  [base-manager] couldn't check support for device '/sys/devices/platform/soc/fe300000.mmcnr/mmc_host/mmc1/mmc1:0001/mmc1:0001:1': not supported by any plugin
+Feb  8 11:02:50 raspberrypi ModemManager[1481]: <info>  [device /sys/devices/platform/scb/fd500000.pcie/pci0000:00/0000:00:00.0/0000:01:00.0/usb1/1-1/1-1.1] creating modem with plugin 'sierra' and '5' ports
+Feb  8 11:02:50 raspberrypi ModemManager[1481]: <warn>  [plugin/sierra] could not grab port ttyUSB1: Cannot add port 'tty/ttyUSB1', unhandled serial type
+Feb  8 11:02:50 raspberrypi ModemManager[1481]: <warn>  [plugin/sierra] could not grab port ttyUSB0: Cannot add port 'tty/ttyUSB0', unhandled serial type
+Feb  8 11:02:50 raspberrypi ModemManager[1481]: <info>  [base-manager] modem for device '/sys/devices/platform/scb/fd500000.pcie/pci0000:00/0000:00:00.0/0000:01:00.0/usb1/1-1/1-1.1' successfully created
+Feb  8 11:02:50 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0] Opening device with flags 'version-info, proxy'...
+Feb  8 11:02:50 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0] created endpoint
+Feb  8 11:02:50 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0] Checking version info (25 retries)...
+Feb  8 11:02:50 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0] QMI Device supports 39 services:
+Feb  8 11:02:50 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0]    ctl (1.5)
+Feb  8 11:02:50 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0]    wds (1.67)
+Feb  8 11:02:50 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0]    dms (1.0)
+Feb  8 11:02:50 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0]    nas (1.25)
+Feb  8 11:02:50 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0]    qos (1.12)
+Feb  8 11:02:50 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0]    wms (1.10)
+Feb  8 11:02:50 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0]    auth (1.3)
+Feb  8 11:02:50 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0]    at (1.4)
+Feb  8 11:02:50 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0]    voice (2.1)
+Feb  8 11:02:50 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0]    cat2 (2.24)
+Feb  8 11:02:50 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0]    uim (1.87)
+Feb  8 11:02:50 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0]    pbm (1.4)
+Feb  8 11:02:50 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0]    test (1.0)
+Feb  8 11:02:50 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0]    loc (2.0)
+Feb  8 11:02:50 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0]    sar (1.0)
+Feb  8 11:02:50 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0]    ims (1.0)
+Feb  8 11:02:50 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0]    csd (1.0)
+Feb  8 11:02:50 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0]    ts (1.0)
+Feb  8 11:02:50 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0]    tmd (1.0)
+Feb  8 11:02:50 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0]    wda (1.16)
+Feb  8 11:02:50 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0]    csvt (1.1)
+Feb  8 11:02:50 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0]    imsp (1.0)
+Feb  8 11:02:50 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0]    imsa (1.0)
+Feb  8 11:02:50 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0]    coex (1.0)
+Feb  8 11:02:50 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0]    pdc (1.0)
+Feb  8 11:02:50 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0]    rfrpe (1.0)
+Feb  8 11:02:50 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0]    dsd (1.0)
+Feb  8 11:02:50 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0]    unknown [0x2d] (1.0)
+Feb  8 11:02:50 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0]    unknown [0x30] (1.0)
+Feb  8 11:02:50 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0]    unknown [0x32] (1.0)
+Feb  8 11:02:50 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0]    unknown [0x36] (1.0)
+Feb  8 11:02:50 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0]    rms (1.0)
+Feb  8 11:02:50 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0]    unknown [0xf2] (1.0)
+Feb  8 11:02:50 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0]    unknown [0xf3] (1.0)
+Feb  8 11:02:50 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0]    unknown [0xf5] (1.0)
+Feb  8 11:02:50 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0]    unknown [0xf6] (1.0)
+Feb  8 11:02:50 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0]    unknown [0xf8] (1.0)
+Feb  8 11:02:50 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0]    unknown [0xf9] (1.0)
+Feb  8 11:02:50 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0]    unknown [0xfe] (1.0)
+Feb  8 11:02:50 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0] Reading expected data format from: /sys/class/net/wwan0/qmi/raw_ip
+Feb  8 11:02:50 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0] Allocating new client ID...
+Feb  8 11:02:50 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0] Registered 'wda' (version 1.16) client with ID '1'
+Feb  8 11:02:50 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0] Writing expected data format to: /sys/class/net/wwan0/qmi/raw_ip
+Feb  8 11:02:50 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0] Reading expected data format from: /sys/class/net/wwan0/qmi/raw_ip
+Feb  8 11:02:50 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0] Allocating new client ID...
+Feb  8 11:02:50 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0] Releasing 'wda' client with flags 'release-cid'...
+Feb  8 11:02:50 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0] Unregistered 'wda' client with ID '1'
+Feb  8 11:02:50 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0] Registered 'dms' (version 1.0) client with ID '1'
+Feb  8 11:02:50 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0] Allocating new client ID...
+Feb  8 11:02:50 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0] Registered 'nas' (version 1.25) client with ID '2'
+Feb  8 11:02:50 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0] Allocating new client ID...
+Feb  8 11:02:50 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0] Registered 'wms' (version 1.10) client with ID '2'
+Feb  8 11:02:50 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0] Allocating new client ID...
+Feb  8 11:02:50 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0] Registered 'uim' (version 1.87) client with ID '2'
+Feb  8 11:02:50 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0] Allocating new client ID...
+Feb  8 11:02:50 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0] Registered 'loc' (version 2.0) client with ID '1'
+Feb  8 11:02:50 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0] Allocating new client ID...
+Feb  8 11:02:50 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0] Registered 'pdc' (version 1.0) client with ID '1'
+Feb  8 11:02:50 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0] Allocating new client ID...
+Feb  8 11:02:50 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0] Registered 'voice' (version 2.1) client with ID '2'
+Feb  8 11:02:50 raspberrypi ModemManager[1481]: <warn>  [modem0] couldn't load facility locks: QMI protocol error (94): 'NotSupported'
+Feb  8 11:02:50 raspberrypi ModemManager[1481]: <info>  [modem0] state changed (unknown -> disabled)
+Feb  8 11:02:50 raspberrypi NetworkManager[407]: <info>  [1612782170.8533] modem["cdc-wdm0"]: modem state changed, 'disabled' --> 'enabling' (reason: user preference)
+Feb  8 11:02:50 raspberrypi NetworkManager[407]: <info>  [1612782170.8554] manager: (cdc-wdm0): new Broadband device (/org/freedesktop/NetworkManager/Devices/6)
+Feb  8 11:02:50 raspberrypi NetworkManager[407]: <info>  [1612782170.8587] device (cdc-wdm0): state change: unmanaged -> unavailable (reason 'managed', sys-iface-state: 'external')
+Feb  8 11:02:50 raspberrypi NetworkManager[407]: <info>  [1612782170.8609] device (cdc-wdm0): modem state 'enabling'
+Feb  8 11:02:50 raspberrypi NetworkManager[407]: <info>  [1612782170.8641] device (cdc-wdm0): state change: unavailable -> disconnected (reason 'none', sys-iface-state: 'managed')
+Feb  8 11:02:50 raspberrypi ModemManager[1481]: <info>  [modem0] state changed (disabled -> enabling)
+Feb  8 11:02:50 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0] Allocating new client ID...
+Feb  8 11:02:50 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0] Registered 'wds' (version 1.67) client with ID '2'
+Feb  8 11:02:50 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0] Releasing 'wds' client with flags 'release-cid'...
+Feb  8 11:02:50 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0] Unregistered 'wds' client with ID '2'
+Feb  8 11:02:51 raspberrypi ModemManager[1481]: <info>  [modem0] state changed (enabling -> enabled)
+Feb  8 11:02:51 raspberrypi NetworkManager[407]: <info>  [1612782171.1639] modem["cdc-wdm0"]: modem state changed, 'enabling' --> 'enabled' (reason: user-requested)
+Feb  8 11:02:51 raspberrypi ModemManager[1481]: <info>  [modem0] 3GPP registration state changed (unknown -> registering)
+Feb  8 11:02:51 raspberrypi ModemManager[1481]: <info>  [modem0] 3GPP registration state changed (registering -> home)
+Feb  8 11:02:51 raspberrypi ModemManager[1481]: <info>  [modem0] state changed (enabled -> registered)
+Feb  8 11:02:51 raspberrypi NetworkManager[407]: <info>  [1612782171.1680] modem["cdc-wdm0"]: modem state changed, 'enabled' --> 'registered' (reason: unknown)
+Feb  8 11:04:58 raspberrypi NetworkManager[407]: <info>  [1612782298.9673] device (wlan0): set-hw-addr: set MAC address to C6:8D:7E:E5:2D:A8 (scanning)
+Feb  8 11:04:58 raspberrypi kernel: [ 6963.581513] brcmfmac: brcmf_cfg80211_set_power_mgmt: power save enabled
+Feb  8 11:04:58 raspberrypi NetworkManager[407]: <info>  [1612782298.9820] device (wlan0): supplicant interface state: inactive -> disabled
+Feb  8 11:04:58 raspberrypi NetworkManager[407]: <info>  [1612782298.9825] device (wlan0): supplicant interface state: disabled -> inactive
+Feb  8 11:04:59 raspberrypi wpa_supplicant[408]: wlan0: Reject scan trigger since one is already pending
+
+# After sudo nmcli connection add connection.id "eeno6" connection.type gsm connection.interface-name "" gsm.apn "everywhere" gsm.username "eesecure" gsm.password "secure" ipv6.method disabled
+
+Feb  8 11:07:12 raspberrypi NetworkManager[407]: <info>  [1612782432.1367] keyfile: add connection /etc/NetworkManager/system-connections/eeno6.nmconnection (b9d9311b-bb5f-4ece-8023-59597919efa2,"eeno6")
+Feb  8 11:07:12 raspberrypi NetworkManager[407]: <info>  [1612782432.1393] audit: op="connection-add" uuid="b9d9311b-bb5f-4ece-8023-59597919efa2" name="eeno6" pid=1509 uid=0 result="success"
+Feb  8 11:07:12 raspberrypi NetworkManager[407]: <info>  [1612782432.1510] policy: auto-activating connection 'eeno6' (b9d9311b-bb5f-4ece-8023-59597919efa2)
+Feb  8 11:07:12 raspberrypi NetworkManager[407]: <info>  [1612782432.1546] device (cdc-wdm0): Activation: starting connection 'eeno6' (b9d9311b-bb5f-4ece-8023-59597919efa2)
+Feb  8 11:07:12 raspberrypi NetworkManager[407]: <info>  [1612782432.1552] device (cdc-wdm0): state change: disconnected -> prepare (reason 'none', sys-iface-state: 'managed')
+Feb  8 11:07:12 raspberrypi NetworkManager[407]: <info>  [1612782432.1599] device (cdc-wdm0): state change: prepare -> need-auth (reason 'none', sys-iface-state: 'managed')
+Feb  8 11:07:12 raspberrypi NetworkManager[407]: <info>  [1612782432.1679] device (cdc-wdm0): state change: need-auth -> prepare (reason 'none', sys-iface-state: 'managed')
+Feb  8 11:07:12 raspberrypi ModemManager[1481]: <info>  [modem0] simple connect started...
+Feb  8 11:07:12 raspberrypi ModemManager[1481]: <info>  [modem0] simple connect state (4/8): wait to get fully enabled
+Feb  8 11:07:12 raspberrypi NetworkManager[407]: <info>  [1612782432.1797] modem["cdc-wdm0"]: modem state changed, 'registered' --> 'connecting' (reason: user-requested)
+Feb  8 11:07:12 raspberrypi ModemManager[1481]: <info>  [modem0] simple connect state (5/8): register
+Feb  8 11:07:12 raspberrypi ModemManager[1481]: <info>  [modem0] simple connect state (6/8): bearer
+Feb  8 11:07:12 raspberrypi ModemManager[1481]: <info>  [modem0] simple connect state (7/8): connect
+Feb  8 11:07:12 raspberrypi ModemManager[1481]: <info>  [modem0] state changed (registered -> connecting)
+Feb  8 11:07:12 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0] Allocating new client ID...
+Feb  8 11:07:12 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0] Registered 'wds' (version 1.67) client with ID '2'
+Feb  8 11:07:12 raspberrypi ModemManager[1481]: <warn>  [modem0] couldn't load operator code: Current operator MCC/MNC is still unknown
+Feb  8 11:07:12 raspberrypi ModemManager[1481]: <warn>  [modem0] couldn't load operator name: Current operator description is still unknown
+Feb  8 11:07:12 raspberrypi ModemManager[1481]: <info>  [modem0] 3GPP registration state changed (home -> idle)
+Feb  8 11:07:12 raspberrypi ModemManager[1481]: transaction 0x3 aborted, building abort request...
+Feb  8 11:07:12 raspberrypi ModemManager[1481]: <info>  [modem0] state changed (connecting -> enabled)
+Feb  8 11:07:12 raspberrypi ModemManager[1481]: transaction 0x3 completed with a response: cancelling the abort operation
+Feb  8 11:07:12 raspberrypi ModemManager[1481]: transaction 0x4 aborted, but message is not abortable
+Feb  8 11:07:12 raspberrypi NetworkManager[407]: <info>  [1612782432.9542] modem["cdc-wdm0"]: modem state changed, 'connecting' --> 'enabled' (reason: unknown)
+Feb  8 11:07:12 raspberrypi ModemManager[1481]: not processing abort response, operation has already been completed
+Feb  8 11:07:12 raspberrypi ModemManager[1481]: <warn>  [modem0/bearer0] connection attempt #1 failed: operation cancelled
+Feb  8 11:07:12 raspberrypi ModemManager[1481]: <info>  [modem0] state changed (enabled -> disconnecting)
+Feb  8 11:07:12 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0] No transaction matched in received message
+Feb  8 11:07:12 raspberrypi NetworkManager[407]: <info>  [1612782432.9606] modem["cdc-wdm0"]: modem state changed, 'enabled' --> 'disconnecting' (reason: user-requested)
+Feb  8 11:07:12 raspberrypi NetworkManager[407]: <warn>  [1612782432.9618] modem-broadband[cdc-wdm0]: failed to connect modem: operation cancelled
+Feb  8 11:07:12 raspberrypi NetworkManager[407]: <info>  [1612782432.9619] device (cdc-wdm0): state change: prepare -> failed (reason 'unknown', sys-iface-state: 'managed')
+Feb  8 11:07:12 raspberrypi ModemManager[1481]: <info>  [modem0] state changed (disconnecting -> enabled)
+Feb  8 11:07:12 raspberrypi ModemManager[1481]: <info>  [modem0/bearer0] connection #1 finished: duration 0s, tx: 0 bytes, rx :0 bytes
+Feb  8 11:07:12 raspberrypi NetworkManager[407]: <warn>  [1612782432.9715] device (cdc-wdm0): Activation: failed for connection 'eeno6'
+Feb  8 11:07:12 raspberrypi NetworkManager[407]: <info>  [1612782432.9786] modem["cdc-wdm0"]: modem state changed, 'disconnecting' --> 'enabled' (reason: user-requested)
+Feb  8 11:07:12 raspberrypi NetworkManager[407]: <info>  [1612782432.9800] device (cdc-wdm0): state change: failed -> disconnected (reason 'none', sys-iface-state: 'managed')
+Feb  8 11:07:12 raspberrypi NetworkManager[407]: <info>  [1612782432.9827] policy: auto-activating connection 'eeno6' (b9d9311b-bb5f-4ece-8023-59597919efa2)
+Feb  8 11:07:12 raspberrypi NetworkManager[407]: <info>  [1612782432.9870] device (cdc-wdm0): Activation: starting connection 'eeno6' (b9d9311b-bb5f-4ece-8023-59597919efa2)
+Feb  8 11:07:12 raspberrypi NetworkManager[407]: <info>  [1612782432.9876] device (cdc-wdm0): state change: disconnected -> prepare (reason 'none', sys-iface-state: 'managed')
+Feb  8 11:07:12 raspberrypi NetworkManager[407]: <info>  [1612782432.9907] device (cdc-wdm0): state change: prepare -> need-auth (reason 'none', sys-iface-state: 'managed')
+Feb  8 11:07:13 raspberrypi NetworkManager[407]: <info>  [1612782433.0000] device (cdc-wdm0): state change: need-auth -> prepare (reason 'none', sys-iface-state: 'managed')
+Feb  8 11:07:13 raspberrypi ModemManager[1481]: <info>  [modem0] simple connect started...
+Feb  8 11:07:13 raspberrypi ModemManager[1481]: <info>  [modem0] simple connect state (4/8): wait to get fully enabled
+Feb  8 11:07:13 raspberrypi ModemManager[1481]: <info>  [modem0] simple connect state (5/8): register
+Feb  8 11:07:13 raspberrypi ModemManager[1481]: <info>  [modem0] simple connect state (6/8): bearer
+Feb  8 11:07:13 raspberrypi ModemManager[1481]: <info>  [modem0] simple connect state (7/8): connect
+Feb  8 11:07:13 raspberrypi ModemManager[1481]: <info>  [modem0] state changed (enabled -> connecting)
+Feb  8 11:07:13 raspberrypi NetworkManager[407]: <info>  [1612782433.0202] modem["cdc-wdm0"]: modem state changed, 'enabled' --> 'connecting' (reason: user-requested)
+Feb  8 11:07:13 raspberrypi ModemManager[1481]: <info>  [modem0] 3GPP registration state changed (idle -> registering)
+Feb  8 11:07:13 raspberrypi ModemManager[1481]: <info>  [modem0] 3GPP registration state changed (registering -> home)
+Feb  8 11:07:13 raspberrypi ModemManager[1481]: <info>  [modem0] state changed (connecting -> registered)
+Feb  8 11:07:13 raspberrypi ModemManager[1481]: <info>  [modem0/bearer0] couldn't start network: QMI protocol error (14): 'CallFailed'
+Feb  8 11:07:13 raspberrypi ModemManager[1481]: <info>  [modem0/bearer0] call end reason (3): generic-no-service
+Feb  8 11:07:13 raspberrypi ModemManager[1481]: <info>  [modem0/bearer0] verbose call end reason (6,50): [3gpp] ipv4-only-allowed
+Feb  8 11:07:13 raspberrypi NetworkManager[407]: <info>  [1612782433.3815] modem["cdc-wdm0"]: modem state changed, 'connecting' --> 'registered' (reason: unknown)
+Feb  8 11:07:13 raspberrypi ModemManager[1481]: <warn>  [modem0/bearer0] connection attempt #2 failed: QMI protocol error (14): 'CallFailed'
+Feb  8 11:07:13 raspberrypi NetworkManager[407]: <warn>  [1612782433.3828] modem-broadband[cdc-wdm0]: failed to connect modem: QMI protocol error (14): 'CallFailed'
+Feb  8 11:07:13 raspberrypi ModemManager[1481]: <info>  [modem0/bearer0] connection #2 finished: duration 0s, tx: 0 bytes, rx :0 bytes
+Feb  8 11:07:13 raspberrypi NetworkManager[407]: <info>  [1612782433.3829] device (cdc-wdm0): state change: prepare -> failed (reason 'unknown', sys-iface-state: 'managed')
+Feb  8 11:07:13 raspberrypi NetworkManager[407]: <warn>  [1612782433.3851] device (cdc-wdm0): Activation: failed for connection 'eeno6'
+Feb  8 11:07:13 raspberrypi NetworkManager[407]: <info>  [1612782433.3859] device (cdc-wdm0): state change: failed -> disconnected (reason 'none', sys-iface-state: 'managed')
+Feb  8 11:07:13 raspberrypi NetworkManager[407]: <info>  [1612782433.3883] policy: auto-activating connection 'eeno6' (b9d9311b-bb5f-4ece-8023-59597919efa2)
+Feb  8 11:07:13 raspberrypi NetworkManager[407]: <info>  [1612782433.3918] device (cdc-wdm0): Activation: starting connection 'eeno6' (b9d9311b-bb5f-4ece-8023-59597919efa2)
+Feb  8 11:07:13 raspberrypi NetworkManager[407]: <info>  [1612782433.3936] device (cdc-wdm0): state change: disconnected -> prepare (reason 'none', sys-iface-state: 'managed')
+Feb  8 11:07:13 raspberrypi NetworkManager[407]: <info>  [1612782433.3970] device (cdc-wdm0): state change: prepare -> need-auth (reason 'none', sys-iface-state: 'managed')
+Feb  8 11:07:13 raspberrypi NetworkManager[407]: <info>  [1612782433.4026] device (cdc-wdm0): state change: need-auth -> prepare (reason 'none', sys-iface-state: 'managed')
+Feb  8 11:07:13 raspberrypi ModemManager[1481]: <info>  [modem0] simple connect started...
+Feb  8 11:07:13 raspberrypi ModemManager[1481]: <info>  [modem0] simple connect state (4/8): wait to get fully enabled
+Feb  8 11:07:13 raspberrypi ModemManager[1481]: <info>  [modem0] simple connect state (5/8): register
+Feb  8 11:07:13 raspberrypi ModemManager[1481]: <info>  [modem0] simple connect state (6/8): bearer
+Feb  8 11:07:13 raspberrypi ModemManager[1481]: <info>  [modem0] simple connect state (7/8): connect
+Feb  8 11:07:13 raspberrypi ModemManager[1481]: <info>  [modem0] state changed (registered -> connecting)
+Feb  8 11:07:13 raspberrypi NetworkManager[407]: <info>  [1612782433.4142] modem["cdc-wdm0"]: modem state changed, 'registered' --> 'connecting' (reason: user-requested)
+Feb  8 11:07:13 raspberrypi ModemManager[1481]: <warn>  [modem0] couldn't load operator code: Current operator MCC/MNC is still unknown
+Feb  8 11:07:13 raspberrypi ModemManager[1481]: <warn>  [modem0] couldn't load operator name: Current operator description is still unknown
+Feb  8 11:07:14 raspberrypi ModemManager[1481]: <info>  [modem0] 3GPP registration state changed (home -> idle)
+Feb  8 11:07:14 raspberrypi ModemManager[1481]: transaction 0xc aborted, building abort request...
+Feb  8 11:07:14 raspberrypi NetworkManager[407]: <info>  [1612782434.0189] modem["cdc-wdm0"]: modem state changed, 'connecting' --> 'enabled' (reason: unknown)
+Feb  8 11:07:14 raspberrypi ModemManager[1481]: <info>  [modem0] state changed (connecting -> enabled)
+Feb  8 11:07:14 raspberrypi ModemManager[1481]: transaction 0xc completed with a response: cancelling the abort operation
+Feb  8 11:07:14 raspberrypi ModemManager[1481]: transaction 0xd aborted, but message is not abortable
+Feb  8 11:07:14 raspberrypi ModemManager[1481]: not processing abort response, operation has already been completed
+Feb  8 11:07:14 raspberrypi ModemManager[1481]: <warn>  [modem0/bearer0] connection attempt #3 failed: operation cancelled
+Feb  8 11:07:14 raspberrypi ModemManager[1481]: <info>  [modem0] state changed (enabled -> disconnecting)
+Feb  8 11:07:14 raspberrypi ModemManager[1481]: [/dev/cdc-wdm0] No transaction matched in received message
+Feb  8 11:07:14 raspberrypi ModemManager[1481]: <info>  [modem0] state changed (disconnecting -> enabled)
+Feb  8 11:07:14 raspberrypi ModemManager[1481]: <info>  [modem0/bearer0] connection #3 finished: duration 0s, tx: 0 bytes, rx :0 bytes
+Feb  8 11:07:14 raspberrypi NetworkManager[407]: <info>  [1612782434.0343] modem["cdc-wdm0"]: modem state changed, 'enabled' --> 'disconnecting' (reason: user-requested)
+Feb  8 11:07:14 raspberrypi NetworkManager[407]: <warn>  [1612782434.0346] modem-broadband[cdc-wdm0]: failed to connect modem: operation cancelled
+Feb  8 11:07:14 raspberrypi NetworkManager[407]: <info>  [1612782434.0347] device (cdc-wdm0): state change: prepare -> failed (reason 'unknown', sys-iface-state: 'managed')
+Feb  8 11:07:14 raspberrypi NetworkManager[407]: <warn>  [1612782434.0403] device (cdc-wdm0): Activation: failed for connection 'eeno6'
+Feb  8 11:07:14 raspberrypi NetworkManager[407]: <info>  [1612782434.0411] modem["cdc-wdm0"]: modem state changed, 'disconnecting' --> 'enabled' (reason: user-requested)
+Feb  8 11:07:14 raspberrypi NetworkManager[407]: <info>  [1612782434.0429] device (cdc-wdm0): state change: failed -> disconnected (reason 'none', sys-iface-state: 'managed')
+Feb  8 11:07:14 raspberrypi NetworkManager[407]: <info>  [1612782434.0465] policy: auto-activating connection 'eeno6' (b9d9311b-bb5f-4ece-8023-59597919efa2)
+Feb  8 11:07:14 raspberrypi NetworkManager[407]: <info>  [1612782434.0527] device (cdc-wdm0): Activation: starting connection 'eeno6' (b9d9311b-bb5f-4ece-8023-59597919efa2)
+Feb  8 11:07:14 raspberrypi NetworkManager[407]: <info>  [1612782434.0535] device (cdc-wdm0): state change: disconnected -> prepare (reason 'none', sys-iface-state: 'managed')
+Feb  8 11:07:14 raspberrypi NetworkManager[407]: <info>  [1612782434.0579] device (cdc-wdm0): state change: prepare -> need-auth (reason 'none', sys-iface-state: 'managed')
+Feb  8 11:07:14 raspberrypi NetworkManager[407]: <info>  [1612782434.0700] device (cdc-wdm0): state change: need-auth -> prepare (reason 'none', sys-iface-state: 'managed')
+Feb  8 11:07:14 raspberrypi ModemManager[1481]: <info>  [modem0] simple connect started...
+Feb  8 11:07:14 raspberrypi ModemManager[1481]: <info>  [modem0] simple connect state (4/8): wait to get fully enabled
+Feb  8 11:07:14 raspberrypi ModemManager[1481]: <info>  [modem0] simple connect state (5/8): register
+Feb  8 11:07:14 raspberrypi ModemManager[1481]: <info>  [modem0] simple connect state (6/8): bearer
+Feb  8 11:07:14 raspberrypi ModemManager[1481]: <info>  [modem0] simple connect state (7/8): connect
+Feb  8 11:07:14 raspberrypi ModemManager[1481]: <info>  [modem0] state changed (enabled -> connecting)
+Feb  8 11:07:14 raspberrypi NetworkManager[407]: <info>  [1612782434.0951] modem["cdc-wdm0"]: modem state changed, 'enabled' --> 'connecting' (reason: user-requested)
+Feb  8 11:07:14 raspberrypi ModemManager[1481]: <info>  [modem0] 3GPP registration state changed (idle -> registering)
+Feb  8 11:07:14 raspberrypi ModemManager[1481]: <info>  [modem0] 3GPP registration state changed (registering -> home)
+Feb  8 11:07:14 raspberrypi NetworkManager[407]: <info>  [1612782434.4386] modem["cdc-wdm0"]: modem state changed, 'connecting' --> 'registered' (reason: unknown)
+Feb  8 11:07:14 raspberrypi ModemManager[1481]: <info>  [modem0] state changed (connecting -> registered)
+Feb  8 11:07:14 raspberrypi ModemManager[1481]: <info>  [modem0/bearer0] couldn't start network: QMI protocol error (14): 'CallFailed'
+Feb  8 11:07:14 raspberrypi ModemManager[1481]: <info>  [modem0/bearer0] call end reason (3): generic-no-service
+Feb  8 11:07:14 raspberrypi ModemManager[1481]: <info>  [modem0/bearer0] verbose call end reason (6,50): [3gpp] ipv4-only-allowed
+Feb  8 11:07:14 raspberrypi ModemManager[1481]: <warn>  [modem0/bearer0] connection attempt #4 failed: QMI protocol error (14): 'CallFailed'
+Feb  8 11:07:14 raspberrypi ModemManager[1481]: <info>  [modem0/bearer0] connection #4 finished: duration 0s, tx: 0 bytes, rx :0 bytes
+Feb  8 11:07:14 raspberrypi NetworkManager[407]: <warn>  [1612782434.4503] modem-broadband[cdc-wdm0]: failed to connect modem: QMI protocol error (14): 'CallFailed'
+Feb  8 11:07:14 raspberrypi NetworkManager[407]: <info>  [1612782434.4504] device (cdc-wdm0): state change: prepare -> failed (reason 'unknown', sys-iface-state: 'managed')
+Feb  8 11:07:14 raspberrypi NetworkManager[407]: <warn>  [1612782434.4534] device (cdc-wdm0): Activation: failed for connection 'eeno6'
+Feb  8 11:07:14 raspberrypi NetworkManager[407]: <info>  [1612782434.4548] device (cdc-wdm0): state change: failed -> disconnected (reason 'none', sys-iface-state: 'managed')
+Feb  8 11:07:14 raspberrypi ModemManager[1481]: <warn>  [modem0] couldn't load operator code: Current operator MCC/MNC is still unknown
+Feb  8 11:07:14 raspberrypi ModemManager[1481]: <warn>  [modem0] couldn't load operator name: Current operator description is still unknown
+Feb  8 11:07:15 raspberrypi ModemManager[1481]: <info>  [modem0] 3GPP registration state changed (home -> idle)
+Feb  8 11:07:15 raspberrypi ModemManager[1481]: <info>  [modem0] state changed (registered -> enabled)
+Feb  8 11:07:15 raspberrypi NetworkManager[407]: <info>  [1612782435.0579] modem["cdc-wdm0"]: modem state changed, 'registered' --> 'enabled' (reason: unknown)
+Feb  8 11:07:15 raspberrypi ModemManager[1481]: <info>  [modem0] 3GPP registration state changed (idle -> registering)
+Feb  8 11:07:15 raspberrypi ModemManager[1481]: <info>  [modem0] 3GPP registration state changed (registering -> home)
+Feb  8 11:07:15 raspberrypi ModemManager[1481]: <info>  [modem0] state changed (enabled -> registered)
+Feb  8 11:07:15 raspberrypi NetworkManager[407]: <info>  [1612782435.5353] modem["cdc-wdm0"]: modem state changed, 'enabled' --> 'registered' (reason: unknown)
+

@@ -174,7 +174,7 @@ Note that some SIM / APNs do not have a username and password in which case you 
 sudo nmcli connection add connection.id "A_NAME" connection.type gsm connection.interface-name "" gsm.apn "APN"
 ```
 
-
+**Example 1 - add stream SIM connection**
 This is a practical example which works with my stream SIM. 
 
 Note in the following example *connection.interface-name ""* instead of *""* we could add an interface name such as cdc-wdm0. Then we would not need to specify the name when bring a connection up. 
@@ -189,6 +189,7 @@ Expected response
 ```
 Connection 'stream2' (1bb7a7f6-f986-4cc8-9d74-68aeb22879d9) successfully added.
 ```
+
 
 
 
@@ -222,6 +223,15 @@ gsm.network-id:                         --
 gsm.pin:                                <hidden>
 gsm.pin-flags:                          0 (none)
 ...
+```
+
+
+**Example 2 - add EE SIM connection with IPv4 only
+At the present time IPV4V6 functionality has mixed success on UK networks. Setting to IPv4 only can fix some connectivity issues.
+
+With the debian system installed at the time of testing ipv6.method disabled is not enabled - to workaround this we need to use ignore and then manually set the context using AT+CGDCONT
+```
+sudo nmcli connection add connection.id "eeno6" connection.type gsm connection.interface-name "" gsm.apn "everywhere" gsm.username "eesecure" gsm.password "secure" ipv6.method ignore 
 ```
 
 
@@ -289,6 +299,54 @@ connection.autoconnect-priority:        0
 connection.autoconnect-retries:         -1 (default)
 connection.autoconnect-slaves:          -1 (default)
 ```
+
+### Change PDP Context type setting
+
+3G/4G modems support the following settings  
+* IPV4
+* IPV6
+* IPV4V6
+
+Comments after practical testing
+* Some networks don't support IPV6
+* Using the EE we have observed the HL8548 fail to IP connect when configured to use IPV4V6 - works ok when only IPV4 is enabled
+* At some point in the distant future it's possible IPv4 will disappear
+
+**PDP Context type - network manager default**
+IPV4V6 is the default - profile settings are as follows 
+
+ipv4.method:                            auto  
+ipv6.method:                            auto  
+
+**PDP Context type - set network manager to IPV4 only**
+ipv4.method:                            auto    
+ipv6.method:                            disabled  
+
+To change the ipv6.method to "disabled" on a connection called "stream2" using nmcli for
+ example - options at the time of writing are are [ignore, auto, dhcp, link-local, manual, shared]
+```
+sudo nmcli connection modify "stream2"  ipv6.method "ignore"
+```
+But it really should be the following - at some point debian linux will change to this
+```
+sudo nmcli connection modify "stream2"  ipv6.method "disabled"
+```
+
+What does this do.
+
+```
+at+cgdcont?
++CGDCONT: 1,"IP","everywhere","0.0.0.0",0,0,0,0
++CGDCONT: 2,"IPV4V6","ims","0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0",0,0,0,0
++CGDCONT: 3,"IPV4V6","sos","0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0",0,0,0,1
+
+OK
+```
+
+
+
+https://developer.gnome.org/NetworkManager/stable/settings-ipv6.html
+https://developer.gnome.org/NetworkManager/stable/settings-ipv4.html
 
 
 ### Network Manager - connection profile file system locations

@@ -85,9 +85,12 @@ the LED should momentarily flash on
 
 ## Pilot power on signal
 It is recommended to use the ./pilotOn.sh and ./pilotOff.sh scripts to ensure correct
- modem operation. The scripts overide the RPi's GPIO default state which may
+ modem operation. The scripts override the RPi's GPIO default state which may
  not be stable states.
 
+## IP connectivity
+Testing has revealed issues on some networks when using when using PDP context type 
+ IPV4V6 and IPV6. If users experience issues try setting the PDP context type tp "IP" (IPv4)
 
 ## Debug
 Power on the PiloT ./pilotOn.sh

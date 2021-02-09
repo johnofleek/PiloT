@@ -24,15 +24,95 @@ mmcli --version
 mmcli 1.10.0
 ```
 
+```
+nmcli tool, version 1.14.6
+```
+
 As part of the investigation I installed a later version  
 http://marksrpicluster.blogspot.com/2019/12/add-buster-backports-to-raspberry-pi.html  
-this didn't fix the issue
+this didn't fix the issue 
 
+
+Update the os
+```
+sudo apt update
+sudo apt full-upgrade --fix-missing
+
+sudo apt autoremove
+```
+
+
+Then add in the backport
+```
+sudo nano /etc/apt/sources.list
+
+Add the following line to the end
+
+deb http://deb.debian.org/debian buster-backports main
+```
+then
+
+```
+curl -O http://http.us.debian.org/debian/pool/main/d/debian-archive-keyring/debian-archive-keyring_2019.1_all.deb
+
+sudo dpkg -i debian-archive-keyring_2019.1_all.deb
+```
+
+Check version [installed] vs backport version
+```
+sudo apt update
+```
+```
+sudo apt list modemmanager* -a
+Listing... Done
+modemmanager-dev/stable 1.10.0-1 armhf
+modemmanager-doc/stable 1.10.0-1 all
+modemmanager-qt-dev/stable 5.54.0-1 armhf
+modemmanager/stable,now 1.10.0-1 armhf [installed,automatic]
+```
+
+```
+sudo apt list network-manager* -a
+Listing... Done
+network-manager-config-connectivity-debian/stable 1.14.6-2+deb10u1 all
+network-manager-dev/stable 1.14.6-2+deb10u1 armhf
+network-manager-fortisslvpn-gnome/stable 1.2.8-2 armhf
+network-manager-fortisslvpn/stable 1.2.8-2 armhf
+network-manager-gnome/stable,now 1.8.20-1.1 armhf [installed]
+network-manager-iodine-gnome/stable 1.2.0-3 armhf
+network-manager-iodine/stable 1.2.0-3 armhf
+network-manager-l2tp-gnome/stable 1.2.10-1 armhf
+network-manager-l2tp/stable 1.2.10-1 armhf
+network-manager-openconnect-gnome/stable 1.2.4-2 armhf
+network-manager-openconnect/stable 1.2.4-2 armhf
+network-manager-openvpn-gnome/stable 1.8.10-1 armhf
+network-manager-openvpn/stable 1.8.10-1 armhf
+network-manager-pptp-gnome/stable 1.2.8-2 armhf
+network-manager-pptp/stable 1.2.8-2 armhf
+network-manager-ssh-gnome/stable 1.2.10-1+deb10u1 armhf
+network-manager-ssh/stable 1.2.10-1+deb10u1 armhf
+network-manager-strongswan/stable 1.4.4-2 armhf
+network-manager-vpnc-gnome/stable 1.2.6-2 armhf
+network-manager-vpnc/stable 1.2.6-2 armhf
+network-manager/stable,now 1.14.6-2+deb10u1 armhf [installed]
+```
+
+
+Install modem manager backport
 ```
 sudo apt -t buster-backports install modemmanager
 mmcli --version
 mmcli 1.14.8
 ```
+Install network-manager backport
+```
+sudo apt -t buster-backports install network-manager
+sudo apt -t buster-backports install network-manager-gnome
+```
+
+
+
+
 
 ## HL7802 physical connection
 

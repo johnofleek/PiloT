@@ -337,8 +337,7 @@ What does this do.
 ```
 at+cgdcont?
 +CGDCONT: 1,"IP","everywhere","0.0.0.0",0,0,0,0
-+CGDCONT: 2,"IPV4V6","ims","0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0",0,0,0,0
-+CGDCONT: 3,"IPV4V6","sos","0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0",0,0,0,1
+
 
 OK
 ```

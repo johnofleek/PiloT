@@ -1,4 +1,4 @@
-A replacement for wiringpi is needed as it is now obsolete. This example uses gpiozero because it's simple but probably not suitable for a commercial application see [quick review](#Quick-review-of-some-common-RPi-GPIO-tools)
+A replacement for wiringpi is needed as it is now obsolete. This example uses raspi-gpio because it's simple to use and makes (whilst the system is powered) persisent changes to GPIO output states. raspi-gpio is probably not suitable for commercial applications. For some alternatives see [quick review](#Quick-review-of-some-common-RPi-GPIO-tools)
 
 # RPi controlled PiloT GPIO
 | PiloT function | RPi 40W GPIO | gpiod |
@@ -8,14 +8,17 @@ A replacement for wiringpi is needed as it is now obsolete. This example uses gp
 | Module RESET (don't use leave 0) | GPIO20 | gpiochip0|
 
 
-# Example PiloT modul power on
-PiloT board power on
+# Example PiloT module power on
+Power on the PiloT using the raspi-gpio command line utility.
 
+Open a command line shell  
+
+Power the Pilot board power on  
 ```
 raspi-gpio set 6 op pn dh
 ```
-PiloT module power on
 
+PiloT module power on  
 ```
 raspi-gpio set 21 op pn dh
 ```
@@ -59,14 +62,4 @@ Output states are retained even when shell is closed
 Works ok for this demo
 
 It is a bit of a hack for production use
-
-
-
-
-
-
-
-
-
-
 

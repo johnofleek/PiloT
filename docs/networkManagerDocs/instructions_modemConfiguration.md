@@ -20,6 +20,9 @@ Click the link below that matches the modem fitted to your PiloT HAT
 *If you don't know the modem type try sending AT command ATi9 to the modem via
  a command serial port*
 
+* [RC76xx](./instructions_RC76xx.md) 4G/3G/2G - supports PPP/ RMNET 
 * [EM7455](./instructions_EM7455.md) 4G/3G - supports MBIM  
 * [HL7692](./instructions_HL7692.md) 4G/2G - supports MBIM  
 * [HL8548](./instructions_HL8548.md) 3G/2G - PPP - possibly better to not use network manager
+
+

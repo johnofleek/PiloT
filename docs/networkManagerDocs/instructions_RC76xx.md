@@ -1,6 +1,6 @@
 ---
 layout: default
-title: HL7692
+title: RC7620
 parent: PiloT Configuration
 grand_parent: PiloT
 nav_order: 2
@@ -36,6 +36,12 @@ or
 sudo minicom -D /dev/ttyUSB2
 ```
 
+## IP connectivity
+At the time of testing the RC7620 supported two HOST IP connection methods
+1. PPP
+2. RMNET 
+
+For information how to use PPP and RC7620 see [this](https://github.com/johnofleek/tree/master/RPi_SierraWireless_PPP#rc7620-module) 
 
 
 ## LEDs

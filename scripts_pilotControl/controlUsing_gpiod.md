@@ -1,6 +1,11 @@
-A replacement for wiringpi is needed as it is now obsolete.
+A replacement for wiringpi is needed as it is now obsolete. This example uses gpiozero because it's simple but probably not suitable for a commercial application [quick review](#Quick-review-of-some-common-RPi-GPIO-tools)
 
-# gpiod
+
+
+
+
+# Quick review of some common RPi GPIO tools
+## gpioset
 Partially installed in OS. Needs to be installed to access the command line tools
 Lets try **[gpiod](https://github.com/brgl/libgpiod)** command line tools with Bulleye
 
@@ -20,11 +25,11 @@ gpioset --mode=signal --background gpiochip0 6=1 21=0 20=0
 The library coupled with an app that runs all the time would work but in here I'm just demoin
 Advantage in a real implementation is that it should work ok with othr GPIO drivers
 
-# gpiozero
+## gpiozero
 Built into OS
 Python library works the same as gpiod does. When the Python script ends the GPIO is returned to initial state
 
-# raspi-gpio
+## raspi-gpio
 Accesses chip GPIO directlt a bit like wiringpi
 Works ok for this demo
 It is a bit of a hack for production use
@@ -42,14 +47,4 @@ It is a bit of a hack for production use
 
 
 
-# Try some commands
 
-Power on
-```
-gpioset --mode=signal --background gpiochip0 6=1 21=0 20=0
-```
-
-Power ON and module ON - module RESET OFF
-```
-gpioset --mode=signal --background gpiochip0 6=1 21=1 20=0
-```

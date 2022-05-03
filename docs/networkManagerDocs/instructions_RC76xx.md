@@ -43,6 +43,8 @@ At the time of testing the RC7620 supported two HOST IP connection methods
 
 For information how to use PPP and RC7620 see [this](https://github.com/johnofleek/RPi_SierraWireless_PPP/blob/master/README.md#rc7620-module) 
 
+Sierra Wireless currently supply their Mobile Broadband Package (MBPL) for Linux which supports the USB RMNET protocol. MBPL is available for download from https://source.sierrawireless.com/
+
 
 ## LEDs
 The PiloT LEDs are connected to the RC7620 GPIO. The state of the LEDs 

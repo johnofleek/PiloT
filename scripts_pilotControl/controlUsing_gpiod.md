@@ -1,4 +1,8 @@
-A replacement for wiringpi is needed as it is now obsolete. This example uses raspi-gpio because it's simple to use and makes (whilst the system is powered) persisent changes to GPIO output states. raspi-gpio is probably not suitable for commercial applications. For some alternatives see [quick review](#Quick-review-of-some-common-RPi-GPIO-tools)
+A replacement for wiringpi is needed as it is now obsolete. 
+
+This example uses raspi-gpio because it's simple to use and makes (whilst the system is powered) persisent changes to GPIO output states. 
+
+raspi-gpio is probably not suitable for commercial applications. For some alternatives see [quick review](#Quick-review-of-some-common-RPi-GPIO-tools)
 
 # RPi controlled PiloT GPIO
 | PiloT function | RPi 40W GPIO | gpiod |

@@ -27,9 +27,9 @@ AT commands can be set from the Raspberry Pi via
 1. AT commands sent from the Raspberry Pi Physical UART /dev/ttyAMA0 on the 40W header to the PiloT RC7620 physical UART 
 2. AT commands sent from the Raspberry Pi Virtual USB UART /dev/ttyUSB2 to the PiloT RC7620 virtual AT command UART
 
-For example 
+For example (assumes modem physical baud rate has been set to 115200)
 ```
-sudo minicom -D /dev/ttyAMA0
+sudo minicom -D /dev/ttyAMA0 -b 115200
 ```
 or
 ```
@@ -42,29 +42,33 @@ sudo minicom -D /dev/ttyUSB2
 The PiloT LEDs are connected to the RC7620 GPIO. The state of the LEDs 
 
 #### LED D6
-Configure the RC7620 GPIO 7 as an output
+Configure the RC7620 GPIO 7 as an output which sets the LED on when the PiloT is powered up
 ```
-AT+WIOCFG=7,0
+AT+WIOCFG=7,4,1,1
 ```
+AT+WIOW=7,1
 
 #### LED D5
-Configure the RC7620 GPIO 7 as an output
+Configure the RC7620 GPIO 7 as an output which sets the LED off when the PiloT is powered up
 ```
-AT+WIOCFG=8,0
+AT+WIOCFG=8,4,1,0
 ```
 Turn the LED D5 ON
 ```
-AT
+AT+WIOW=8,1
 ```
 
 
 ## RC7620 USB port composition
+Default USB composition is 
+```
+diag,nmea,modem,rmnet0,ecm
+```
 
 
+## RC7620 PiloT power on 
 
-## RC7620 and power on signal
-
-
+See [this](https://github.com/johnofleek/PiloT/tree/master/scripts_pilotControl) 
 
    
   

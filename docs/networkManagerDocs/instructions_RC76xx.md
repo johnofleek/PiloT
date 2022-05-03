@@ -41,7 +41,7 @@ At the time of testing the RC7620 supported two HOST IP connection methods
 1. PPP
 2. RMNET 
 
-For information how to use PPP and RC7620 see [this](https://github.com/johnofleek/tree/master/RPi_SierraWireless_PPP#rc7620-module) 
+For information how to use PPP and RC7620 see [this](https://github.com/johnofleek/RPi_SierraWireless_PPP/blob/master/README.md#rc7620-module) 
 
 
 ## LEDs

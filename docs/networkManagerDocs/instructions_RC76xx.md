@@ -54,7 +54,10 @@ Configure the RC7620 GPIO 7 as an output which sets the LED on when the PiloT is
 ```
 AT+WIOCFG=7,4,1,1
 ```
+Turn the LED D6 ON
+```
 AT+WIOW=7,1
+```
 
 #### LED D5
 Configure the RC7620 GPIO 7 as an output which sets the LED off when the PiloT is powered up

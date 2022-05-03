@@ -1,11 +1,36 @@
-A replacement for wiring pi is needed as it is now obsolete.
+A replacement for wiringpi is needed as it is now obsolete.
 
-Lets try **[gpiod](https://github.com/brgl/libgpiod)** with Bulleye
+# gpiod
+Partially installed in OS. Needs to be installed to access the command line tools
+Lets try **[gpiod](https://github.com/brgl/libgpiod)** command line tools with Bulleye
+
+*Install*
+```
+sudo apt install gpiod
+```
+
+*Summary*
+It works
+The state valid only while executing. IO state reverts unless you demonsize it like this
+```
+gpioset --mode=signal --background gpiochip0 6=1 21=0 20=0
+```
 
 
+The library coupled with an app that runs all the time would work but in here I'm just demoin
+Advantage in a real implementation is that it should work ok with othr GPIO drivers
+
+# gpiozero
+Built into OS
+Python library works the same as gpiod does. When the Python script ends the GPIO is returned to initial state
+
+# raspi-gpio
+Accesses chip GPIO directlt a bit like wiringpi
+Works ok for this demo
+It is a bit of a hack for production use
 
 
-# RPi controlled PiloT GPIO
+## RPi controlled PiloT GPIO
 | PiloT function | RPi 40W GPIO | gpiod |
 | --- | --- | --- |
 | POWER Supply ON | GPIO6 | gpiochip0|
@@ -13,10 +38,9 @@ Lets try **[gpiod](https://github.com/brgl/libgpiod)** with Bulleye
 | Module RESET (don't use leave 0) | GPIO20 | gpiochip0|
 
 
-# Install
-```
-sudo apt install gpiod
-```
+
+
+
 
 # Try some commands
 

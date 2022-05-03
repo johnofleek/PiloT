@@ -23,6 +23,29 @@ PiloT module power on
 raspi-gpio set 21 op pn dh
 ```
 
+Note from the RC76xx PTS
+```
+If POWER_ON_N remains connected to the GND for more than ~7s, the module will
+start and turn off once POWER_ON_N is released.
+```
+
+
+# Example PiloT module power off
+Power off the PiloT using the raspi-gpio command line utility.  
+
+Open a command line shell  - Ideally send the power off command such as AT+CFUN=0
+
+Signal the PiloT module to power off  
+```
+raspi-gpio set 21 op pn dl
+```
+
+
+Power the Pilot board power off   
+```
+raspi-gpio set 6 op pn dl
+```
+
 
 
 # Quick review of some common RPi GPIO tools

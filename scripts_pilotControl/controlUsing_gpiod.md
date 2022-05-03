@@ -1,4 +1,4 @@
-A replacement for wiringpi is needed as it is now obsolete. This example uses gpiozero because it's simple but probably not suitable for a commercial application [quick review](#Quick-review-of-some-common-RPi-GPIO-tools)
+A replacement for wiringpi is needed as it is now obsolete. This example uses gpiozero because it's simple but probably not suitable for a commercial application see [quick review](#Quick-review-of-some-common-RPi-GPIO-tools)
 
 
 
@@ -26,11 +26,14 @@ The library coupled with an app that runs all the time would work but in here I'
 Advantage in a real implementation is that it should work ok with othr GPIO drivers
 
 ## gpiozero
-Built into OS
+[gpiozero](https://github.com/RPi-Distro/raspi-gpio) is built into OS
+
 Python library works the same as gpiod does. When the Python script ends the GPIO is returned to initial state
 
 ## raspi-gpio
-Accesses chip GPIO directlt a bit like wiringpi
+[raspi-gpio](https://github.com/RPi-Distro/raspi-gpio) is built into OS
+Accesses chip GPIO directly
+Output states are retained 
 Works ok for this demo
 It is a bit of a hack for production use
 

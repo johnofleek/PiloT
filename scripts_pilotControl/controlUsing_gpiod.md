@@ -63,21 +63,26 @@ sudo apt install gpiod
 ```
 
 *Summary*
-It works
-The state valid only while executing. IO state reverts unless you demonsize it like this
+
+It works. 
+
+The state valid only while executing. 
+
+IO state reverts unless you demonsize it like this
 ```
 gpioset --mode=signal --background gpiochip0 6=1 21=0 20=0
 ```
 
-
 The library coupled with an app that runs all the time would work but in here I'm just demo
 
-Advantage in a real implementation is that it should work ok with othr GPIO drivers
+The advantage in a real implementation is that it should work ok with other GPIO drivers
 
 ## gpiozero
 gpiozero is built into OS
 
 Python library works the same as gpiod does. When the Python script ends the GPIO is returned to initial state
+
+Would work well for a Python based system implementation
 
 ## raspi-gpio
 [raspi-gpio](https://github.com/RPi-Distro/raspi-gpio) is built into OS 
@@ -88,5 +93,5 @@ Output states are retained even when shell is closed
 
 Works ok for this demo
 
-It is a bit of a hack for production use
+Using raspi-gpio in a product applications will be a bit of a hack as it bypasses any Linux drivers
 

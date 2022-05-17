@@ -80,3 +80,30 @@ The following table summarises the assignment of the first two UARTs:
 | Compute Module 3 & 3+ | primary | secondary | 
 | Raspberry Pi 4 | secondary (Bluetooth) | primary |
 
+## Disabling the Linux Serial Console
+By default, the primary UART is assigned to the Linux console. If you wish to use the primary UART for other purposes, you must reconfigure Raspberry Pi OS.
+ This can be done by using raspi-config:
+
+Start raspi-config: sudo raspi-config.
+
+Select option 3 - Interface Options.
+
+Select option P6 - Serial Port.
+
+At the prompt Would you like a login shell to be accessible over serial? answer 'No'
+
+At the prompt Would you like the serial port hardware to be enabled? answer 'Yes'
+
+Exit raspi-config and reboot the Raspberry Pi for changes to take effect.
+
+## UARTs and Device Tree
+Various UART Device Tree overlay definitions can be found in the [kernel GitHub tree](https://github.com/raspberrypi/linux)
+ The two most useful overlays are disable-bt and miniuart-bt.
+
+disable-bt disables the Bluetooth device and makes the first PL011 (UART0) the primary UART. 
+
+You must also disable the system service that initialises the modem, so it does not connect to the UART, using sudo systemctl disable hciuart.
+
+You add a line to the config.txt file to apply a Device Tree overlay. Note that the -overlay.dts part of the filename is removed. For example:
+
+dtoverlay=disable-bt

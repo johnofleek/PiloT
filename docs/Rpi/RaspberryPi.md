@@ -23,13 +23,16 @@ http://raspberrypi.org/documentation/configuration/uart.md
 
 ## Check current config
 The following is an example where ttyAMA0 is connected to 
-* The 40 Way header primary UART GPIO 14 (transmit) and 15 (receive)
+* 40 Way header **primary** UART GPIO 14 (transmit) and 15 (receive)
 * UART0
+* UART PL011
+
 ```
 pi@raspberrypi:~ $ find /dev/* -type l -ls | grep "serial"
       246      0 lrwxrwxrwx   1 root     root            7 May 16 21:17 /dev/serial0 -> ttyAMA0
       221      0 lrwxrwxrwx   1 root     root            5 May 16 21:17 /dev/serial1 -> ttyS0
 ```
+
 
 The following sections were copied from the RPi official [documentation](https://www.raspberrypi.com/documentation/computers/configuration.html#configuring-uarts)
 
@@ -40,10 +43,10 @@ The PL011 is a capable, broadly 16550-compatible UART.
 The mini UART has a reduced feature set. With limited baud settings etc
 
 
-## Primary UART
+### Primary UART
 On the Raspberry Pi, one UART is selected to be present on GPIO 14 (transmit) and 15 (receive) - this is the primary UART. By default, this will also be the UART on which a Linux console may be present. Note that GPIO 14 is pin 8 on the GPIO header, while GPIO 15 is pin 10.
 
-## Secondary UART
+### Secondary UART
 The secondary UART is not normally present on the GPIO connector. By default, the secondary UART is connected to the Bluetooth side of the combined wireless LAN/Bluetooth controller, on models which contain this controller.
 
 

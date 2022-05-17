@@ -22,6 +22,7 @@ http://raspberrypi.org/documentation/configuration/uart.md
 
 
 ## Check current config
+
 The following is an example where ttyAMA0 is connected to 
 * 40 Way header **primary** UART GPIO 14 (transmit) and 15 (receive)
 * UART0
@@ -33,6 +34,16 @@ pi@raspberrypi:~ $ find /dev/* -type l -ls | grep "serial"
       221      0 lrwxrwxrwx   1 root     root            5 May 16 21:17 /dev/serial1 -> ttyS0
 ```
 
+
+If the user wishes to use the PiloT physical UART interface (as opposed to a USB serial port) it is recommended a PL011 is connnected to the PiloT so that a fully featured UART is available to interface with the cellular module. 
+
+Summary of steps to disable BT and console 
+* disable-bt -- see below
+* Enable serial port
+* Disabling the Linux Serial Console -- see below
+
+
+## RPi UART information
 
 The following sections were copied from the RPi official [documentation](https://www.raspberrypi.com/documentation/computers/configuration.html#configuring-uarts)
 

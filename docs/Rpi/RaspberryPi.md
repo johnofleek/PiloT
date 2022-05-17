@@ -40,7 +40,7 @@ If the user wishes to use the PiloT physical UART interface (as opposed to a USB
 Summary of steps to disable BT and console 
 * disable-bt -- see below
 * Enable serial port
-* Disabling the Linux Serial Console -- see below
+* Disable the Linux Serial Console -- see below
 
 
 ## RPi UART information

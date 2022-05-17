@@ -42,40 +42,10 @@ The following table summarises the assignment of the first two UARTs:
 |  Model | first PL011 (UART0) | mini UART | 
 | ------ | ------------------- | --------- |
 | Raspberry Pi Zero | primary  | secondary | 
-
-Raspberry Pi Zero W
-
-secondary (Bluetooth)
-
-primary
-
-Raspberry Pi 1
-
-primary
-
-secondary
-
-Raspberry Pi 2
-
-primary
-
-secondary
-
-Raspberry Pi 3
-
-secondary (Bluetooth)
-
-primary
-
-Compute Module 3 & 3+
-
-primary
-
-secondary
-
-Raspberry Pi 4
-
-secondary (Bluetooth)
-
-primary
+| Raspberry Pi Zero W | secondary (Bluetooth) | primary |
+| Raspberry Pi 1 | primary | secondary | 
+| Raspberry Pi 2 | primary | secondary |
+| Raspberry Pi 3 | secondary (Bluetooth) | primary | 
+| Compute Module 3 & 3+ | primary | secondary | 
+| Raspberry Pi 4 | secondary (Bluetooth) | primary |
 

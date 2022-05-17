@@ -22,7 +22,9 @@ http://raspberrypi.org/documentation/configuration/uart.md
 
 
 ## Check current config
-The following is an example where 
+The following is an example where ttyAMA0 is connected to 
+* The 40 Way header primary UART GPIO 14 (transmit) and 15 (receive)
+* UART0
 ```
 pi@raspberrypi:~ $ find /dev/* -type l -ls | grep "serial"
       246      0 lrwxrwxrwx   1 root     root            7 May 16 21:17 /dev/serial0 -> ttyAMA0
@@ -45,7 +47,7 @@ On the Raspberry Pi, one UART is selected to be present on GPIO 14 (transmit) an
 The secondary UART is not normally present on the GPIO connector. By default, the secondary UART is connected to the Bluetooth side of the combined wireless LAN/Bluetooth controller, on models which contain this controller.
 
 
-Raspberry Pi Zero, 1, 2 and 3
+### Raspberry Pi Zero, 1, 2 and 3
 The Raspberry Pi Zero, 1, 2, and 3 each contain two UARTs as follows:
 
 | Name |	Type |
@@ -53,7 +55,7 @@ The Raspberry Pi Zero, 1, 2, and 3 each contain two UARTs as follows:
 | UART0 | PL011 |
 | UART1 |mini UART |
 
-Raspberry Pi 4 and 400
+### Raspberry Pi 4 and 400
 The Raspberry Pi 4B and 400 have an additional four PL011s, which are disabled by default:
 
 | Name | Type |
@@ -67,7 +69,7 @@ The Raspberry Pi 4B and 400 have an additional four PL011s, which are disabled b
 
 
 
-Primary and Secondary UART
+### Primary and Secondary UART
 The following table summarises the assignment of the first two UARTs:
 
 |  Model | first PL011 (UART0) | mini UART | 
@@ -84,6 +86,7 @@ The following table summarises the assignment of the first two UARTs:
 By default, the primary UART is assigned to the Linux console. If you wish to use the primary UART for other purposes, you must reconfigure Raspberry Pi OS.
  This can be done by using raspi-config:
 
+```
 Start raspi-config: sudo raspi-config.
 
 Select option 3 - Interface Options.
@@ -95,6 +98,7 @@ At the prompt Would you like a login shell to be accessible over serial? answer 
 At the prompt Would you like the serial port hardware to be enabled? answer 'Yes'
 
 Exit raspi-config and reboot the Raspberry Pi for changes to take effect.
+```
 
 ## UARTs and Device Tree
 Various UART Device Tree overlay definitions can be found in the [kernel GitHub tree](https://github.com/raspberrypi/linux)

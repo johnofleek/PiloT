@@ -79,7 +79,19 @@ diag,nmea,modem,rmnet0,ecm
 
 ## RC7620 PiloT power on 
 
-See [this](https://github.com/johnofleek/PiloT/tree/master/scripts_pilotControl) 
+Quick test method
+Power the Pilot board power on  
+```
+raspi-gpio set 6 op pn dh
+```
+
+PiloT module power on  
+```
+raspi-gpio set 21 op pn dh
+```
+
+
+For more indepth information see [this](https://github.com/johnofleek/PiloT/tree/master/scripts_pilotControl) 
 
    
   

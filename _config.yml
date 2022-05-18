@@ -6,7 +6,8 @@ remote_theme: 	"just-the-docs/just-the-docs"
 
 color_scheme: schemeIniveo
 
-logo: "/images/iniveoLogo.png"
+#logo: "/images/iniveoLogo.png"
+logo: "/images/PiloT.png"
 
 # Footer content appears at the bottom of every page's main content
 footer_content: "J Thompson 2022"

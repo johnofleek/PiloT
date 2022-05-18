@@ -30,7 +30,7 @@ raspi-gpio set 21 op pn dh
 Note from the RC76xx PTS
 ```
 If POWER_ON_N remains connected to the GND for more than ~7s, the module will
-start and turn off once POWER_ON_N is released.
+start ok. It will turn off if POWER_ON_N is then released (OC).
 ```
 
 

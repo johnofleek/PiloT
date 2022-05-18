@@ -8,9 +8,9 @@ has_toc: false
 
 # Purpose
 
-Capture notes on Raspberry Pi related information related to integrating the PiloT PCA.
+Document Raspberry information related to integrating the PiloT HAT
 
-# Development kit
+# Development kit used
 * RPi4
 * Raspbian based on Bullseye
 
@@ -21,7 +21,7 @@ http://raspberrypi.org/documentation/configuration/uart.md
 # RPi Hardware UARTs
 
 
-## Check current config
+## Check current Raspian configuration
 
 The following is an example where ttyAMA0 is connected to 
 * 40 Way header **primary** UART GPIO 14 (transmit) and 15 (receive)
@@ -47,7 +47,7 @@ Summary of steps to disable BT and console
 
 The following sections were copied from the RPi official [documentation](https://www.raspberrypi.com/documentation/computers/configuration.html#configuring-uarts)
 
-There are two types of UART available on the Raspberry Pi - PL011 and mini UART. 
+There are two types of UART hardware available on the Raspberry Pi - PL011 and mini UART. 
 
 The PL011 is a capable, broadly 16550-compatible UART.
 
@@ -84,7 +84,7 @@ The Raspberry Pi 4B and 400 have an additional four PL011s, which are disabled b
 
 
 ### Primary and Secondary UART
-The following table summarises the assignment of the first two UARTs:
+The following table summarises the default Raspbian assignment of the first two UARTs:
 
 |  Model | first PL011 (UART0) | mini UART | 
 | ------ | ------------------- | --------- |
@@ -118,10 +118,15 @@ Exit raspi-config and reboot the Raspberry Pi for changes to take effect.
 Various UART Device Tree overlay definitions can be found in the [kernel GitHub tree](https://github.com/raspberrypi/linux)
  The two most useful overlays are disable-bt and miniuart-bt.
 
-disable-bt disables the Bluetooth device and makes the first PL011 (UART0) the primary UART. 
-
-You must also disable the system service that initialises the modem, so it does not connect to the UART, using sudo systemctl disable hciuart.
-
+**disable-bt** disables the Bluetooth device and makes the first PL011 (UART0) the primary UART. 
 You add a line to the config.txt file to apply a Device Tree overlay. Note that the -overlay.dts part of the filename is removed. For example:
-
+```
 dtoverlay=disable-bt
+```
+
+You must also disable the system service that initialises the Bluetooth modem, so it does not connect to the UART, using 
+```
+sudo systemctl disable hciuart.
+```
+
+
